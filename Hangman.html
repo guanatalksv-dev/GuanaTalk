@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GuanaTalk - Hangman</title>
+    <link rel="stylesheet" href="Hangman.css">
+</head>
+<body>
+
+   <header class="navbar">
+    <div class="logo">
+        <img src="img/logo.png" alt="GuanaTalk Logo">
+        <span>GuanaTalk</span>
+    </div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="#">Favorite</a>
+        <a href="#">About us</a>
+    </nav>
+    <div class="profile-dropdown">
+        <button class="profile-btn">
+            My Profile <i class="ri-arrow-down-s-line"></i>
+        </button>
+    </header>
+
+    <main class="game-container">
+    <h2 class="title">Hangman-Objects</h2>
+    
+    <div class="content-wrapper">
+        <div class="panel game-board">
+            <div id="hangman-drawing">
+                <div id="h-stand"></div>
+                <div id="h-rope"></div>
+                <div id="h-head"></div>
+                <div id="h-body"></div>
+                <div id="h-arm-l"></div>
+                <div id="h-arm-r"></div>
+                <div id="h-leg-l"></div>
+                <div id="h-leg-r"></div>
+            </div>
+
+            <div id="word-display" class="word-display">
+                <span>_</span><span>_</span><span>_</span><span class="revealed">H</span><span>_</span><span>_</span><span>_</span><span>_</span>
+            </div>
+        </div>
+
+        <div class="panel stats-area">
+            <h3>Used Letters</h3>
+            <div id="used-letters" class="used-letters">
+                <span>A</span><span>X</span><span>X</span><span>X</span><span>O</span><span>M</span>
+            </div>
+            
+            <h3>Attempts left</h3>
+            <div class="attempts-container">
+                <div class="progress-bar">
+                    <div id="progress" class="progress"></div>
+                </div>
+                <span id="attempts">5</span>
+            </div>
+        </div>
+    </div>
+
+    <div id="keyboard" class="keyboard">
+        <button>A</button><button>B</button><button>C</button><button>D</button>
+        <button class="disabled">F</button><button>G</button><button>H</button>
+        <button class="disabled">I</button><button>J</button><button>K</button>
+        <button class="disabled">L</button><button class="disabled">M</button>
+        </div>
+</main>
+
+    <script src="Hangman.js"></script>
+</body>
+</html>
