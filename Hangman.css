@@ -1,3 +1,25 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    
+    /* 1. Color de fondo celeste general */
+    background-color: #e3f2fd; 
+    
+    /* 2. Este degradado simula las siluetas de los volcanes salvadoreños en el fondo */
+    background-image: 
+        /* Volcán 1 (Izalco) */
+        linear-gradient(135deg, transparent 70%, rgba(13, 71, 161, 0.05) 70%, rgba(13, 71, 161, 0.05) 100%),
+        /* Volcán 2 (San Salvador) */
+        linear-gradient(225deg, transparent 65%, rgba(13, 71, 161, 0.08) 65%, rgba(13, 71, 161, 0.08) 100%);
+        
+    background-size: 50% 100%, 60% 100%;
+    background-position: left bottom, right bottom;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
 .navbar {
     background-color: #1f4e8c;
     display: flex;
@@ -48,13 +70,6 @@ nav a {
 
 .profile-btn:hover {
     background: #27ae60;
-}
-
-body {
-    background-color: #a2cffe;
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
 }
 
 .game-container {

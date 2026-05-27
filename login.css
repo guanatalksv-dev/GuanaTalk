@@ -4,7 +4,6 @@
     --bg-cream: #fdf5e6;
     --card-yellow: #f9e6b3;
     --btn-gold: #f0b440;
-    --border-dark: #000000;
 }
 
 * {
@@ -53,7 +52,7 @@ body {
     margin: 60px auto;
     padding: 60px 40px; 
     border-radius: 40px;
-    border: 3px solid var(--border-dark);
+    border:  #f0b440 solid 3px;
     box-shadow: 0 8px 0 var(--border-dark);
     text-align: center;
 }
