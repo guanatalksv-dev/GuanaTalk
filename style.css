@@ -196,28 +196,24 @@ nav a {
     }
 }
 
-
 .hero {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #FBF2EB;
-    padding: 40px 60px;
-    border-bottom-left-radius: 40px;
-    border-bottom-right-radius: 40px;
+    padding: 5px 60px;
+    background: linear-gradient(180deg, #fcefe3 0%, #fdf5ee 100%);
+    position: relative;
 }
-
 .hero-text h1 {
-    font-size: 32px;
-    margin: 20px;
-    padding: 10px;
+    font-size: 2.2rem;
+    color: #111;
+    margin-bottom: 10px;
 }
-
 .hero-text p {
-    color: #333;
-    font-size: 40px;
-    margin: 20px;
-    padding: 10px;
+    font-size: 1.5rem;
+    color: #555;
+    max-width: 400px;
+    line-height: 1.5;
 }
 
 .hero-img {
