@@ -409,3 +409,17 @@ nav a {
 .text p{
     margin-top:8px;
 }
+
+html{
+    scroll-behavior:smooth;
+}
+
+.divider{
+    width:80%;
+    margin:40px auto;
+
+    border:none;
+    height:2px;
+
+    background:#aaa;
+}
