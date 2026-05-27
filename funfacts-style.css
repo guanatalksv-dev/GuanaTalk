@@ -341,3 +341,64 @@ body {
     color: #444;
     text-align: center;
 }
+
+.colors-section{
+
+   h1{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    }
+
+   p{
+    text-align: center;
+   }
+}
+.color-card{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    margin:25px auto;
+
+    width:90%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    box-shadow:0 4px 10px rgba(0,0,0,0.15);
+}
+
+.left{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.circle{
+    width:70px;
+    height:70px;
+    border-radius:50%;
+}
+
+.blue{ background:#004aad; }
+.sky{ background:#59b7e8; }
+.white{ background:#f1ead8; }
+.green{ background:#34b36b; }
+.gold{ background:#f2c94c; }
+.brown{ background:#7b4b2a; }
+.pink{ background:#ff8ab5; }
+
+.color-card img{
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.text h3{
+    margin:0;
+    font-size:24px;
+}
+
+.text p{
+    margin-top:8px;
+}
