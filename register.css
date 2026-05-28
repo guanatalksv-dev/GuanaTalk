@@ -1,6 +1,6 @@
 :root {
     --primary-blue: #0052b4;      
-    --primary-dark: #9d95ce;       
+    --primary-dark: #9d95ce;      
     --accent-green: #2e7d32;      
     --btn-gold: #f0b440;          
     --btn-gold-hover: #dca334;
@@ -76,7 +76,7 @@ body {
 }
  
 .main-container {
-    max-width: 600px;
+    max-width: 950px;
     width: 100%;
     margin: auto; 
     padding: 15px;
@@ -113,11 +113,11 @@ body {
     padding: 25px 35px; 
 }
  
-.form-grid-login {
-    display: flex;
-    flex-direction: column;
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 16px; 
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
  
 .form-group-container {
@@ -133,6 +133,10 @@ body {
 .form-group-container:focus-within {
     border-color: var(--primary-blue);
     box-shadow: 0 0 0 3px rgba(0, 82, 180, 0.1);
+}
+ 
+.full-width-field {
+    grid-column: span 1;
 }
  
 .icon-column {
@@ -167,7 +171,8 @@ body {
     margin-bottom: 1px;
 }
  
-.input-column input {
+.input-column input,
+.input-column select.select-field {
     border: none !important;
     outline: none !important;
     font-size: 0.92rem;
@@ -179,33 +184,6 @@ body {
  
 .input-column input::placeholder {
     color: #94a3b8;
-}
-
-.form-options-custom {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 0.85rem;
-    font-weight: 500;
-    color: #64748b;
-    margin-bottom: 25px;
-    padding: 0 2px;
-}
-
-.form-options-custom input[type="checkbox"] {
-    margin-right: 6px;
-    accent-color: var(--primary-blue);
-    cursor: pointer;
-}
-
-.form-options-custom a {
-    color: var(--primary-blue);
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.form-options-custom a:hover {
-    text-decoration: underline;
 }
  
 .project-action {
@@ -290,7 +268,14 @@ body {
     color: #94a3b8;
 }
  
-@media (max-width: 480px) {
+@media (max-width: 768px) {
+    .main-container {
+        margin: 10px auto;
+    }
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
     .forms-body {
         padding: 15px 20px;
     }

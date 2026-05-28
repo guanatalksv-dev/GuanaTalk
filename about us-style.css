@@ -22,7 +22,12 @@ body {
     color: white;
 }
 
-
+.logo {
+    display: flex;
+     margin-left: 40px;
+    align-items: center;
+    font-weight: bold;
+}
 
 .logo img {
     height: 70px;
@@ -105,7 +110,7 @@ nav a {
 
 
 .menu-lines-btn {
-    border: 2px solid #e4bf70;
+    border: 2px solid #000;
     background: #ead9b5; 
     color: black;
     width: 45px;
@@ -127,7 +132,7 @@ nav a {
 
 .profile-btn {
     background: #46BA37;
-    border: 2px solid #30aa30;
+    border: 2px solid #000;
     padding: 10px 20px;
     border-radius: 25px;
     color: white;
@@ -142,19 +147,7 @@ nav a {
 }
 
 
-.dropdown-content {
-    display: none; 
-    position: absolute;
-    right: 0;
-    top: 120%;
-    background-color: #fff;
-    min-width: 150px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-    border: 2px solid #000;
-    border-radius: 12px;
-    z-index: 1000;
-    overflow: hidden;
-}
+
 
 .dropdown-content a {
     color: #333;
@@ -207,6 +200,7 @@ nav a {
     margin-bottom: 10px;
 }
 .hero-text p {
+    
     font-size: 1.5rem;
     color: #555;
     max-width: 400px;
@@ -222,97 +216,6 @@ nav a {
   mix-blend-mode: multiply; 
   margin-right: -20px;
   margin-top: 30px;
-}
-
-.cards {
-  display: flex;
-  justify-content: center; 
-  padding: 30px;
-  flex-wrap: wrap;
-  gap: 15px; 
-  margin-bottom: 20px; 
-}
-
-.card {
-  width: 160px;      
-  height: 200px;     
-  border-radius: 100px; 
-  text-align: center;
-  color: #FBF2EB;
-  font-weight: bold;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; 
-  align-items: center;
-  padding: 15px 10px; 
-  transition: 0.3s;
-  box-shadow: 0 15px 30px rgba(0,0,0,0.1); 
-  border: 2px solid rgba(255, 255, 255, 0.3);
-}
-
-
-.card:hover {
-  transform: translateY(-8px); 
-}
-
-
-.card img {
-  width: 85%;        
-  height: 120px;     
-  object-fit: contain; 
-}
-
-.card p {
-  font-size: 18px;
-  margin-bottom: 5px;
-}
-
-
-.pink{
-  background:linear-gradient(#ff9cb0,#ff6c8d);
-}
-
-.green{
-  background:linear-gradient(#79af72,#3F5D44);
-}
-
-.orange{
-  background:linear-gradient(#f8cc70,#f4a91c);
-}
-
-.blue{
-  background:linear-gradient(#8ad2ff,#0D9AEF);
-}
-
-.gray{
-  background: #b6def4ee;
-  color:white;
-}
-
-.funfact {
-  background: #fcd37b;
-  margin: 40px 10%; 
-  padding: 15px 25px;
-  border-radius: 50px; 
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  font-size: 16px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-  clear: both; 
-}
-
-@media (max-width: 768px) {
-  .hero {
-    flex-direction: column;
-    text-align: center;
-    padding: 40px 20px;
-  }
-  .hero-img {
-    margin-right: 0;
-    max-width: 300px;
-    margin-top: 20px;
-  }
 }
 
 .container{
@@ -377,12 +280,15 @@ nav a {
 }
 
 .steps{
+
+ align-items: center;
   display:flex;
   flex-direction:column;
   gap:25px;
 }
 
 .step{
+    align-items: center;
   display:flex;
   align-items:flex-start;
   gap:15px;
@@ -464,4 +370,78 @@ nav a {
 
 .green{
   background:#6b9467;
+}
+
+
+.colors-section h1{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+.colors-section p{
+    text-align: center;
+}
+
+.color-card{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    margin:25px auto;
+
+    width:90%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    box-shadow:0 4px 10px rgba(0,0,0,0.15);
+}
+
+.left{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.circle{
+    width:70px;
+    height:70px;
+    border-radius:50%;
+}
+
+.blue{ background:#004aad; }
+.sky{ background:#59b7e8; }
+.white{ background:#f1ead8; }
+.green{ background:#34b36b; }
+.gold{ background:#f2c94c; }
+.brown{ background:#7b4b2a; }
+.pink{ background:#ff8ab5; }
+
+.color-card img{
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.text h3{
+    margin:0;
+    font-size:24px;
+}
+
+.text p{
+    margin-top:8px;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+.divider{
+    width:80%;
+    margin:40px auto;
+
+    border:none;
+    height:2px;
+
+    background:#aaa;
 }
