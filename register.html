@@ -1,101 +1,122 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register GuanaTalk</title>
-    <link rel="stylesheet" href="registerr.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="register.css">
 </head>
 <body>
-    <header class="navbar">
-         <div class="logo">
-            <a href="index.html" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit;">
-                <img src="img/logo.png" alt="GuanaTalk Logo">
-                <span>GuanaTalk</span>
-            </a>
-        </div>
+ 
+<header class="navbar">
+    <div class="logo">
+        <a href="index.html" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit;">
+            <img src="img/guanatalk.logo.png" alt="GuanaTalk Logo">
+            <span>GuanaTalk</span>
+        </a>
+    </div>
+    <div class="profile-section">
         <button class="profile-btn">My Profile</button>
-    </header>
-
-    <div class="container">
-        <div class="form-card-header">
-            <h2>GuanaTalk Registration: Join Our Journey</h2>
-        </div>
     </div>
-    
-    <form class="forms" action="php/register.php" method="POST">
-
-        <div class="form-grid">
-
-            <div class="form-group-container">
-                <div class="icon-column side-name">
-                    <span class="emoji-icon"><i class="fa-solid fa-user"></i></span>
-                </div>
-                <div class="input-column">
-                    <label>Full Name</label>
-                    <input type="text" name="nombre" placeholder="Enter your full name" required>
-                </div>
+</header>
+ 
+    <div class="main-container">
+       
+        <div class="form-card">
+            <div class="form-card-header">
+                <h2>GuanaTalk Registration</h2>
+                <p>Únete a la comunidad global más chiva de El Salvador</p>
             </div>
-
-            <div class="form-group-container">
-                <div class="icon-column side-nationality">
-                    <span class="emoji-icon"><i class="fa-solid fa-earth-americas"></i></span>
+ 
+            <form class="forms-body" action="php/register.php" method="POST">
+                <div class="form-grid">
+ 
+                    <!-- 1. Nombre Completo -->
+                    <div class="form-group-container">
+                        <div class="icon-column">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <div class="input-column">
+                            <label>Nombre Completo</label>
+                            <input type="text" name="nombre" placeholder="Ej. Juan Pérez" required>
+                        </div>
+                    </div>
+ 
+                    <!-- 2. Correo Electrónico -->
+                    <div class="form-group-container">
+                        <div class="icon-column">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div class="input-column">
+                            <label>Correo Electrónico</label>
+                            <input type="email" name="email" placeholder="correo@ejemplo.com" required>
+                        </div>
+                    </div>
+ 
+                    <!-- 3. Contraseña -->
+                    <div class="form-group-container">
+                        <div class="icon-column">
+                            <i class="fa-solid fa-lock"></i>
+                        </div>
+                        <div class="input-column">
+                            <label>Contraseña</label>
+                            <input type="password" name="password" placeholder="Crea una contraseña" required>
+                        </div>
+                    </div>
+ 
+                    <!-- 4. Confirmar Contraseña -->
+                    <div class="form-group-container">
+                        <div class="icon-column">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <div class="input-column">
+                            <label>Confirmar Contraseña</label>
+                            <input type="password" name="confirm_password" placeholder="Repite tu contraseña" required>
+                        </div>
+                    </div>
+ 
+                    <!-- 5. Nacionalidad (Pasa al final con ancho completo) -->
+                    <div class="form-group-container full-width-field">
+                        <div class="icon-column">
+                            <i class="fa-solid fa-earth-americas"></i>
+                        </div>
+                        <div class="input-column">
+                            <label>Nacionalidad</label>
+                            <select name="nacionalidad" class="select-field" required>
+                                <option value="" disabled selected>Selecciona tu nacionalidad</option>
+                                <option value="Salvadoreño">🇸🇻 Salvadoreño</option>
+                                <option value="Extranjero">🌍 Extranjero</option>
+                            </select>
+                        </div>
+                    </div>
+ 
                 </div>
-                <div class="input-column">
-                    <label>Nationality</label>
-                    <select name="nacionalidad" class="select-field" required>
-                        <option value="" disabled selected>Select your nationality</option>
-                        <option value="Salvadoreño">👤 Salvadoreño</option>
-                        <option value="Extranjero">🌍 Extranjero</option>
-                    </select>
+ 
+                <div class="text-center project-action">
+                    <button class="register-btn" type="submit">
+                        Registrarme Ahora <i class="fa-solid fa-arrow-right ms-2"></i>
+                    </button>
                 </div>
-            </div>
-
-            <div class="form-group-container">
-                <div class="icon-column side-email">
-                    <span class="emoji-icon"><i class="fa-solid fa-envelope"></i></span>
-                </div>
-                <div class="input-column">
-                    <label>Email Address</label>
-                    <input type="email" name="email" placeholder="Enter your email" required>
-                </div>
-            </div>
-
-            <div class="form-group-container">
-                <div class="icon-column side-password">
-                    <span class="emoji-icon"><i class="fa-solid fa-lock"></i></span>
-                </div>
-                <div class="input-column">
-                    <label>Password</label>
-                    <input type="password" name="password" placeholder="Create a password" required>
-                </div>
-            </div>
-
-            <div class="form-group-container">
-                <div class="icon-column side-password">
-                    <span class="emoji-icon"><i class="fa-solid fa-shield-halved"></i></span>
-                </div>
-                <div class="input-column">
-                    <label>Confirm Password</label>
-                    <input type="password" name="confirm_password" placeholder="Confirm your password" required>
-                </div>
-            </div>
-
+            </form>
         </div>
-
-        <button class="register-btn" type="submit">Register Now!</button>
-
-    </form>
-
-    <div class="fun-fact">
-        <div class="fun-left">
-            <span class="megaphone-box"><i class="fa-solid fa-bullhorn"></i></span>
-            <p><b>Fun Fact:</b> We're growing global community! Join and meet others</p>
+ 
+        <div class="fun-fact-card">
+            <div class="fun-left">
+                <div class="megaphone-icon-box">
+                    <i class="fa-solid fa-bullhorn"></i>
+                </div>
+                <div class="fun-text">
+                    <span class="badge-fact">Dato Chivo</span>
+                    <p>¡Somos una comunidad en crecimiento global! Conéctate con salvadoreños en todas partes del mundo.</p>
+                </div>
+            </div>
+            <i class="fa-solid fa-chevron-right arrow-detail"></i>
         </div>
-        <i class="fa-solid fa-chevron-right"></i>
+ 
     </div>
-
+ 
 </body>
 </html>
