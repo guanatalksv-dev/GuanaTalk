@@ -6,6 +6,7 @@
     <title>Legends</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="legends.css">
+    
 </head>
 <body>
      <header>
@@ -20,7 +21,7 @@
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="#">Favorite</a></li>
-                <li><a href="#">About us</a></li>
+                <li><a href="aboutus.html">About us</a></li>
             </ul>
 
             <button class="profile-btn">My Profile</button>
@@ -87,9 +88,61 @@
             <a href="LaCarretaChillona.html"><button>Read more</button></a>
         </div>
 
+         
+  <?php
+include("conexionleyendas.php");
+
+$sql = "SELECT * FROM leyendas";
+$resultado = mysqli_query($conn, $sql);
+?>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Leyendas</title>
+    <link rel="stylesheet" href="legends.css">
+</head>
+<body>
+
+
+
+<div class="contenedor">
+
+<?php while($fila = mysqli_fetch_assoc($resultado)){ ?>
+
+    <div class="card">
+
+        <img src="img/<?php echo $fila['Imagen']; ?>">
+
+        <h2>
+            <?php echo $fila['Titulo']; ?>
+        </h2>
+
+        <p>
+            <?php echo $fila['Descripcion']; ?>
+        </p>
+
+         <a href="legends.php?id=<?php echo $fila['id']; ?>">
+        <button>Read more</button>
+    </a>
+
+
     </div>
+
+<?php } ?>
+
+</div>
+
+</body>
+</html>
+
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/js/bootstrap.min.js"></script>
 
 </body>
 </html>
+    </div>
+  
+  
+ 
