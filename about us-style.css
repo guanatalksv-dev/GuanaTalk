@@ -280,18 +280,19 @@ nav a {
 }
 
 .steps{
-
- align-items: center;
   display:flex;
   flex-direction:column;
   gap:25px;
+
+  width:70%;
+  margin:auto;
 }
 
 .step{
-    align-items: center;
   display:flex;
   align-items:flex-start;
   gap:15px;
+  width:100%;
 }
 
 .dot{
@@ -301,17 +302,6 @@ nav a {
   border-radius:50%;
   margin-top:8px;
 }
-
-.step h4{
-  font-size:22px;
-  margin-bottom:5px;
-}
-
-.step p{
-  font-size:17px;
-  line-height:1.5;
-}
-
 /* WHY */
 
 .why{

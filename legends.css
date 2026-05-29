@@ -23,6 +23,17 @@ body{
 
     
 }
+.navbar {
+    background-color: #1f4e8c;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    margin: auto;
+    padding: 7px;
+    color: white;
+}
+
+
 
 .hero{
     display: flex;

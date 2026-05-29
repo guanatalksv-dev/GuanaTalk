@@ -20,7 +20,7 @@
 
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="#">Favorite</a></li>
+                <li><a href="favoritos.html">Favorite</a></li>
                 <li><a href="aboutus.html">About us</a></li>
             </ul>
 
