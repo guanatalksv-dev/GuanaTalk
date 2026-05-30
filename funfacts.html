@@ -4,58 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GuanaTalk - Fun Facts</title>
-
     <link rel="stylesheet" href="funfacts-style.css">
-
     <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
 </head>
-
 <body>
 
-    <header>
-        <nav class="navbar">
+    <nav class="navbar">
+        <div class="logo">
+            <img src="img/guanatalk.logo.png" alt="GuanaTalk Logo">
+        </div>
 
-            <div class="logo">
-                <img src="img/guanatalk.logo.png" alt="Logo">
-            </div>
+        <ul class="nav-links">
+            <li><a href="funfacts.html" class="active">Home</a></li>
+            <li><a href="#">Favorite</a></li>
+            <li><a href="aboutus.html">About us</a></li>
+        </ul>
 
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#">Favorite</a></li>
-                <li><a href="aboutus.html">About us</a></li>
-            </ul>
-
-            <button class="profile-btn">My Profile</button>
-
-        </nav>
-    </header>
+        <div class="nav-actions">
+            <a href="#" class="profile-btn">My Profile</a>
+        </div>
+    </nav>
 
     <main class="content-container">
 
-        
         <section class="hero-section">
-
             <div class="hero-text">
                 <h1>Fun facts</h1>
-
-                <p>
-                    Discover interesting facts about El Salvador and its culture.
-                </p>
-
-                <div class="search-container">
-                    <span class="search-icon">🔍</span>
-                    <input type="text" placeholder="Search...">
-                </div>
+                <p>Discover interesting facts about El Salvador and its culture.</p>
             </div>
-
             <div class="hero-image">
                 <img class="hero-img" src="img/fondosv.png" alt="El Salvador">
             </div>
-
         </section>
 
-<section class="symbols-section">
-
+        <section class="symbols-section">
             <div class="section-title-badge">
                 <h2>National symbols</h2>
             </div>
@@ -65,8 +47,9 @@
             </p>
 
             <div class="cards-grid">
-
-                <div class="card-container">
+                
+               
+                <div class="card-container" data-id="bandera">
                     <div class="card-inner">
                         <div class="card-front">
                             <img src="img/bandera.png" alt="Bandera">
@@ -86,7 +69,8 @@
                     </div>
                 </div>
 
-                <div class="card-container">
+                
+                <div class="card-container" data-id="ave-nacional">
                     <div class="card-inner">
                         <div class="card-front">
                             <img src="img/ave-nacional.png" alt="Ave Nacional">
@@ -106,7 +90,8 @@
                     </div>
                 </div>
 
-                <div class="card-container">
+                
+                <div class="card-container" data-id="flor-nacional">
                     <div class="card-inner">
                         <div class="card-front">
                             <img src="img/flor-nacional.png" alt="Flor Nacional">
@@ -124,44 +109,59 @@
                             </div>
                         </div>
                     </div>
-                <div class="card">
-                    <img src="img/avenacional.png" alt="Ave Nacional">
-
-                    <h3>Ave Nacional</h3>
-
-                    <p>
-                        The Torogoz became El Salvador's national bird in 1999.
-                        It symbolizes freedom and family.
-                    </p>
                 </div>
 
-               
-                <div class="card">
-                    <img src="img/flor.png" alt="Flor Nacional">
+                
+                <div class="card-container" data-id="national-shield">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="img/escudo.png" alt="National Shield" />
+                            <h3>National Shield</h3>
+                            <p class="tap-hint"><i class="ri-hand-pointer-line"></i> Hover to discover</p>
+                        </div>
+                        <div class="card-back">
+                            <h3>Did you know?</h3>
+                            <p>The National Shield features a vibrant landscape with five volcanoes, symbolizing the five original states of the Central American Isthmus. The rainbow above represents peace and hope.</p>
+                            <div class="card-back-action">
+                                <i class="ri-star-line favorite-toggle" title="Add to favorites"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                    <h3>Flor Nacional</h3>
-
-                    <p>
-                        The Izote flower symbolizes Salvadoran identity,
-                        resilience and hospitality.
-                    </p>
+                
+                <div class="card-container" data-id="maquilishuat">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="img/arbol-nacional.png" alt="Maquilishuat Tree" />
+                            <h3>National Tree</h3>
+                            <p class="tap-hint"><i class="ri-hand-pointer-line"></i> Hover to discover</p>
+                        </div>
+                        <div class="card-back">
+                            <h3>Did you know?</h3>
+                            <p>The Maquilishuat is El Salvador's national tree. In the dry season, it loses its leaves and bursts into beautiful, dense pink blossoms, painting the landscape with color.</p>
+                            <div class="card-back-action">
+                                <i class="ri-star-line favorite-toggle" title="Add to favorites"></i>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
             </div>
 
+            
         </section>
 
         <section class="more-content-section">
-
             <p class="more-content-text">
                 Want to explore more?
             </p>
-
             <a href="funfacts-extended.html" class="btn-explore-more">
                 Click here to discover extra content!
             </a>
-
         </section>
 
-   
-   
+    </main>
+
+</body>
+</html>
