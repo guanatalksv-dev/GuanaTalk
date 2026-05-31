@@ -15,13 +15,13 @@
         </div>
 
         <ul class="nav-links">
-            <li><a href="funfacts.html" class="active">Home</a></li>
-            <li><a href="#">Favorite</a></li>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="favoritos.html">Favorite</a></li>
             <li><a href="aboutus.html">About us</a></li>
         </ul>
 
         <div class="nav-actions">
-            <a href="#" class="profile-btn">My Profile</a>
+            <a href="" class="profile-btn">My Profile</a>
         </div>
     </nav>
 
@@ -48,7 +48,6 @@
 
             <div class="cards-grid">
                 
-               
                 <div class="card-container" data-id="bandera">
                     <div class="card-inner">
                         <div class="card-front">
@@ -69,7 +68,6 @@
                     </div>
                 </div>
 
-                
                 <div class="card-container" data-id="ave-nacional">
                     <div class="card-inner">
                         <div class="card-front">
@@ -90,7 +88,6 @@
                     </div>
                 </div>
 
-                
                 <div class="card-container" data-id="flor-nacional">
                     <div class="card-inner">
                         <div class="card-front">
@@ -111,11 +108,10 @@
                     </div>
                 </div>
 
-                
                 <div class="card-container" data-id="national-shield">
                     <div class="card-inner">
                         <div class="card-front">
-                            <img src="img/escudo.png" alt="National Shield" />
+                            <img src="img/escudo.png" alt="National Shield">
                             <h3>National Shield</h3>
                             <p class="tap-hint"><i class="ri-hand-pointer-line"></i> Hover to discover</p>
                         </div>
@@ -129,11 +125,10 @@
                     </div>
                 </div>
 
-                
                 <div class="card-container" data-id="maquilishuat">
                     <div class="card-inner">
                         <div class="card-front">
-                            <img src="img/arbol-nacional.png" alt="Maquilishuat Tree" />
+                            <img src="img/arbol-nacional.png" alt="Maquilishuat Tree">
                             <h3>National Tree</h3>
                             <p class="tap-hint"><i class="ri-hand-pointer-line"></i> Hover to discover</p>
                         </div>
@@ -148,8 +143,6 @@
                 </div>
 
             </div>
-
-            
         </section>
 
         <section class="more-content-section">
@@ -162,6 +155,72 @@
         </section>
 
     </main>
+
+    <script src="favoritos.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const estrellas = document.querySelectorAll(".favorite-toggle");
+
+            estrellas.forEach(estrella => {
+                const bloque = estrella.closest(".card-container, .extended-card");
+                if (!bloque) return;
+
+                const idElemento = bloque.getAttribute("data-id");
+                if (!idElemento) return;
+
+                let favoritosActuales = obtenerFavoritos();
+                if (favoritosActuales.some(item => (item.id ? item.id === idElemento : item === idElemento))) {
+                    estrella.classList.remove("ri-star-line");
+                    estrella.classList.add("ri-star-fill");
+                    estrella.style.color = "#f1c40f";
+                }
+
+                
+                estrella.addEventListener("click", (evento) => {
+                    evento.stopPropagation(); 
+
+                    let titulo = "";
+                    let imagen = "img/guanatalk.logo.png";
+                    let descripcion = "";
+                    let esBloqueExtendido = bloque.classList.contains("extended-card");
+
+                    if (esBloqueExtendido) {
+                        titulo = bloque.querySelector(".extended-badge").innerText;
+                        descripcion = bloque.querySelector(".lyric-text").innerHTML;
+                    } else {
+                        titulo = bloque.querySelector(".card-front h3") ? bloque.querySelector(".card-front h3").innerText : "Symbol";
+                        imagen = bloque.querySelector(".card-front img") ? bloque.querySelector(".card-front img").getAttribute("src") : "";
+                        descripcion = bloque.querySelector(".card-back p") ? bloque.querySelector(".card-back p").innerText : "";
+                    }
+
+                    let favoritos = obtenerFavoritos();
+                    const index = favoritos.findIndex(item => (item.id ? item.id === idElemento : item === idElemento));
+
+                    if (index !== -1) {
+                        favoritos.splice(index, 1);
+                        estrella.classList.remove("ri-star-fill");
+                        estrella.classList.add("ri-star-line");
+                        estrella.style.color = "";
+                    } else {
+                        const datosTarjeta = {
+                            id: idElemento,
+                            title: titulo,
+                            imgSrc: imagen,
+                            description: descripcion,
+                            isExtended: esBloqueExtendido
+                        };
+                        favoritos.push(datosTarjeta);
+                        estrella.classList.remove("ri-star-line");
+                        estrella.classList.add("ri-star-fill");
+                        estrella.style.color = "#f1c40f";
+                    }
+
+                    guardarFavoritos(favoritos);
+                });
+            });
+        });
+    </script>
 
 </body>
 </html>

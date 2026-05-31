@@ -366,7 +366,7 @@ html {
 .card-container {
     background-color: transparent;
     width: 100%;
-    height: 320px; 
+    height: 340px; 
     perspective: 1000px; 
 }
 
@@ -405,9 +405,10 @@ html {
 }
 
 .card-front img {
-    max-width: 100px;
-    height: auto;
+    max-width: 110px;
+    height: 110px;
     margin-bottom: 15px;
+    object-fit: contain;
 }
 
 .card-front h3 {
@@ -444,7 +445,7 @@ html {
 
 .card-back-action {
     margin-top: auto; 
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     color: #ffffff;
     cursor: pointer;
     transition: transform 0.2s;
@@ -453,6 +454,21 @@ html {
 .card-back-action:hover {
     transform: scale(1.2);
     color: #f1c40f;
+}
+
+#favoritos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 40px;
+    justify-content: center;
+}
+
+#favoritos-container .card-front img {
+    max-width: 100px;
+    height: auto;
+    margin-bottom: 15px;
+    object-fit: contain;
 }
 
 @media (max-width: 768px) {
@@ -470,3 +486,4 @@ html {
         justify-content: center;
     }
 }
+

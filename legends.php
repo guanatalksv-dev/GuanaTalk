@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legends</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="legends.css">
+    
+</head>
+<body>
+     <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                <a href="index.html">
+                 <img src="img/guanatalk.logo.png" alt="Logo">
+                </a>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="favoritos.html">Favorite</a></li>
+                <li><a href="aboutus.html">About us</a></li>
+            </ul>
+
+            <button class="profile-btn">My Profile</button>
+
+        </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Legends</h1>
+        <p>
+          Discover tradittional tales filled with mistery, culture and imagination
+        </p><br>
+         <div class="search-box">
+                <input type="text" placeholder="🔍 Search...">
+            </div>
+        </div>
+
+        <div class="hero-image">
+            <img src="img/legend.girl.png" alt="Legend Girl">
+      </div>
+    </section>
+
+    <div class="cards-container">
+
+        <div class="card">
+            <img src="img/LaSiguanaba2.png" alt="La Siguanaba">
+
+            <h2>La Siguanaba</h2>
+
+            <p>
+                A ghostly woman who appears near rivers at night
+                to lure men with her beauty, only to reveal a terrifying
+                face when they approach.
+            </p>
+
+            <a href="LaSiguanaba.html"><button>Read more</button></a>
+        </div>
+
+        <div class="card">
+            <img src="img/El Cipitio.png" alt="La Siguanaba">
+
+            <h2>El Cipitio</h2>
+
+            <p>
+               A mischievous boy with a straw hat who loves eating corn and playing tricks on people;
+                he symbolizes innocence and folklore humor.
+            </p>
+
+            <a href="cipitio.html"><button>Read more</button></a>
+        </div>
+
+        <div class="card">
+            <img src="img/La Carreta Chillona.png" alt="La Carreta Chillona">
+
+            <h2>La Carreta Chillona</h2>
+
+            <p>
+                A haunted cart that roams the streets at night,
+                screeching loudly as a warning of death or misfortune
+                approaching.
+            </p>
+
+            <a href="LaCarretaChillona.html"><button>Read more</button></a>
+        </div>
+
+         
+  <?php
+include("conexionleyendas.php");
+
+$sql = "SELECT * FROM leyendas";
+$resultado = mysqli_query($conn, $sql);
+?>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Leyendas</title>
+    <link rel="stylesheet" href="legends.css">
+</head>
+<body>
+
+
+
+<div class="contenedor">
+
+<?php while($fila = mysqli_fetch_assoc($resultado)){ ?>
+
+    <div class="card">
+
+        <img src="img/<?php echo $fila['Imagen']; ?>">
+
+        <h2>
+            <?php echo $fila['Titulo']; ?>
+        </h2>
+
+        <p>
+            <?php echo $fila['Descripcion']; ?>
+        </p>
+
+         <a href="legends.php?id=<?php echo $fila['id']; ?>">
+        <button>Read more</button>
+    </a>
+
+
+    </div>
+
+<?php } ?>
+
+</div>
+
+</body>
+</html>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+    </div>
+  
+  
+ 
