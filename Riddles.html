@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GuanaTalk - Riddles & Curiosities</title>
+    <link rel="stylesheet" href="riddles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+
+<!-- Contenedor dinámico de pétalos de Maquilishuat -->
+<div class="maquilishuat-leaves-container" id="leaves-container"></div>
+
+<header class="navbar">
+    <div class="logo">
+        <a href="index.html" style="text-decoration: none; color: inherit;">
+            <img src="img/guanatalk.logo.png" alt="GuanaTalk Logo" style="height: 70px;">
+        </a>
+    </div>
+    <div class="back-area">
+        <a href="minigames.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Back to Games</a>
+    </div>
+</header>
+
+<main class="game-wrapper">
+    <div class="game-info">
+        <h1>🌸 Riddles & Salvadorean Curiosities</h1>
+        <p>Test your knowledge! Read the riddle, check the hints if needed, and select the correct option.</p>
+    </div>
+
+    <div class="master-card-container">
+        <!-- Sección de Preguntas (Izquierda) -->
+        <div class="question-section">
+            <div class="riddle-badge">
+                <!-- Icono interactivo con popup de instrucciones integrado -->
+                <div class="question-mark-icon" onclick="toggleInstrucciones(event)">
+                    ❓
+                    <div class="game-instructions-popup" id="instructions-popup">
+                        <strong>How to play:</strong><br>
+                        1. Read the riddle carefully.<br>
+                        2. If you are stuck, click <strong>"Reveal Hint"</strong> on the right side.<br>
+                        3. Pick the best option. Green means correct, Red means incorrect!
+                    </div>
+                </div>
+                <span id="riddle-number">Riddle 1 of 5</span>
+            </div>
+            
+            <div class="riddle-content-box">
+                <!-- Invertidos dinámicamente desde JS: Inglés arriba, Español abajo -->
+                <p class="text-es" id="riddle-text-es">Loading riddle...</p>
+                <p class="text-en" id="riddle-text-en">Cargando adivinanza...</p>
+            </div>
+
+            <div class="options-container" id="options-container">
+                <!-- Los botones se inyectan desde JavaScript -->
+            </div>
+
+            <button id="next-btn" class="next-btn hidden" onclick="siguienteRiddle()">Next Riddle <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+
+        <!-- Sección de Pistas (Derecha) -->
+        <div class="hints-section">
+            <div class="hints-header">
+                <i class="fa-solid fa-lightbulb"></i>
+                <h3>HINTS</h3>
+            </div>
+            <div class="hints-body">
+                <p id="hint-text">Click the button below if you need a clue to solve this riddle!</p>
+                <button id="reveal-hint-btn" class="reveal-hint-btn" onclick="revelarPista()">Reveal Hint</button>
+            </div>
+        </div>
+    </div>
+</main>
+
+<div id="result-modal" class="modal-overlay hidden">
+    <div class="result-card">
+        <span class="modal-flower top-left">🌸</span>
+        <span class="modal-flower top-right">🌸</span>
+        <span class="modal-flower bottom-left">🌸</span>
+        <span class="modal-flower bottom-right">🌸</span>
+
+        <div class="result-content">
+            <div class="result-icon" id="result-emoji">🎉</div>
+            <h2 id="result-title">Amazing Job!</h2>
+            <p id="result-text">You have completed the challenge.</p>
+            
+            <div class="score-box">
+                <span id="score-count">0</span> / <span id="total-count">5</span>
+            </div>
+            
+            <button class="restart-btn" onclick="reiniciarJuego()">Play Again <i class="fa-solid fa-rotate-right"></i></button>
+        </div>
+    </div>
+</div>
+
+<script src="riddles.js"></script>
+</body>
+</html>
