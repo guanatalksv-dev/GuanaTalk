@@ -151,7 +151,6 @@ function moveSelection(x, y) {
     }
 }
 
-// CALIBRACIÓN: Línea verde neón de alta visibilidad para que resalte sobre el fondo oscuro
 function drawSelectionLine() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     if (!startCell || !currentCell) return;
@@ -168,7 +167,7 @@ function drawSelectionLine() {
     ctx.moveTo(x1, y1);
     ctx.lineTo(x2, y2);
     ctx.lineWidth = celdaAncho * 0.65;
-    ctx.strokeStyle = "rgba(0, 255, 148, 0.45)"; // Magnífico verde neón translúcido
+    ctx.strokeStyle = "rgba(0, 255, 148, 0.45)"; 
     ctx.lineCap = "round";
     ctx.stroke();
 }

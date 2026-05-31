@@ -331,29 +331,24 @@ h1 {
     transform: scale(0.95);
 }
 
-/* --- CONFIGURACIÓN DEL BARRIDO HALFTONE COMO TU IMAGEN --- */
 .halftone-dissolving {
     transition: opacity 1.2s ease;
-    background-color: #FBF2EB !important; /* El color de tu Home que va apareciendo debajo */
+    background-color: #FBF2EB !important; 
 }
 
-/* Aplicamos la máscara de puntos degradados a todo el contenedor de la pantalla de bienvenida */
 .halftone-dissolving #intro-wrapper {
     pointer-events: none;
     animation: halftoneSweep 1.2s cubic-bezier(0.42, 0, 0.58, 1) forwards;
-    
-    /* Creamos el tramado de puntos negros de imprenta */
+
     -webkit-mask-image: radial-gradient(circle, rgba(0,0,0,1) 15%, rgba(0,0,0,0) 70%);
     mask-image: radial-gradient(circle, rgba(0,0,0,1) 15%, rgba(0,0,0,0) 70%);
     -webkit-mask-size: 18px 18px;
     mask-size: 18px 18px;
-    
-    /* Agregamos el degradado lineal dinámico que controla el tamaño como en tu muestra */
+
     -webkit-mask-composite: source-in;
     mask-composite: intersect;
 }
 
-/* La animación que desplaza el degradado de puntos grandes a chicos hacia afuera */
 @keyframes halftoneSweep {
     0% {
         -webkit-mask-position: 0 0;
@@ -361,12 +356,10 @@ h1 {
         opacity: 1;
     }
     50% {
-        /* Los puntos intermedios empiezan a encogerse en los extremos */
         -webkit-mask-size: 12px 12px;
         mask-size: 12px 12px;
     }
     100% {
-        /* Se encogen hasta desaparecer (el lado blanco de tu imagen cubre todo) */
         -webkit-mask-size: 0px 0px;
         mask-size: 0px 0px;
         opacity: 0;

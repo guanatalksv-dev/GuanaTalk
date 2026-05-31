@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GuanaTalk - Memory Match Game</title>
+    <link rel="stylesheet" href="memory.css">
+</head>
+<body class="memory-body-theme">
+
+    <nav class="memory-navbar">
+        <div class="navbar-logo">
+            <img src="img/guanatalk.logo.png" alt="GuanaTalk Logo">
+        </div>
+        <a href="minigames.html" class="navbar-back-btn">← Back to Games</a>
+    </nav>
+
+    <div class="game-info-bar">
+        <div class="round-indicator" id="round-text">ROUND 1 / 5</div>
+        <div class="question-btn" id="openModalBtn">?</div>
+    </div>
+
+    <div class="memory-game-layout">
+        
+        <div class="board-wrapper">
+            <div id="tablero-memory" class="tablero-artesanal-memory">
+                </div>
+        </div>
+
+        <div class="side-panel">
+            <div class="stats-card-artesanal">
+                <h3>Game Stats</h3>
+                <div class="stat-row">
+                    <span>Matches Found:</span>
+                    <span id="matches-count">0 / 4</span>
+                </div>
+                <div class="stat-row">
+                    <span>Moves Made:</span>
+                    <span id="moves-count">0</span>
+                </div>
+                <button class="action-game-btn" id="restart-btn">Restart Game</button>
+            </div>
+
+            <div class="words-dictionary-card">
+                <h4>Round Slang</h4>
+                <ul id="slang-list-container">
+                    </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="instructionModal" class="modal-overlay">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h2>How to Play?</h2>
+                <div class="close-btn" id="closeModalBtn">&times;</div>
+            </div>
+            <div class="modal-body">
+                <p>Find the 4 pairs of Salvadoran slang and meanings to automatically advance to the next round!</p>
+                <p>Complete all 5 rounds with the lowest amount of moves to become a certified Salvadoran speaker.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="memory.js"></script>
+</body>
+</html>

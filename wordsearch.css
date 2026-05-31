@@ -6,14 +6,12 @@
 }
 
 body {
-    /* ADIÓS PEQUITAS: Degradado hermoso inspirado en la selva y montañas de El Salvador */
     background: linear-gradient(135deg, #1E4620 0%, #0F2A12 50%, #051406 100%);
     min-height: 100vh;
     overflow-x: hidden;
     position: relative;
 }
 
-/* --- ANIMACIÓN DE HOJAS Y FLORES FLOTANTES --- */
 .nature-leaves-container {
     position: fixed;
     top: 0; left: 0; width: 100%; height: 100%;
@@ -33,7 +31,6 @@ body {
     100% { transform: translateY(105vh) rotate(360deg) translateX(60px); opacity: 0; }
 }
 
-/* --- NAVBAR --- */
 .navbar {
     background-color: #1f4e8c;
     display: flex;
@@ -59,7 +56,6 @@ body {
 }
 .back-btn:hover { background: #44bd32; transform: scale(1.05); }
 
-/* --- DISEÑO DE CONTENEDORES --- */
 .game-wrapper {
     max-width: 850px;
     margin: 0 auto;
@@ -89,7 +85,6 @@ body {
     box-shadow: 0 4px 10px rgba(76, 209, 55, 0.3);
 }
 
-/* --- EL TABLERO MAESTRO VIBRANTE (VERDE ECO) --- */
 .master-game-board {
     display: flex;
     flex-direction: column;
@@ -161,12 +156,11 @@ body {
     border: 1px solid rgba(255,255,255,0.2);
 }
 
-/* --- CONTENEDOR DE LA MATRIZ --- */
 .grid-interaction-container {
     position: relative;
     margin-bottom: 25px;
     padding: 12px;
-    background: #0d3819; /* Fondo oscuro interno para que las letras resalten */
+    background: #0d3819; 
     border-radius: 28px;
     box-shadow: inset 0 8px 15px rgba(0,0,0,0.3);
 }
@@ -180,7 +174,6 @@ body {
     cursor: pointer;
 }
 
-/* LA MATRIZ DE LETRAS TOTALMENTE REDISEÑADA */
 .wordsearch-grid {
     display: grid;
     grid-template-columns: repeat(8, 52px);
@@ -193,20 +186,18 @@ body {
     background: linear-gradient(135deg, #ffffff 0%, #f1f2f6 100%);
     border-radius: 14px;
     display: flex; align-items: center; justify-content: center;
-    font-size: 1.5rem; font-weight: 800; color: #1e4620; /* Color verde selva oscuro para la letra */
+    font-size: 1.5rem; font-weight: 800; color: #1e4620; 
     user-select: none;
     box-shadow: 0 4px 6px rgba(0,0,0,0.15);
     transition: transform 0.1s, background 0.2s;
 }
 
-/* Cuando ya se encontró la palabra, se tiñe de un verde menta brillante */
 .grid-cell.found {
     background: linear-gradient(135deg, #2ecc71, #218c4e) !important;
     color: white !important;
     box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
-/* --- PANEL DE LISTA DE PALABRAS --- */
 .word-list-panel {
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(5px);
@@ -239,7 +230,6 @@ body {
     opacity: 0.85;
 }
 
-/* --- MODAL ESTILO GUANATALK (ROSADO HERMOSO) --- */
 .modal-overlay {
     position: fixed;
     top: 0; left: 0; width: 100%; height: 100%;
