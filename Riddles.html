@@ -9,7 +9,6 @@
 </head>
 <body>
 
-<!-- Contenedor dinámico de pétalos de Maquilishuat -->
 <div class="maquilishuat-leaves-container" id="leaves-container"></div>
 
 <header class="navbar">
@@ -47,19 +46,16 @@
             </div>
             
             <div class="riddle-content-box">
-                <!-- Invertidos dinámicamente desde JS: Inglés arriba, Español abajo -->
                 <p class="text-es" id="riddle-text-es">Loading riddle...</p>
                 <p class="text-en" id="riddle-text-en">Cargando adivinanza...</p>
             </div>
 
             <div class="options-container" id="options-container">
-                <!-- Los botones se inyectan desde JavaScript -->
             </div>
 
             <button id="next-btn" class="next-btn hidden" onclick="siguienteRiddle()">Next Riddle <i class="fa-solid fa-arrow-right"></i></button>
         </div>
 
-        <!-- Sección de Pistas (Derecha) -->
         <div class="hints-section">
             <div class="hints-header">
                 <i class="fa-solid fa-lightbulb"></i>
