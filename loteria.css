@@ -7,11 +7,10 @@ body {
     background: linear-gradient(135deg, #0d47a1 0%, #0091ea 50%, #e0f7fa 100%);
     font-family: 'Outfit', sans-serif;
     min-height: 100vh;
-    padding-top: 100px; /* Espacio para que el Navbar fijo no tape el juego */
+    padding-top: 100px; 
     padding-bottom: 40px;
 }
 
-/* --- NAVBAR ESTILO GUANATALK --- */
 .guanatalk-navbar {
     position: fixed;
     top: 0;
@@ -80,7 +79,6 @@ body {
     font-size: 0.9rem;
 }
 
-/* Signo de interrogación solicitado */
 .help-circle-btn {
     background: #00be9b;
     border: none;
@@ -101,7 +99,6 @@ body {
     transform: scale(1.1) rotate(15deg);
 }
 
-/* --- CONTENEDOR Y VISOR --- */
 .loteria-container {
     max-width: 1100px;
     width: 92%;
@@ -138,18 +135,16 @@ body {
     font-weight: 500;
 }
 
-/* --- TABLERO EN CUADRÍCULA --- */
 .tablero-artesanal {
     background: rgba(255, 255, 255, 0.9);
     border-radius: 24px;
     padding: 25px;
     box-shadow: 0 20px 45px rgba(13, 71, 161, 0.2);
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 columnas ideal para rondas variadas */
+    grid-template-columns: repeat(4, 1fr); 
     gap: 15px;
 }
 
-/* --- CARTAS INDIVIDUALES --- */
 .card-artesanal {
     background: #ffffff;
     border: 2px solid #e2e8f0;
@@ -211,7 +206,6 @@ body {
     border-radius: 6px;
 }
 
-/* --- MARCADOR TURQUESA NEÓN --- */
 .card-artesanal.marcada::before {
     content: '';
     position: absolute;
@@ -250,7 +244,6 @@ body {
     75% { transform: translateX(6px); border-color: #ff3d00; }
 }
 
-/* --- POP-UP MODAL INDICACIONES --- */
 .modal-overlay {
     position: fixed;
     top: 0; left: 0; width: 100%; height: 100%;
@@ -309,7 +302,6 @@ body {
     color: #444;
 }
 
-/* Responsive */
 @media (max-width: 800px) {
     .tablero-artesanal { grid-template-columns: repeat(2, 1fr); }
     .nav-menu { display: none; } /* Ocultar links en mobile por espacio */

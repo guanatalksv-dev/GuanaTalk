@@ -1,0 +1,432 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: #FBF2EB;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* --- ANIMACIÓN DE PÉTALOS DE MAQUILISHUAT --- */
+.maquilishuat-leaves-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.petal {
+    position: absolute;
+    background: linear-gradient(135deg, #ff9ff3, #feca57);
+    border-radius: 150% 0 150% 150%;
+    opacity: 0.7;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-20px) rotate(0deg) translateX(0px);
+        opacity: 0;
+    }
+    10% { opacity: 0.8; }
+    90% { opacity: 0.8; }
+    100% {
+        transform: translateY(105vh) rotate(360deg) translateX(100px);
+        opacity: 0;
+    }
+}
+
+/* --- NAVBAR & GENERALS --- */
+.navbar {
+    background-color: #1f4e8c;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 60px;
+    position: relative;
+    z-index: 10;
+}
+
+.back-btn {
+    background: #dfb969;
+    color: #2c2512;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background 0.2s;
+}
+.back-btn:hover { background: #cfab59; }
+
+.game-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    position: relative;
+    z-index: 5;
+}
+
+.game-info {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.game-info h1 {
+    font-size: 2.3rem;
+    color: #1f4e8c;
+    margin-bottom: 8px;
+}
+
+.game-info p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* --- CONTENEDOR MASTER CARD --- */
+.master-card-container {
+    display: flex;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(8px);
+    border-radius: 32px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+    border: 2px solid rgba(255, 159, 243, 0.2);
+    overflow: hidden;
+    min-height: 480px;
+}
+
+.question-section {
+    flex: 2;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-right: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.riddle-badge {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.question-mark-icon {
+    font-size: 1.8rem;
+    background: #ff9ff3;
+    color: white;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(255, 159, 243, 0.4);
+    position: relative;
+    cursor: pointer;
+}
+
+.riddle-badge span {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #1f4e8c;
+}
+
+.game-instructions-popup {
+    position: absolute;
+    top: 50%;                 
+    left: 55px;               
+    transform: translateY(-50%) scale(0.9);
+    width: 280px;
+    background: white;
+    color: #333;
+    padding: 15px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(255, 107, 129, 0.25);
+    border: 2px solid #ff9ff3;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    font-weight: normal;
+    text-align: left;
+    pointer-events: none;
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 999;             /* Nos aseguramos de que flote por encima de todo */
+}
+
+/* Flechita decorativa apuntando hacia la izquierda (hacia el signo de interrogación) */
+.game-instructions-popup::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 100%;              /* Coloca la flecha al lado izquierdo del cuadro */
+    transform: translateY(-50%);
+    border-width: 8px;
+    border-style: solid;
+    border-color: transparent white transparent transparent; /* Flecha hacia la izquierda */
+}
+
+/* Animación de entrada */
+.game-instructions-popup.show {
+    opacity: 1;
+    transform: translateY(-50%) scale(1);
+    pointer-events: auto;
+}
+
+/* --- CONTENIDOS DE TEXTO --- */
+.riddle-content-box {
+    margin-bottom: 30px;
+}
+
+.riddle-content-box .text-es {
+    font-size: 1.35rem;
+    color: #2c3e50;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.riddle-content-box .text-en {
+    font-size: 1.15rem;
+    color: #7f8c8d;
+    font-style: italic;
+}
+
+/* --- BOTONES DE OPCIÓN MÚLTIPLE --- */
+.options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+}
+
+.option-btn {
+    width: 100%;
+    padding: 16px 25px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #444;
+    background: white;
+    border: 2px solid #ffccd5;
+    border-radius: 16px;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+}
+
+.option-btn:hover:not(:disabled) {
+    background: linear-gradient(135deg, #fff0f3, #ffccd5);
+    border-color: #ff85a2;
+    transform: translateY(-2px);
+}
+
+.option-btn.correct {
+    background: linear-gradient(135deg, #d4edda, #c3e6cb) !important;
+    border-color: #28a745 !important;
+    color: #155724 !important;
+}
+
+.option-btn.incorrect {
+    background: linear-gradient(135deg, #f8d7da, #f5c6cb) !important;
+    border-color: #dc3545 !important;
+    color: #721c24 !important;
+}
+
+/* --- SECCIÓN PISTAS --- */
+.hints-section {
+    flex: 1;
+    background: linear-gradient(180deg, #fff0f5 0%, #ffe4e1 100%);
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hints-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #ff6b81;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.hints-body {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+#hint-text {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+    background: white;
+    padding: 20px;
+    border-radius: 18px;
+    border: 1px dashed #ffb6c1;
+    min-height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.reveal-hint-btn {
+    background: #ff6b81;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 6px 15px rgba(255, 107, 129, 0.3);
+    transition: background 0.2s, transform 0.2s;
+}
+.reveal-hint-btn:hover { background: #fb526a; transform: scale(1.03); }
+
+.next-btn {
+    margin-top: 20px;
+    background-color: #1f4e8c;
+    color: white;
+    border: none;
+    padding: 14px 30px;
+    border-radius: 14px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: background 0.2s;
+}
+.next-btn:hover { background-color: #163966; }
+.hidden { display: none !important; }
+
+/* --- CUADRO DE RESULTADOS FINAL (MODAL) --- */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(31, 78, 140, 0.4); /* Fondo oscurecido con toque azul navbar */
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+}
+
+/* Cuando se le quita la clase hidden y se muestra */
+.modal-overlay:not(.hidden) {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.result-card {
+    background: #ffffff;
+    width: 420px;
+    padding: 40px 30px;
+    border-radius: 28px;
+    border: 4px solid #ff9ff3; /* Borde rosado precioso */
+    box-shadow: 0 20px 50px rgba(255, 159, 243, 0.4);
+    position: relative;
+    text-align: center;
+    transform: scale(0.8);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.modal-overlay:not(.hidden) .result-card {
+    transform: scale(1);
+}
+
+/* Posicionamiento de las flores en las esquinas */
+.modal-flower {
+    position: absolute;
+    font-size: 1.8rem;
+    filter: drop-shadow(0 3px 5px rgba(0,0,0,0.1));
+    animation: pulseFlower 2s infinite ease-in-out;
+}
+.modal-flower.top-left { top: -15px; left: -15px; }
+.modal-flower.top-right { top: -15px; right: -15px; }
+.modal-flower.bottom-left { bottom: -15px; left: -15px; }
+.modal-flower.bottom-right { bottom: -15px; right: -15px; }
+
+@keyframes pulseFlower {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.15) rotate(10deg); }
+}
+
+/* Detalles del contenido interno */
+.result-icon {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+}
+
+.result-content h2 {
+    color: #1f4e8c;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.result-content p {
+    color: #666;
+    font-size: 1.1rem;
+    line-height: 1.4;
+    margin-bottom: 25px;
+}
+
+/* Caja del puntaje final */
+.score-box {
+    display: inline-block;
+    background: linear-gradient(135deg, #fff0f3, #ffccd5);
+    color: #ff4d6d;
+    font-size: 2.2rem;
+    font-weight: 800;
+    padding: 10px 35px;
+    border-radius: 20px;
+    border: 2px dashed #ff85a2;
+    margin-bottom: 30px;
+}
+#score-count { color: #ff1443; }
+#total-count { color: #ff85a2; }
+
+/* Botón de reinicio */
+.restart-btn {
+    background: linear-gradient(135deg, #ff6b81, #ff4757);
+    color: white;
+    border: none;
+    padding: 14px 35px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(255, 107, 129, 0.4);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.2s;
+}
+.restart-btn:hover {
+    background: linear-gradient(135deg, #fb526a, #ff2e44);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 22px rgba(255, 107, 129, 0.5);
+}

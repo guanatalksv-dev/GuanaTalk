@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GuanaTalk - Nature Word Search Challenge</title>
+    <link rel="stylesheet" href="wordsearch.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+
+<div class="nature-leaves-container" id="leaves-container"></div>
+
+<header class="navbar">
+    <div class="logo">
+        <a href="index.html" style="text-decoration: none; color: inherit;">
+            <img src="img/guanatalk.logo.png" alt="GuanaTalk Logo" style="height: 70px;">
+        </a>
+    </div>
+    <div class="back-area">
+        <a href="minigames.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Back to Games</a>
+    </div>
+</header>
+
+<main class="game-wrapper">
+    <div class="game-title-container">
+        <h1>🌿 Nature Quest: El Salvador Edition</h1>
+        <div class="round-badge" id="round-title">Round 1: Salvadoran Slang</div>
+    </div>
+
+    <div class="master-game-board">
+        
+        <div class="game-top-bar">
+            <div class="question-mark-icon" onclick="toggleInstrucciones(event)">
+                ❓
+                <div class="game-instructions-popup" id="instructions-popup">
+                    <strong>How to play:</strong><br>
+                    1. Check the word list at the bottom.<br>
+                    2. <strong>Click and drag</strong> across the grid to connect letters!<br>
+                    3. Find all 5 words to clear the level.
+                </div>
+            </div>
+            <div class="score-pill" id="words-found-count">Found: 0 / 5</div>
+        </div>
+
+        <div class="grid-interaction-container" id="grid-interaction-container">
+            <canvas id="selection-canvas"></canvas>
+            <div class="wordsearch-grid" id="wordsearch-grid"></div>
+        </div>
+
+        <div class="word-list-panel">
+            <div id="words-container" class="words-container">
+                </div>
+        </div>
+    </div>
+</main>
+
+<div id="result-modal" class="modal-overlay hidden">
+    <div class="result-card">
+        <span class="modal-flower top-left">🌸</span>
+        <span class="modal-flower top-right">🌸</span>
+        <span class="modal-flower bottom-left">🌸</span>
+        <span class="modal-flower bottom-right">🌸</span>
+
+        <div class="result-content">
+            <div class="result-icon" id="modal-emoji">🏆</div>
+            <h2 id="modal-title">¡Qué Chivo!</h2>
+            <p id="modal-text">You completed the round successfully.</p>
+            <div class="score-box" id="modal-badge">Round Cleared</div>
+            <br>
+            <button class="restart-btn" id="modal-btn" onclick="avanzarRonda()">Next Round <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+    </div>
+</div>
+
+<script src="wordsearch.js"></script>
+</body>
+</html>

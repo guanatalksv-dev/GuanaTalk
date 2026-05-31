@@ -22,7 +22,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     for (let i = 0; i < cantidadIconos; i++) {
         const icono = document.createElement('i');
-
         const claseIconoAleatorio = iconosDisponibles[Math.floor(Math.random() * iconosDisponibles.length)];
 
         icono.classList.add('fa-solid', claseIconoAleatorio, 'doodle-icon');
