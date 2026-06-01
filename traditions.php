@@ -1,8 +1,6 @@
 <?php 
-// 1. Incluimos tu archivo de conexión real
 include("php/conexion.php"); 
 
-// 2. Traemos todas las tradiciones guardadas en la base de datos
 $query = "SELECT * FROM tradiciones";
 $resultado = $conn->query($query);
 ?>
@@ -13,7 +11,8 @@ $resultado = $conn->query($query);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Traditions</title>
     <link rel="stylesheet" href="styles/traditions.css">
-    <style>{
+    <style>
+        .categories-grid a {
             text-decoration: none;
             color: inherit;
             display: block;
@@ -53,13 +52,13 @@ $resultado = $conn->query($query);
         <section class="categories-grid">
             
             <?php
-            {
-                if  ($resultado && $resultado->num_rows > 0) {
-                    while ($fila = $resultado->fetch_assoc()) {
+            if ($resultado && $resultado->num_rows > 0) {
+                while ($fila = $resultado->fetch_assoc()) {
                     
+                    if ($fila['titulo'] == 'Fiestas Patronales') {
                         $enlace = "fiestas-patronales.php";
                     } else {
-                        $enlace = "#";
+                        $enlace = "#"; 
                     }
                     ?>
                     
@@ -71,8 +70,8 @@ $resultado = $conn->query($query);
                     </a>
 
                     <?php
-                } } else {
-                
+                }
+            } else {
                 echo "<p style='color: #666; text-align: center; width: 100%;'>No se encontraron tradiciones disponibles en este momento.</p>";
             }
             ?>
