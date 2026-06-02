@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", () => {
     const contenedorParticulas = document.getElementById("particles-layer");
     if (!contenedorParticulas) return;
@@ -37,15 +36,39 @@ function iniciarBienvenida() {
         quizScreen.style.display = "none"; 
         welcomeScreen.classList.remove("hidden");
  
+        ejecutarMaquinaDeEscribir();
+
+        // 1. CREAR EL TELÓN HALFTONE EXACTO DE TU IMAGEN
+        let halftoneOverlay = document.getElementById("halftone-overlay");
+        if (!halftoneOverlay) {
+            halftoneOverlay = document.createElement("div");
+            halftoneOverlay.id = "halftone-overlay";
+            // Inyectamos un patrón SVG real para que los círculos tengan el degradado de tamaño idéntico a tu ejemplo
+            halftoneOverlay.innerHTML = `
+                <svg width="0" height="0">
+                    <defs>
+                        <linearGradient id="halftone-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" stop-color="white" />
+                            <stop offset="100%" stop-color="black" />
+                        </linearGradient>
+                        <mask id="halftone-mask">
+                            <rect width="100%" height="100%" fill="url(#halftone-grad)" />
+                        </mask>
+                    </defs>
+                </svg>
+            `;
+            document.body.appendChild(halftoneOverlay);
+        }
+
+        // 2. PASADOS 3.0 SEGUNDOS: Iniciamos el barrido de disolución por puntos
         setTimeout(() => {
+            document.body.classList.add("halftone-dissolving");
+        }, 3000);
 
-            wrapper.classList.add("fade-out-magic");
-
-            setTimeout(() => {
-                window.location.href = "index.html";
-            }, 1000);
-
-        }, 4000);
+        // 3. PASADOS 4.2 SEGUNDOS: Redirección limpia al Home
+        setTimeout(() => {
+            window.location.href = "index.html";
+        }, 4200);
 
     }, 500); 
 }
@@ -53,6 +76,8 @@ function iniciarBienvenida() {
 function ejecutarMaquinaDeEscribir() {
     const textoCompleto = "Welcome to GuanaTalk";
     const contenedorTexto = document.getElementById("typewriter-text");
+    if (!contenedorTexto) return;
+    
     let indice = 0;
     
     function escribir() {
@@ -67,9 +92,5 @@ function ejecutarMaquinaDeEscribir() {
             setTimeout(escribir, 70); 
         }
     }
-
     escribir();
-    setTimeout(() => {
-        window.location.href = "index.html";
-    }, 4000);
 }

@@ -1,74 +1,117 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GuanaTalk - Hangman</title>
+    <title>GuanaTalk - Hangman Beach Edition</title>
     <link rel="stylesheet" href="Hangman.css">
 </head>
-<body>
+<body class="hangman-beach-theme">
 
-   <header class="navbar">
-    <div class="logo">
-        <img src="img/logo.png" alt="GuanaTalk Logo">
-        <span>GuanaTalk</span>
-    </div>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="#">Favorite</a>
-        <a href="#">About us</a>
+    <div class="sea-element palm-tree-1">🌴</div>
+    <div class="sea-element palm-tree-2">🌴</div>
+    <div class="sea-element starfish-1">⭐</div>
+    <div class="sea-element starfish-2">✨</div>
+    <div class="sea-element jellyfish-1">🪼</div>
+    <div class="sea-element jellyfish-2">🪼</div>
+    <div class="sea-element fish-1">🐟</div>
+    <div class="sea-element fish-2">🐠</div>
+    <div class="ocean-wave wave-1"></div>
+    <div class="ocean-wave wave-2"></div>
+    <div class="beach-sand-floor"></div>
+
+    <nav class="hangman-navbar">
+        <div class="navbar-logo">
+            <img src="img/guanatalk.logo.png" alt="GuanaTalk Logo">
+        </div>
+        <a href="minigames.html" class="navbar-back-btn">Back to Games</a>
     </nav>
-    <div class="profile-dropdown">
-        <button class="profile-btn">
-            My Profile <i class="ri-arrow-down-s-line"></i>
-        </button>
-    </header>
 
-    <main class="game-container">
-    <h2 class="title">Hangman-Objects</h2>
-    
-    <div class="content-wrapper">
-        <div class="panel game-board">
-            <div id="hangman-drawing">
-                <div id="h-stand"></div>
-                <div id="h-rope"></div>
-                <div id="h-head"></div>
-                <div id="h-body"></div>
-                <div id="h-arm-l"></div>
-                <div id="h-arm-r"></div>
-                <div id="h-leg-l"></div>
-                <div id="h-leg-r"></div>
+    <div class="hangman-container">
+        
+        <header class="hangman-header">
+            <h1>HANGMAN - BEACH ED.</h1>
+            <div class="header-right">
+                <div class="streak-badge">🏄‍♂️ Streak: <span id="streak-count">0</span></div>
+                <div class="help-btn">?</div>
             </div>
+        </header>
 
-            <div id="word-display" class="word-display">
-                <span>_</span><span>_</span><span>_</span><span class="revealed">H</span><span>_</span><span>_</span><span>_</span><span>_</span>
-            </div>
-        </div>
-
-        <div class="panel stats-area">
-            <h3>Used Letters</h3>
-            <div id="used-letters" class="used-letters">
-                <span>A</span><span>X</span><span>X</span><span>X</span><span>O</span><span>M</span>
-            </div>
-            
-            <h3>Attempts left</h3>
-            <div class="attempts-container">
-                <div class="progress-bar">
-                    <div id="progress" class="progress"></div>
+        <div class="game-panels">
+            <div class="panel card-canvas">
+                <div class="canvas-container">
+                    <canvas id="hangmanCanvas" width="250" height="250"></canvas>
                 </div>
-                <span id="attempts">5</span>
+                <div class="word-display" id="word-spaces">
+                </div>
+            </div>
+
+            <div class="panel card-info">
+                <div class="info-section used-letters-box">
+                    <h3>USED LETTERS</h3>
+                    <div class="letters-container" id="used-letters">
+                        None yet
+                    </div>
+                </div>
+
+                <div class="info-section hint-box">
+                    <span class="hint-tag">SURF HINT</span>
+                    <p id="hint-text">Loading hint...</p>
+                </div>
+
+                <div class="info-section attempts-box">
+                    <h3>LIFEBUOYS LEFT</h3>
+                    <div class="attempts-wrapper">
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" id="attempts-bar" style="width: 100%;"></div>
+                        </div>
+                        <span class="attempts-number" id="attempts-count">6</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="keyboard-container" id="keyboard">
+            <div class="keyboard-row">
+                <button class="key-btn">A</button><button class="key-btn">B</button><button class="key-btn">C</button><button class="key-btn">D</button><button class="key-btn">E</button><button class="key-btn">F</button><button class="key-btn">G</button><button class="key-btn">H</button><button class="key-btn">I</button><button class="key-btn">J</button><button class="key-btn">K</button><button class="key-btn">L</button><button class="key-btn">M</button>
+            </div>
+            <div class="keyboard-row">
+                <button class="key-btn">N</button><button class="key-btn">Ñ</button><button class="key-btn">O</button><button class="key-btn">P</button><button class="key-btn">Q</button><button class="key-btn">R</button><button class="key-btn">S</button><button class="key-btn">T</button><button class="key-btn">U</button><button class="key-btn">V</button><button class="key-btn">W</button><button class="key-btn">X</button><button class="key-btn">Y</button>
+            </div>
+            <div class="keyboard-row">
+                <button class="key-btn">Z</button>
             </div>
         </div>
+
     </div>
 
-    <div id="keyboard" class="keyboard">
-        <button>A</button><button>B</button><button>C</button><button>D</button>
-        <button class="disabled">F</button><button>G</button><button>H</button>
-        <button class="disabled">I</button><button>J</button><button>K</button>
-        <button class="disabled">L</button><button class="disabled">M</button>
+    <div class="custom-modal" id="helpModal">
+    <div class="modal-content">
+        <span class="close-modal-btn" id="closeModal">&times;</span>
+        <h2>🏄‍♂️ How to Play Beach Hangman</h2>
+        <p>Welcome to GuanaTalk! Help our beach buddy escape the midday heat by guessing the hidden Salvadoran slang word.</p>
+        
+        <div class="modal-steps">
+            <div class="step-item">
+                <span class="step-number">1</span>
+                <p>Read the <strong>Surf Hint</strong> to understand the meaning of the local slang word.</p>
+            </div>
+            <div class="step-item">
+                <span class="step-number">2</span>
+                <p>Click the letters on the screen keyboard to guess the word before your lifebuoys run out.</p>
+            </div>
+            <div class="step-item">
+                <span class="step-number">3</span>
+                <p>Every wrong guess draws a part of the beach buddy and removes a lifebuoy. You have <strong>6 attempts</strong>!</p>
+            </div>
         </div>
-</main>
-
+        
+        <div class="modal-footer-tip">
+            🤙 <em>Tip: Guessing correctly increases your winning streak! Keep it alive!</em>
+        </div>
+    </div>
+</div>
     <script src="Hangman.js"></script>
 </body>
 </html>

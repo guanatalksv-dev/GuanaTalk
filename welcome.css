@@ -330,3 +330,38 @@ h1 {
     pointer-events: none;
     transform: scale(0.95);
 }
+
+.halftone-dissolving {
+    transition: opacity 1.2s ease;
+    background-color: #FBF2EB !important; 
+}
+
+.halftone-dissolving #intro-wrapper {
+    pointer-events: none;
+    animation: halftoneSweep 1.2s cubic-bezier(0.42, 0, 0.58, 1) forwards;
+
+    -webkit-mask-image: radial-gradient(circle, rgba(0,0,0,1) 15%, rgba(0,0,0,0) 70%);
+    mask-image: radial-gradient(circle, rgba(0,0,0,1) 15%, rgba(0,0,0,0) 70%);
+    -webkit-mask-size: 18px 18px;
+    mask-size: 18px 18px;
+
+    -webkit-mask-composite: source-in;
+    mask-composite: intersect;
+}
+
+@keyframes halftoneSweep {
+    0% {
+        -webkit-mask-position: 0 0;
+        mask-position: 0 0;
+        opacity: 1;
+    }
+    50% {
+        -webkit-mask-size: 12px 12px;
+        mask-size: 12px 12px;
+    }
+    100% {
+        -webkit-mask-size: 0px 0px;
+        mask-size: 0px 0px;
+        opacity: 0;
+    }
+}

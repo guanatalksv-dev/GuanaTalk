@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Outfit:wght@500;800&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: linear-gradient(135deg, #0d47a1 0%, #0091ea 50%, #e0f7fa 100%);
+    font-family: 'Outfit', sans-serif;
+    min-height: 100vh;
+    padding-top: 100px; 
+    padding-bottom: 40px;
+}
+
+.guanatalk-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background: #ffffff;
+    box-shadow: 0 4px 20px rgba(13, 71, 161, 0.15);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+}
+
+.nav-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.logo img {
+    height: 70px;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #555555;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: color 0.2s;
+}
+
+.nav-menu a:hover, .nav-menu a.active {
+    color: #0091ea;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#ronda-badge {
+    background: #0d47a1;
+    color: white;
+    font-family: 'Fredoka One', cursive;
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+}
+
+.help-circle-btn {
+    background: #00be9b;
+    border: none;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1.3rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 190, 155, 0.3);
+    transition: transform 0.2s;
+}
+
+.help-circle-btn:hover {
+    transform: scale(1.1) rotate(15deg);
+}
+
+.loteria-container {
+    max-width: 1100px;
+    width: 92%;
+    margin: 0 auto;
+}
+
+.radio-cantador {
+    background: #ffffff;
+    border: 4px solid #00b0ff;
+    border-radius: 20px;
+    padding: 18px;
+    margin-bottom: 25px;
+    box-shadow: 0 10px 25px rgba(13, 71, 161, 0.15);
+    text-align: center;
+}
+
+.radio-cantador h2 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 1.7rem;
+    color: #0d47a1;
+    margin: 0 0 10px 0;
+}
+
+.radio-screen {
+    background: linear-gradient(120deg, #e0f2f1 0%, #ffffff 100%);
+    border: 2px solid #00be9b;
+    border-radius: 12px;
+    padding: 15px;
+}
+
+#pista-texto {
+    font-size: 1.3rem;
+    color: #004d40;
+    font-weight: 500;
+}
+
+.tablero-artesanal {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 24px;
+    padding: 25px;
+    box-shadow: 0 20px 45px rgba(13, 71, 161, 0.2);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 15px;
+}
+
+.card-artesanal {
+    background: #ffffff;
+    border: 2px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 15px;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 180px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+    transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card-artesanal:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(13, 71, 161, 0.15);
+    border-color: #0091ea;
+    background: #fffde7;
+}
+
+.illustration-container {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f0f7ff;
+    border-radius: 50%;
+    padding: 8px;
+}
+
+.card-artesanal img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.card-artesanal span {
+    font-family: 'Fredoka One', cursive;
+    font-size: 1.1rem;
+    color: #0d47a1;
+    margin-top: 10px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.card-number {
+    position: absolute;
+    top: 8px;
+    left: 10px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: #0091ea;
+    background: #e1f5fe;
+    padding: 2px 6px;
+    border-radius: 6px;
+}
+
+.card-artesanal.marcada::before {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 24px;
+    background: radial-gradient(circle at 30% 30%, #00e676 0%, #00b0ff 70%, #0d47a1 100%);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    z-index: 10;
+    transform: translate(-50%, -50%) rotate(-10deg);
+    box-shadow: 0 6px 12px rgba(13, 71, 161, 0.3), inset -2px -2px 4px rgba(0,0,0,0.2);
+    animation: dropIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.3) forwards;
+}
+
+.card-artesanal.marcada {
+    pointer-events: none;
+    background: #e1f5fe !important;
+    border-color: #00b0ff;
+}
+
+.card-artesanal.marcada img,
+.card-artesanal.marcada span,
+.card-artesanal.marcada .card-number {
+    opacity: 0.25;
+}
+
+@keyframes dropIn {
+    0% { transform: translate(-50%, -50%) scale(0); }
+    100% { transform: translate(-50%, -50%) scale(1) rotate(-10deg); }
+}
+
+@keyframes errorShake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-6px); border-color: #ff3d00; }
+    75% { transform: translateX(6px); border-color: #ff3d00; }
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(13, 71, 161, 0.6);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-card {
+    background: #ffffff;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+    transform: scale(0.9);
+    transition: transform 0.25s ease;
+}
+
+.modal-overlay.active .modal-card {
+    transform: scale(1);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px dashed #e2e8f0;
+    padding-bottom: 10px;
+}
+
+.modal-header h2 {
+    margin: 0;
+    font-family: 'Fredoka One', cursive;
+    color: #0d47a1;
+    font-size: 1.4rem;
+}
+
+.close-btn {
+    background: none; border: none; font-size: 2rem; color: #888; cursor: pointer;
+}
+
+.modal-body p {
+    line-height: 1.5;
+    color: #444;
+}
+
+@media (max-width: 800px) {
+    .tablero-artesanal { grid-template-columns: repeat(2, 1fr); }
+    .nav-menu { display: none; } /* Ocultar links en mobile por espacio */
+}
