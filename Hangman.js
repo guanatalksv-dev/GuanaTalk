@@ -1,160 +1,260 @@
-const wordBank = [
-    { palabra: "CHERO", pista: "A friendly term used to mean a close friend, buddy, or homie." },
-    { palabra: "CIPOTE", pista: "A typical Salvadoran word used to refer to a kid, child, or teenager." },
-    { palabra: "PUPUSA", pista: "The most famous traditional Salvadoran thick handmade corn or rice tortilla." },
-    { palabra: "CHIVO", pista: "A popular expression used when something is cool, awesome, or great." },
-    { palabra: "BAYUNCO", pista: "Used to describe someone who acts silly, goofy, dramatic, or slightly rude." },
-    { palabra: "CHORREADO", pista: "An adjective used when something is completely stained, dirty, or messy." },
-    { palabra: "CHUCHO", pista: "The quintessential Salvadoran slang word for a dog." },
-    { palabra: "PANDO", pista: "Used when something is crooked, unaligned, or when someone has bad luck." },
-    { palabra: "CHAMBON", pista: "A person who does a job carelessly, poorly, or in a very lazy way." },
-    { palabra: "BOLO", pista: "Slang used to describe someone who is completely drunk or intoxicated." }
-];
-
-const stickmanIds = ["p-head", "p-body", "p-armL", "p-armR", "p-legL", "p-legR"];
-let hiddenWord = "";
-let correctGuesses = [];
-let wrongGuesses = [];
-let currentStreak = 0; 
-const maxLives = 6;
-
 document.addEventListener("DOMContentLoaded", () => {
-    initGame();
+
+    const wordBank = [
+        { word: "CHUCHO", hint: "The quintessential Salvadoran slang word for a dog." },
+        { word: "CHIVO", hint: "An expression used to state that something is awesome, cool, or great." },
+        { word: "CIPOTE", hint: "The traditional local word used to refer to a kid, child, or teenager." },
+        { word: "PUPUSA", hint: "The most famous, thick, handmade corn tortilla stuffed with cheese or pork." },
+        { word: "BAYUNCO", hint: "Used to describe someone who is acting silly, goofy, or making weird jokes." },
+        { word: "MAJE", hint: "Friendly slang equivalent to 'dude', 'guy', or 'bro' among friends." },
+        { word: "CORA", hint: "Derived from the English word 'quarter', it means a 25-cent coin." }
+    ];
+
+    let selectedGame = {};
+    let guessedLetters = [];
+    let wrongLetters = [];
+    let attemptsLeft = 6;
+    let currentStreak = 0;
+
+    const wordSpacesContainer = document.getElementById("word-spaces");
+    const usedLettersContainer = document.getElementById("used-letters");
+    const attemptsCountDisplay = document.getElementById("attempts-count");
+    const attemptsBar = document.getElementById("attempts-bar");
+    const hintTextDisplay = document.getElementById("hint-text");
+    const streakDisplay = document.getElementById("streak-count");
+    const keyboardButtons = document.querySelectorAll(".key-btn");
+ 
+    const canvas = document.getElementById("hangmanCanvas");
+    const ctx = canvas.getContext("2d");
+
+    function initHangman() {
+        selectedGame = wordBank[Math.floor(Math.random() * wordBank.length)];
+        guessedLetters = [];
+        wrongLetters = [];
+        attemptsLeft = 6;
+
+        hintTextDisplay.textContent = selectedGame.hint;
+        attemptsCountDisplay.textContent = attemptsLeft;
+        attemptsBar.style.width = "100%";
+        streakDisplay.textContent = currentStreak;
+        usedLettersContainer.textContent = "None yet";
+
+        renderWordSpaces();
+        drawHangmanScene(0); 
+
+        keyboardButtons.forEach(btn => {
+            btn.classList.remove("disabled");
+        });
+    }
+
+    function renderWordSpaces() {
+        wordSpacesContainer.innerHTML = "";
+        const wordArray = selectedGame.word.split("");
+
+        wordArray.forEach(letter => {
+            const span = document.createElement("span");
+            span.classList.add("letter-space");
+            if (guessedLetters.includes(letter)) {
+                span.textContent = letter;
+            } else {
+                span.textContent = "_";
+            }
+            wordSpacesContainer.appendChild(span);
+        });
+    }
+
+    function handleLetterGuess(letter) {
+        if (guessedLetters.includes(letter) || wrongLetters.includes(letter)) return;
+
+        if (selectedGame.word.includes(letter)) {
+            guessedLetters.push(letter);
+            renderWordSpaces();
+            checkWinCondition();
+        } else {
+            wrongLetters.push(letter);
+            attemptsLeft--;
+            updateAttemptsUI();
+            
+            const errorsMade = 6 - attemptsLeft;
+            drawHangmanScene(errorsMade);
+            
+            checkLoseCondition();
+        }
+    }
+
+    function updateAttemptsUI() {
+        attemptsCountDisplay.textContent = attemptsLeft;
+        const percentage = (attemptsLeft / 6) * 100;
+        attemptsBar.style.width = `${percentage}%`;
+
+        if (wrongLetters.length > 0) {
+            usedLettersContainer.textContent = wrongLetters.join(", ");
+        }
+    }
+
+    function checkWinCondition() {
+        const wordArray = selectedGame.word.split("");
+        const isWon = wordArray.every(letter => guessedLetters.includes(letter));
+
+        if (isWon) {
+            currentStreak++;
+            setTimeout(() => {
+                alert(`🎉 Awesome! You guessed it!\nCorrect Word: ${selectedGame.word}\nYour winning streak increased!`);
+                initHangman();
+            }, 300);
+        }
+    }
+
+    function checkLoseCondition() {
+        if (attemptsLeft === 0) {
+            currentStreak = 0; 
+            setTimeout(() => {
+                alert(`😢 Game Over!\nThe correct word was: ${selectedGame.word}\nDon't worry, catch the next wave!`);
+                initHangman();
+            }, 300);
+        }
+    }
+
+    function drawHangmanScene(errors) {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.lineCap = "round";
+        ctx.lineJoin = "round";
+
+        ctx.fillStyle = "#e6c280";
+        ctx.beginPath();
+        ctx.arc(60, 245, 45, Math.PI, 0);
+        ctx.fill();
+
+        ctx.strokeStyle = "#9c6634";
+        ctx.lineWidth = 22; 
+        ctx.beginPath();
+        ctx.moveTo(60, 215);
+        ctx.quadraticCurveTo(55, 120, 115, 55);
+        ctx.stroke();
+
+        ctx.strokeStyle = "#7a4b22";
+        ctx.lineWidth = 3;
+        const trunkPoints = [
+            {x1: 56, y1: 180, x2: 74, y2: 177},
+            {x1: 54, y1: 140, x2: 73, y2: 135},
+            {x1: 62, y1: 100, x2: 83, y2: 92},
+            {x1: 80, y1: 70, x2: 100, y2: 62}
+        ];
+        trunkPoints.forEach(p => {
+            ctx.beginPath(); ctx.moveTo(p.x1, p.y1); ctx.lineTo(p.x2, p.y2); ctx.stroke();
+        });
+
+        ctx.fillStyle = "#3ca85c";
+        ctx.strokeStyle = "#2d8246";
+        ctx.lineWidth = 3;
+
+        ctx.beginPath();
+        ctx.moveTo(115, 55);
+        ctx.quadraticCurveTo(40, 30, 25, 75);
+        ctx.quadraticCurveTo(55, 70, 115, 55);
+        ctx.fill(); ctx.stroke();
+
+        ctx.beginPath();
+        ctx.moveTo(115, 55);
+        ctx.quadraticCurveTo(115, 10, 135, 5);
+        ctx.quadraticCurveTo(140, 30, 115, 55);
+        ctx.fill(); ctx.stroke();
+
+        ctx.beginPath();
+        ctx.moveTo(115, 55);
+        ctx.quadraticCurveTo(155, 40, 185, 70);
+        ctx.quadraticCurveTo(150, 80, 115, 55);
+        ctx.fill(); ctx.stroke();
+
+        ctx.beginPath();
+        ctx.moveTo(115, 55);
+        ctx.quadraticCurveTo(80, 20, 75, 35);
+        ctx.quadraticCurveTo(95, 50, 115, 55);
+        ctx.fill(); ctx.stroke();
+
+        ctx.fillStyle = "#5c3a21";
+        ctx.beginPath(); ctx.arc(102, 65, 9, 0, Math.PI * 2); ctx.fill();
+        ctx.beginPath(); ctx.arc(116, 68, 8, 0, Math.PI * 2); ctx.fill();
+        ctx.beginPath(); ctx.arc(110, 56, 8, 0, Math.PI * 2); ctx.fill();
+
+        ctx.strokeStyle = "#d2b48c";
+        ctx.lineWidth = 4;
+        ctx.beginPath();
+        ctx.moveTo(165, 71);
+        ctx.lineTo(165, 102);
+        ctx.stroke();
+
+        ctx.strokeStyle = "#333333";
+        ctx.lineWidth = 4;
+
+        if (errors >= 1) {
+            ctx.beginPath();
+            ctx.arc(165, 117, 15, 0, Math.PI * 2);
+            ctx.stroke();
+        }
+
+        if (errors >= 2) {
+            ctx.beginPath();
+            ctx.moveTo(165, 132);
+            ctx.lineTo(165, 177);
+            ctx.stroke();
+        }
+
+        if (errors >= 3) {
+            ctx.beginPath();
+            ctx.moveTo(165, 142);
+            ctx.lineTo(145, 157);
+            ctx.stroke();
+        }
+
+        if (errors >= 4) {
+            ctx.beginPath();
+            ctx.moveTo(165, 142);
+            ctx.lineTo(185, 157);
+            ctx.stroke();
+        }
+
+        if (errors >= 5) {
+            ctx.beginPath();
+            ctx.moveTo(165, 177); ctx.lineTo(150, 212);
+            ctx.moveTo(165, 177); ctx.lineTo(180, 212);
+            ctx.stroke();
+        }
+
+        if (errors >= 6) {
+            ctx.strokeStyle = "#ff4500"; 
+            ctx.lineWidth = 7;
+            ctx.beginPath();
+            ctx.arc(165, 172, 14, 0, Math.PI * 2);
+            ctx.stroke();
+        }
+    }
+
+    keyboardButtons.forEach(button => {
+        button.addEventListener("click", function() {
+            const letter = this.textContent.trim().toUpperCase();
+            this.classList.add("disabled");
+            handleLetterGuess(letter);
+        });
+    });
+
+    initHangman();
+
+    const helpModal = document.getElementById("helpModal");
+    const openModalBtn = document.querySelector(".help-btn");
+    const closeModalBtn = document.getElementById("closeModal");
+
+    openModalBtn.addEventListener("click", () => {
+        helpModal.style.display = "flex";
+    });
+
+    closeModalBtn.addEventListener("click", () => {
+        helpModal.style.display = "none";
+    });
+
+    window.addEventListener("click", (event) => {
+        if (event.target === helpModal) {
+            helpModal.style.display = "none";
+        }
+    });
 });
-
-function initGame() {
-    document.getElementById("game-over-modal").classList.remove("active");
-    document.getElementById("streak-counter").innerText = currentStreak;
-
-    const currentItem = wordBank[Math.floor(Math.random() * wordBank.length)];
-    hiddenWord = currentItem.palabra;
-    correctGuesses = [];
-    wrongGuesses = [];
-
-    document.getElementById("pista-texto").innerText = currentItem.pista;
-    document.getElementById("used-letters-container").innerHTML = "";
-    document.getElementById("attempts-text").innerText = maxLives;
-    document.getElementById("progress-bar").style.width = "100%";
-
-    stickmanIds.forEach(id => {
-        document.getElementById(id).style.opacity = "0";
-    });
-
-    renderSlots();
-    renderKeyboard();
-}
-
-function renderSlots() {
-    const container = document.getElementById("word-slots-container");
-    container.innerHTML = "";
-    for (let char of hiddenWord) {
-        const slot = document.createElement("div");
-        slot.classList.add("slot-letter");
-        slot.innerText = "_";
-        container.appendChild(slot);
-    }
-}
-
-function renderKeyboard() {
-    const container = document.getElementById("keyboard-container");
-    container.innerHTML = "";
-    const alphabet = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ".split("");
-
-    alphabet.forEach(letter => {
-        const key = document.createElement("button");
-        key.classList.add("btn-key");
-        key.innerText = letter;
-        key.onclick = () => handleInput(letter, key);
-        container.appendChild(key);
-    });
-}
-
-function handleInput(letter, element) {
-    if (hiddenWord.includes(letter)) {
-        element.classList.add("right");
-        correctGuesses.push(letter);
-        updateSlots();
-        checkWin();
-    } else {
-        element.classList.add("wrong");
-        wrongGuesses.push(letter);
-
-        const partToReveal = stickmanIds[wrongGuesses.length - 1];
-        if (partToReveal) {
-            document.getElementById(partToReveal).style.opacity = "1";
-        }
-
-        updateStats();
-        checkLose();
-    }
-}
-
-function updateSlots() {
-    const slots = document.getElementById("word-slots-container").getElementsByClassName("slot-letter");
-    for (let i = 0; i < hiddenWord.length; i++) {
-        if (correctGuesses.includes(hiddenWord[i])) {
-            slots[i].innerText = hiddenWord[i];
-        }
-    }
-}
-
-function updateStats() {
-    const currentLives = maxLives - wrongGuesses.length;
-    document.getElementById("attempts-text").innerText = currentLives;
-    
-    const usedContainer = document.getElementById("used-letters-container");
-    const charBadge = document.createElement("div");
-    charBadge.classList.add("used-char");
-    charBadge.innerText = wrongGuesses[wrongGuesses.length - 1];
-    usedContainer.appendChild(charBadge);
-
-    const percent = (currentLives / maxLives) * 100;
-    document.getElementById("progress-bar").style.width = `${percent}%`;
-}
-
-function checkWin() {
-    const hasWon = hiddenWord.split("").every(l => correctGuesses.includes(l));
-    if (hasWon) {
-        disableKeyboard();
-        currentStreak++; 
-        showEndModal(true);
-    }
-}
-
-function checkLose() {
-    if (wrongGuesses.length >= maxLives) {
-        disableKeyboard();
-        currentStreak = 0; 
-        showEndModal(false);
-    }
-}
-
-function showEndModal(isWin) {
-    const modal = document.getElementById("game-over-modal");
-    const icon = document.getElementById("modal-icon");
-    const title = document.getElementById("modal-title");
-    const msg = document.getElementById("modal-message");
-
-    if (isWin) {
-        icon.innerText = "🔥";
-        title.innerText = "Excellent!";
-        msg.innerText = `You won! Current streak: ${currentStreak} words in a row!`;
-    } else {
-        icon.innerText = "🥺";
-        title.innerText = "What a mess! (¡Qué regada!)";
-        msg.innerText = `The correct word was: ${hiddenWord}. Streak reset to 0.`;
-    }
-
-    modal.classList.add("active");
-}
-
-function disableKeyboard() {
-    const keys = document.getElementsByClassName("btn-key");
-    for (let k of keys) k.style.pointerEvents = "none";
-}
-
-function toggleHelpModal(open) {
-    const modal = document.getElementById("help-modal");
-    if (open) modal.classList.add("active");
-    else modal.classList.remove("active");
-}
