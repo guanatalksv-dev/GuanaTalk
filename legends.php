@@ -96,17 +96,6 @@ $sql = "SELECT * FROM leyendas";
 $resultado = mysqli_query($conn, $sql);
 ?>
 
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Leyendas</title>
-    <link rel="stylesheet" href="legends.css">
-</head>
-<body>
-
-
-
 <div class="contenedor">
 
 <?php while($fila = mysqli_fetch_assoc($resultado)){ ?>
@@ -123,7 +112,7 @@ $resultado = mysqli_query($conn, $sql);
             <?php echo $fila['Descripcion']; ?>
         </p>
 
-         <a href="legends.php?id=<?php echo $fila['id']; ?>">
+         <a href="legends.php?id=<?php echo $fila['LegendsID']; ?>">
         <button>Read more</button>
     </a>
 
@@ -134,10 +123,6 @@ $resultado = mysqli_query($conn, $sql);
 
 </div>
 
-</body>
-</html>
-
-    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/js/bootstrap.min.js"></script>
 
 </body>
