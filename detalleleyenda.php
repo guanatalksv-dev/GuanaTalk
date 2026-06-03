@@ -1,17 +1,19 @@
 <?php
+// 1. Importamos tu archivo de conexión real
 include("conexionleyendas.php");
 
+// 2. Validamos el parámetro 'id' que viene desde el botón Read More
 if (isset($_GET['id']) && is_numeric($_GET['id'])) {
     $id = $_GET['id'];
 
-    // Buscamos únicamente la leyenda seleccionada
-    $query = "SELECT Titulo, Descripcion, Imagen FROM leyendas WHERE legendsID = $id";
+    // 3. Traemos todos los campos, incluyendo el texto largo (Contenido_Completo)
+    $query = "SELECT Titulo, Descripcion, Descripcion_larga, Imagen FROM leyendas WHERE legendsID = $id";
     $resultado = mysqli_query($conexion, $query);
 
     if ($resultado && mysqli_num_rows($resultado) == 1) {
         $leyenda = mysqli_fetch_assoc($resultado);
     } else {
-        echo "Leyenda no encontrada.";
+        echo "La leyenda no existe en la base de datos.";
         exit;
     }
 } else {
@@ -25,60 +27,73 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $leyenda['Titulo']; ?></title>
-    <link rel="stylesheet" href="styles/legends.css"> 
-    
+    <link rel="stylesheet" href="styles/legends.css">
     <style>
-        
+        /* Estilos específicos para calcar tu tarjeta clara de detalles */
+        body {
+            background-color: #ebdcb9; /* Fondo crema exterior de tu web */
+            font-family: 'Arial', sans-serif;
+        }
         .detalle-container {
-            background-color: #f6ebd1; /* Fondo claro de tu imagen */
+            background-color: #f6ebd1; /* Fondo beige claro de la tarjeta */
             max-width: 850px;
-            margin: 50px auto;
-            padding: 30px;
-            border-radius: 12px;
+            margin: 60px auto;
+            padding: 40px;
+            border-radius: 15px;
             display: flex;
-            gap: 30px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            gap: 35px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
         }
         .detalle-img {
             flex: 1;
+            max-width: 280px;
         }
         .detalle-img img {
             width: 100%;
-            border-radius: 10px;
+            border-radius: 12px;
             object-fit: cover;
+            display: block;
         }
         .detalle-info {
             flex: 2;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
         }
         .detalle-info h1 {
             color: #0b5ba1; /* Color azul del título */
-            font-size: 36px;
+            font-size: 38px;
             margin-top: 0;
+            margin-bottom: 20px;
             text-align: center;
-            font-family: sans-serif;
         }
         .detalle-info p {
-            color: #0b5ba1; /* Color azul del texto */
+            color: #0b5ba1; /* Color azul de los párrafos */
             font-size: 15px;
             line-height: 1.6;
             text-align: justify;
-            font-family: sans-serif;
+            margin-bottom: 15px;
+        }
+        .btn-container {
+            text-align: center;
+            margin-top: auto; /* Empuja el botón al fondo */
+            padding-top: 20px;
         }
         .btn-back {
             background-color: #e3a92b; /* Color amarillo del botón Back */
             color: white;
             border: none;
-            padding: 10px 40px;
+            padding: 12px 50px;
             font-size: 18px;
             font-weight: bold;
-            border-radius: 8px;
+            border-radius: 10px;
             cursor: pointer;
             text-decoration: none;
             display: inline-block;
-            margin: 15px auto 0 auto;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: background 0.2s;
+        }
+        .btn-back:hover {
+            background-color: #c79220;
         }
     </style>
 </head>
@@ -92,9 +107,11 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
         <div class="detalle-info">
             <h1><?php echo $leyenda['Titulo']; ?></h1>
             
-            <p><?php echo nl2br($leyenda['Descripcion']); ?></p>
+            <p>
+                <?php echo nl2br($leyenda['Descripcion_larga']); ?>
+            </p>
             
-            <div style="text-align: center;">
+            <div class="btn-container">
                 <a href="legends.php" class="btn-back">Back</a>
             </div>
         </div>
