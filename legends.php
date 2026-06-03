@@ -112,7 +112,7 @@ $resultado = mysqli_query($conn, $sql);
             <?php echo $fila['Descripcion']; ?>
         </p>
 
-         <a href="legends.php?id=<?php echo $fila['LegendsID']; ?>">
+         <a href="legends.php?id=<?php echo $fila['legendsID']; ?>">
         <button>Read more</button>
     </a>
 
