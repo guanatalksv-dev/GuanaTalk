@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -89,37 +90,7 @@
         </div>
 
          
-  <?php
-include("conexionleyendas.php");
-
-$sql = "SELECT * FROM leyendas";
-$resultado = mysqli_query($conn, $sql);
-?>
-
-<div class="contenedor">
-
-<?php while($fila = mysqli_fetch_assoc($resultado)){ ?>
-
-    <div class="card">
-
-        <img src="img/<?php echo $fila['Imagen']; ?>">
-
-        <h2>
-            <?php echo $fila['Titulo']; ?>
-        </h2>
-
-        <p>
-            <?php echo $fila['Descripcion']; ?>
-        </p>
-
-         <a href="legends.php?id=<?php echo $fila['legendsID']; ?>">
-        <button>Read more</button>
-    </a>
-
-
-    </div>
-
-<?php } ?>
+  
 
 </div>
 
@@ -128,6 +99,3 @@ $resultado = mysqli_query($conn, $sql);
 </body>
 </html>
     </div>
-  
-  
- 
