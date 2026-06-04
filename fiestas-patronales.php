@@ -21,7 +21,7 @@ $resultado = $conn->query($query_elementos);
                 <a href="traditions.php"><img src="img/guanatalk.logo.png" alt="Logo"></a>
             </div>
             <ul class="nav-links">
-                <li><a href="traditions.php">Home</a></li>
+                <li><a href="index.php">Home</a></li>
                 <li><a href="favoritos.html">Favorite</a></li>
                 <li><a href="aboutus.html">About us</a></li>
             </ul>
