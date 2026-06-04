@@ -71,67 +71,6 @@ nav a {
     font-weight: 500;
 }
 
-<<<<<<< HEAD
-.profile-dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.profile-btn {
-  display: block;
-    background: #46BA37;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 25px;
-    color: white;
-    cursor: pointer;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    transition: 0.3s;
-}
-
-.profile-btn:hover {
-    background: #46BA37;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    right: 0;
-    top: 100%;
-    background-color: #fff;
-    min-width: 150px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-    border-radius: 12px;
-    margin-top: 10px;
-    z-index: 1000;
-    overflow: hidden;
-}
-
-.dropdown-content a {
-    color: #333;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    font-size: 14px;
-    font-weight: 600;
-}
-
-.dropdown-content a:hover {
-    background-color: #f1f1f1;
-    color: #1f4e8c;
-}
-
-.divider {
-    height: 1px;
-    background-color: #eee;
-}
-
-
-=======
->>>>>>> 50b812459c9a1140273f45aa45307d1fd989a06d
 .profile-section {
     display: flex;
     align-items: center;
@@ -157,7 +96,7 @@ nav a {
 
 .menu-lines-dropdown {
     position: relative;
-    display: block;
+    display: inline-block;
 }
 
 .menu-lines-btn {

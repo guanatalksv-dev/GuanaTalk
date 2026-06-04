@@ -1,5 +1,4 @@
 <?php
-// Importamos la conexión
 include("conexionleyendas.php");
 
 
@@ -20,12 +19,12 @@ $resultado = mysqli_query($conexion, $query);
      <header>
         <nav class="navbar">
             <div class="logo">
-                <a href="index.html">
+                <a href="index.php">
                  <img src="img/guanatalk.logo.png" alt="Logo">
                 </a>
             </div>
             <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.php">Home</a></li>
                 <li><a href="favoritos.html">Favorite</a></li>
                 <li><a href="aboutus.html">About us</a></li>
             </ul>
@@ -48,7 +47,6 @@ $resultado = mysqli_query($conexion, $query);
 
     <div class="cards-container">
         <?php
-        // Iteramos sobre los registros que devolvió la base de datos
         if ($resultado && mysqli_num_rows($resultado) > 0) {
             while ($row = mysqli_fetch_assoc($resultado)) {
                 ?>

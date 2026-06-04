@@ -24,7 +24,7 @@ $resultado = $conn->query($query);
 
     <header class="navbar">
             <div class="logo">
-                <a href="index.html" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit;">
+               <a href="index.php" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit;">
                     <img src="img/guanatalk.logo.png" alt="GuanaTalk Logo">
                 </a>
             </div>
