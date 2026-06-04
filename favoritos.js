@@ -8,7 +8,12 @@ function guardarFavoritos(favoritos) {
 
 function removerFavoritoDirecto(id) {
     let favoritos = obtenerFavoritos();
-    favoritos = favoritos.filter(item => (item.id ? item.id !== id : item !== id));
+    favoritos = favoritos.filter(item => {
+        if (item && item.id) {
+            return item.id !== id;
+        }
+        return item !== id;
+    });
     guardarFavoritos(favoritos);
     mostrarFavoritos(); 
 }
@@ -20,34 +25,40 @@ function mostrarFavoritos() {
     let favoritos = obtenerFavoritos();
     contenedor.innerHTML = "";
 
-    if (favoritos.length === 0) {
-        contenedor.innerHTML = `<p style="text-align: center; color: #666; grid-column: 1/-1; margin-top: 30px;">You haven't saved any favorites yet. Go back and tap the stars! ⭐</p>`;
+    if (!favoritos || favoritos.length === 0) {
+        contenedor.innerHTML = `<p style="text-align: center; color: #666; grid-column: 1/-1; margin-top: 50px; font-family: Arial, sans-serif; font-size: 1.2rem;">You haven't saved any favorites yet. Go back and tap the stars! ⭐</p>`;
         return;
     }
 
+    const diccionarioPalabras = {
+        bicho: { title: "Bicho/a", img: "img/bicho.png", audio: "audio/bicho.mp3", colorClass: "pink" },
+        pulgarcito: { title: "Pulgarcito", img: "img/pulgarcito.png", audio: "audio/pulgarcito.mp3", colorClass: "orange" },
+        apiate: { title: "Apiate", img: "img/apiate.png", audio: "audio/apiate.mp3", colorClass: "lightpink" },
+        volado: { title: "Volado", img: "img/volado.png", audio: "audio/volado.mp3", colorClass: "peach" },
+        canchita: { title: "Canchita", img: "img/canchita.png", audio: "audio/canchita.mp3", colorClass: "peach2" },
+        chero: { title: "Chero/a", img: "img/chero.png", audio: "audio/chero.mp3", colorClass: "orange2" }
+    };
+
     favoritos.forEach(item => {
         if (item && item.id) {
-            
             let idLower = item.id.toLowerCase();
             
             if (item.isExtended) {
                 contenedor.innerHTML += `
-                <div class="extended-card" data-id="${item.id}" style="position: relative; grid-column: 1 / -1; width: 100%; max-width: 800px; margin: 15px auto; background: white; border-radius: 20px; padding: 25px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border: 1px solid #eef0f2; text-align: center;">
-                    <div style="position: absolute; top: 20px; right: 25px; font-size: 2rem; cursor: pointer;">
+                <div class="extended-card" data-id="${item.id}">
+                    <div class="extended-star-container">
                         <span class="character-fav-star active" onclick="removerFavoritoDirecto('${item.id}')">★</span>
                     </div>
-                    <div class="extended-badge" style="background-color: #f1c40f; padding: 8px 25px; border-radius: 20px; color: white; font-size: 1.1rem; font-weight: bold; margin-bottom: 20px; display: inline-block;">${item.title}</div>
+                    <div class="extended-badge">${item.title}</div>
                     <div class="extended-scroll-box">
-                        <div class="lyric-text" style="font-size: 1rem; line-height: 1.6; color: #444;">
+                        <div class="lyric-text">
                             ${item.description}
                         </div>
                     </div>
                 </div>
                 `;
             } 
-            
             else if (idLower.includes('salarrue') || idLower.includes('claudia') || idLower.includes('espino') || idLower.includes('dalton') || idLower.includes('ayala') || idLower.includes('llort')) {
-                
                 let rol = item.subtitle;
                 if (!rol) {
                     if (idLower.includes('salarrue')) rol = "Writer and Painter";
@@ -60,7 +71,6 @@ function mostrarFavoritos() {
                 }
 
                 let primerNombre = item.title.split(' ')[0].split('(')[0].trim();
-                
                 let rutaImagen = item.imgSrc || `img/${primerNombre.toLowerCase()}.png`;
 
                 contenedor.innerHTML += `
@@ -85,7 +95,6 @@ function mostrarFavoritos() {
                 </div>
                 `;
             } 
-            
             else {
                 contenedor.innerHTML += `
                 <div class="card-container" data-id="${item.id}">
@@ -99,7 +108,7 @@ function mostrarFavoritos() {
                             <h3>Did you know?</h3>
                             <p>${item.description}</p>
                             <div class="card-back-action">
-                                <i class="ri-star-fill favorite-toggle" style="color: #f1c40f;" onclick="removerFavoritoDirecto('${item.id}')"></i>
+                                <span class="character-fav-star active" onclick="removerFavoritoDirecto('${item.id}')">★</span>
                             </div>
                         </div>
                     </div>
@@ -107,10 +116,16 @@ function mostrarFavoritos() {
                 `;
             }
 
-        } else {
+        } else if (typeof item === 'string' && diccionarioPalabras[item]) {
+            const data = diccionarioPalabras[item];
             contenedor.innerHTML += `
-            <div class="favorito-item">
-                <h2>${item}</h2>
+            <div class="card ${data.colorClass}" data-id="${item}">
+                <button class="fav-btn active" onclick="removerFavoritoDirecto('${item}')">★</button>
+                <img src="${data.img}" alt="${data.title}">
+                <h3>${data.title}</h3>
+                <audio controls>
+                    <source src="${data.audio}" type="audio/mp3">
+                </audio>
             </div>
             `;
         }
