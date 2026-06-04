@@ -29,7 +29,7 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
     <title><?php echo $leyenda['Titulo']; ?></title>
     <link rel="stylesheet" href="styles/legends.css">
     <style>
-        /* Estilos específicos para calcar tu tarjeta clara de detalles */
+        
         body {
             background-color: #ebdcb9; /* Fondo crema exterior de tu web */
             font-family: 'Arial', sans-serif;
@@ -60,14 +60,14 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
             flex-direction: column;
         }
         .detalle-info h1 {
-            color: #0b5ba1; /* Color azul del título */
+            color: #0b5ba1; 
             font-size: 38px;
             margin-top: 0;
             margin-bottom: 20px;
             text-align: center;
         }
         .detalle-info p {
-            color: #0b5ba1; /* Color azul de los párrafos */
+            color: #0b5ba1; 
             font-size: 15px;
             line-height: 1.6;
             text-align: justify;
@@ -75,11 +75,11 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
         }
         .btn-container {
             text-align: center;
-            margin-top: auto; /* Empuja el botón al fondo */
+            margin-top: auto; 
             padding-top: 20px;
         }
         .btn-back {
-            background-color: #e3a92b; /* Color amarillo del botón Back */
+            background-color: #e3a92b; 
             color: white;
             border: none;
             padding: 12px 50px;

@@ -1,7 +1,7 @@
 <?php
 $host = "localhost";
-$user = "root";        // Cambia si tienes otro usuario en MySQL
-$password = "";        // Cambia si tu MySQL tiene contraseña
+$user = "root";        
+$password = "";        
 $database = "sistema_usuarios";
 
 $conexion = mysqli_connect($host, $user, $password, $database);
