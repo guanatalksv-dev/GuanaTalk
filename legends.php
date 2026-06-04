@@ -14,7 +14,7 @@ $resultado = mysqli_query($conexion, $query);
     <title>Legends</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="styles/legends.css">
-    <link rel="stylesheet" href="detalleleyenda.php">
+    
 </head>
 <body>
      <header>

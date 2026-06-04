@@ -6,16 +6,25 @@ function guardarFavoritos(favoritos) {
     localStorage.setItem("favoritos", JSON.stringify(favoritos));
 }
 
-function removerFavoritoDirecto(id) {
+function toggleFavorito(nombre, boton) {
     let favoritos = obtenerFavoritos();
+
+    if (favoritos.includes(nombre)) {
+        favoritos = favoritos.filter(item => item !== nombre);
+        boton.classList.remove("active");
+    } else {
+        favorites.push(nombre);
+        boton.classList.add("active");
+    }
+
     favoritos = favoritos.filter(item => {
         if (item && item.id) {
-            return item.id !== id;
+            return item.id !== nombre;
         }
-        return item !== id;
+        return item !== nombre;
     });
+    
     guardarFavoritos(favoritos);
-    mostrarFavoritos(); 
 }
 
 function mostrarFavoritos() {
@@ -129,7 +138,7 @@ function mostrarFavoritos() {
             </div>
             `;
         }
-    });
+    }); 
 }
 
 mostrarFavoritos();
