@@ -1,3 +1,11 @@
+<?php
+// Importamos la conexión
+include("conexionleyendas.php");
+
+
+$query = "SELECT legendsID, Titulo, Descripcion, Imagen FROM leyendas";
+$resultado = mysqli_query($conexion, $query);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,138 +19,58 @@
 <body>
      <header>
         <nav class="navbar">
-
             <div class="logo">
                 <a href="index.html">
                  <img src="img/guanatalk.logo.png" alt="Logo">
                 </a>
             </div>
-
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="favoritos.html">Favorite</a></li>
                 <li><a href="aboutus.html">About us</a></li>
             </ul>
-
             <button class="profile-btn">My Profile</button>
-
         </nav>
     </header>
 
     <section class="hero">
       <div class="hero-text">
         <h1>Legends</h1>
-        <p>
-          Discover tradittional tales filled with mistery, culture and imagination
-        </p><br>
+        <p>Discover traditional tales filled with mystery, culture, and imagination</p><br>
          <div class="search-box">
                 <input type="text" placeholder="🔍 Search...">
             </div>
         </div>
-
         <div class="hero-image">
             <img src="img/legend.girl.png" alt="Legend Girl">
       </div>
     </section>
 
     <div class="cards-container">
+        <?php
+        // Iteramos sobre los registros que devolvió la base de datos
+        if ($resultado && mysqli_num_rows($resultado) > 0) {
+            while ($row = mysqli_fetch_assoc($resultado)) {
+                ?>
+                <div class="card">
+                    <img src="<?php echo $row['Imagen']; ?>" alt="<?php echo $row['Titulo']; ?>">
 
-        <div class="card">
-            <img src="img/LaSiguanaba2.png" alt="La Siguanaba">
+                    <h2><?php echo $row['Titulo']; ?></h2>
 
-            <h2>La Siguanaba</h2>
+                    <p><?php echo $row['Descripcion']; ?></p>
 
-            <p>
-                A ghostly woman who appears near rivers at night
-                to lure men with her beauty, only to reveal a terrifying
-                face when they approach.
-            </p>
-
-            <a href="LaSiguanaba.html"><button>Read more</button></a>
-        </div>
-
-        <div class="card">
-            <img src="img/El Cipitio.png" alt="La Siguanaba">
-
-            <h2>El Cipitio</h2>
-
-            <p>
-               A mischievous boy with a straw hat who loves eating corn and playing tricks on people;
-                he symbolizes innocence and folklore humor.
-            </p>
-
-            <a href="cipitio.html"><button>Read more</button></a>
-        </div>
-
-        <div class="card">
-            <img src="img/La Carreta Chillona.png" alt="La Carreta Chillona">
-
-            <h2>La Carreta Chillona</h2>
-
-            <p>
-                A haunted cart that roams the streets at night,
-                screeching loudly as a warning of death or misfortune
-                approaching.
-            </p>
-
-            <a href="LaCarretaChillona.html"><button>Read more</button></a>
-        </div>
-
-         
-  <?php
-include("conexionleyendas.php");
-
-$sql = "SELECT * FROM leyendas";
-$resultado = mysqli_query($conn, $sql);
-?>
-
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Leyendas</title>
-    <link rel="stylesheet" href="legends.css">
-</head>
-<body>
-
-
-
-<div class="contenedor">
-
-<?php while($fila = mysqli_fetch_assoc($resultado)){ ?>
-
-    <div class="card">
-
-        <img src="img/<?php echo $fila['Imagen']; ?>">
-
-        <h2>
-            <?php echo $fila['Titulo']; ?>
-        </h2>
-
-        <p>
-            <?php echo $fila['Descripcion']; ?>
-        </p>
-
-         <a href="legends.php?id=<?php echo $fila['id']; ?>">
-        <button>Read more</button>
-    </a>
-
-
+                    <a href="detalleleyenda.php?id=<?php echo $row['legendsID']; ?>">
+                        <button>Read more</button>
+                    </a>
+                </div>
+                <?php
+            }
+        } else {
+            echo "<p style='color:white;'>No se encontraron leyendas en la base de datos.</p>";
+        }
+        ?>
     </div>
 
-<?php } ?>
-
-</div>
-
-</body>
-</html>
-
-    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/js/bootstrap.min.js"></script>
-
 </body>
 </html>
-    </div>
-  
-  
- 
