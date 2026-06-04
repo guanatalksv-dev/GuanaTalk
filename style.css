@@ -13,7 +13,6 @@ body {
 }
 
 .navbar {
-  
     background-color: #1f4e8c;
     display: flex;
     justify-content: space-between;
@@ -42,7 +41,6 @@ nav a {
 }
 
 .profile-btn {
-  display: block;
     background: #46BA37;
     border: none;
     padding: 10px 20px;
@@ -102,7 +100,7 @@ nav a {
 
 .menu-lines-dropdown {
     position: relative;
-    display: block;
+    display: inline-block;
 }
 
 

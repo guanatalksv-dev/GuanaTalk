@@ -7,22 +7,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = $_POST['password'];
 
     // Usamos usuarioID porque así aparece en tu phpMyAdmin
-    $sql = "SELECT usuarioID, nombre, password FROM usuarios WHERE email = ?";
+    $sql = "SELECT usuarioID, nombre, email, nacionalidad, password FROM usuarios WHERE email = ?";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("s", $email);
     $stmt->execute();
     $result = $stmt->get_result();
 
     if ($usuario = $result->fetch_assoc()) {
-        // password_verify es obligatorio para contraseñas con hash
+        
         if (password_verify($password, $usuario['password'])) {
             // Guardamos los datos en la sesión
             $_SESSION['usuario_id'] = $usuario['usuarioID'];
             $_SESSION['nombre'] = $usuario['nombre'];
+            $_SESSION['email'] = $usuario['email'];
+            $_SESSION['nacionalidad'] = $usuario['nacionalidad'];
 
             // Redirección a la HomePage (index.php)
-            // Usamos ../ para salir de la carpeta 'php' y encontrar el archivo en la raíz
-            header("Location: ../index.html");
+    
+            header("Location: ../index.php");
             exit(); 
         } else {
             echo "La contraseña no coincide.";

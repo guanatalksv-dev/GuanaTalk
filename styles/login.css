@@ -55,10 +55,13 @@ body {
 
 .profile-section {
     display: flex;
+    flex-direction: row;
     align-items: center;
+    gap: 15px;
 }
 
 .profile-btn {
+    display: block;
     background: #46BA37;
     border: none;
     padding: 8px 22px;

@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+   <?php
+session_start();
+?>
+ <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
@@ -8,15 +11,15 @@
   <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-
+    
 <header class="navbar">
           <div class="logo">
-            <a href="index.html" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit;">
+            <a href="index.php" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit;">
                 <img src="img/guanatalk.logo.png" alt="GuanaTalk Logo">
             </a>
         </div>
     <nav>
-        <a href="index.html">Home</a>
+        <a href="index.php">Home</a>
         <a href="favoritos.html">Favorite</a>
         <a href="aboutus.html">About us</a>
     </nav>
@@ -25,14 +28,16 @@
             <div class="menu-lines-btn">
                 <i class="ri-menu-line"></i>
             </div>
-            <div class="dropdown-content">
-                <a href="login.html">Login</a>
-                <div class="divider"></div>
-                <a href="register.html">Register</a>
-            </div>
-        </div>
-
-        <button class="profile-btn">My Profile</button>
+           <div class="dropdown-content">
+    <?php if(isset($_SESSION['usuario_id'])): ?>
+        <a href="php/logout.php">Log Out</a>
+    <?php else: ?>
+        <a href="login.html">Login</a>
+        <div class="divider"></div>
+        <a href="register.html">Register</a>
+    <?php endif; ?>
+</div>
+    <a href="php/profile.php" class="profile-btn">My Profile</a>
     </div>
 </header>
 
