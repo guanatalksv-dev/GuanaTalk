@@ -10,8 +10,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const id = tarjeta.getAttribute('data-id');
         if (!id) return;
 
-        if (favoritos.includes(id)) {
+        const estaEnFavoritos = favoritos.some(item => item && item.id === id);
+
+        if (estaEnFavoritos) {
             boton.classList.add('active');
+        } else {
+            boton.classList.remove('active'); 
         }
 
         boton.addEventListener('click', function(e) {
@@ -22,14 +26,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (this.classList.contains('active')) {
                 this.classList.remove('active');
-                favoritos = favoritos.filter(item => {
-                    if (item && item.id) return item.id !== id;
-                    return item !== id;
-                });
+                favoritos = favoritos.filter(item => item && item.id !== id);
             } else {
                 this.classList.add('active');
-                if (!favoritos.includes(id)) {
-                    favoritos.push(id);
+                
+                const yaExiste = favoritos.some(item => item && item.id === id);
+
+                if (!yaExiste) {
+                    const titulo = tarjeta.querySelector('h3') ? tarjeta.querySelector('h3').innerText : '';
+                    const imagen = tarjeta.querySelector('img') ? tarjeta.querySelector('img').src : '';
+                    const audioSrc = tarjeta.querySelector('audio') ? tarjeta.querySelector('audio').src : '';
+                    
+                    const clasesTarjeta = Array.from(tarjeta.classList);
+                    const bgClass = clasesTarjeta.find(c => ['pink', 'orange', 'lightpink', 'peach', 'peach2', 'orange2'].includes(c)) || 'pink';
+
+                    favoritos.push({
+                        id: id,
+                        type: "word",
+                        title: titulo,
+                        img: imagen,
+                        audio: audioSrc,
+                        bgClass: bgClass
+                    });
                 }
             }
 

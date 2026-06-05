@@ -30,7 +30,7 @@
         <section class="hero-section">
             <div class="hero-text">
                 <h1>Fun facts</h1>
-                <p>Discover the national symbols of El Salvador and the stories behind them. From the flag and coat of arms to the country's natural symbols, learn how these icons reflect the history, culture, and pride of the Salvadoran people.</p>
+                <p>Discover the national symbols of El Salvador and the stories behind them.</p>
             </div>
             <div class="hero-image">
                 <img class="hero-img" src="img/fondosv.png" alt="El Salvador">
@@ -162,6 +162,14 @@
         document.addEventListener("DOMContentLoaded", () => {
             const estrellas = document.querySelectorAll(".favorite-toggle");
 
+            function obtenerFavoritos() {
+                return JSON.parse(localStorage.getItem("favoritos")) || [];
+            }
+
+            function guardarFavoritos(lista) {
+                localStorage.setItem("favoritos", JSON.stringify(lista));
+            }
+
             estrellas.forEach(estrella => {
                 const bloque = estrella.closest(".card-container, .extended-card");
                 if (!bloque) return;
@@ -176,7 +184,6 @@
                     estrella.style.color = "#f1c40f";
                 }
 
-                
                 estrella.addEventListener("click", (evento) => {
                     evento.stopPropagation(); 
 
@@ -202,11 +209,13 @@
                         estrella.classList.remove("ri-star-fill");
                         estrella.classList.add("ri-star-line");
                         estrella.style.color = "";
+                        console.log("Eliminado de favoritos:", idElemento);
                     } else {
                         const datosTarjeta = {
                             id: idElemento,
+                            type: "funfact",
                             title: titulo,
-                            imgSrc: imagen,
+                            img: imagen,     
                             description: descripcion,
                             isExtended: esBloqueExtendido
                         };
@@ -214,6 +223,7 @@
                         estrella.classList.remove("ri-star-line");
                         estrella.classList.add("ri-star-fill");
                         estrella.style.color = "#f1c40f";
+                        console.log("Guardado con éxito en favoritos:", datosTarjeta);
                     }
 
                     guardarFavoritos(favoritos);

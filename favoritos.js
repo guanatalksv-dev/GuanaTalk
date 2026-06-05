@@ -1,144 +1,125 @@
-function obtenerFavoritos() {
-    return JSON.parse(localStorage.getItem("favoritos")) || [];
-}
-
-function guardarFavoritos(favoritos) {
-    localStorage.setItem("favoritos", JSON.stringify(favoritos));
-}
-
-function toggleFavorito(nombre, boton) {
-    let favoritos = obtenerFavoritos();
-
-    if (favoritos.includes(nombre)) {
-        favoritos = favoritos.filter(item => item !== nombre);
-        boton.classList.remove("active");
-    } else {
-        favorites.push(nombre);
-        boton.classList.add("active");
-    }
-
-    favoritos = favoritos.filter(item => {
-        if (item && item.id) {
-            return item.id !== nombre;
-        }
-        return item !== nombre;
-    });
+document.addEventListener("DOMContentLoaded", () => {
+    const favoritosContainer = document.getElementById("favoritos-container");
     
-    guardarFavoritos(favoritos);
-}
+    let favoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
 
-function mostrarFavoritos() {
-    let contenedor = document.getElementById("favoritos-container");
-    if (!contenedor) return;
+    function renderFavoritos() {
+        favoritosContainer.innerHTML = "";
 
-    let favoritos = obtenerFavoritos();
-    contenedor.innerHTML = "";
-
-    if (!favoritos || favoritos.length === 0) {
-        contenedor.innerHTML = `<p style="text-align: center; color: #666; grid-column: 1/-1; margin-top: 50px; font-family: Arial, sans-serif; font-size: 1.2rem;">You haven't saved any favorites yet. Go back and tap the stars! ⭐</p>`;
-        return;
-    }
-
-    const diccionarioPalabras = {
-        bicho: { title: "Bicho/a", img: "img/bicho.png", audio: "audio/bicho.mp3", colorClass: "pink" },
-        pulgarcito: { title: "Pulgarcito", img: "img/pulgarcito.png", audio: "audio/pulgarcito.mp3", colorClass: "orange" },
-        apiate: { title: "Apiate", img: "img/apiate.png", audio: "audio/apiate.mp3", colorClass: "lightpink" },
-        volado: { title: "Volado", img: "img/volado.png", audio: "audio/volado.mp3", colorClass: "peach" },
-        canchita: { title: "Canchita", img: "img/canchita.png", audio: "audio/canchita.mp3", colorClass: "peach2" },
-        chero: { title: "Chero/a", img: "img/chero.png", audio: "audio/chero.mp3", colorClass: "orange2" }
-    };
-
-    favoritos.forEach(item => {
-        if (item && item.id) {
-            let idLower = item.id.toLowerCase();
-            
-            if (item.isExtended) {
-                contenedor.innerHTML += `
-                <div class="extended-card" data-id="${item.id}">
-                    <div class="extended-star-container">
-                        <span class="character-fav-star active" onclick="removerFavoritoDirecto('${item.id}')">★</span>
-                    </div>
-                    <div class="extended-badge">${item.title}</div>
-                    <div class="extended-scroll-box">
-                        <div class="lyric-text">
-                            ${item.description}
-                        </div>
-                    </div>
+        if (favoritos.length === 0) {
+            favoritosContainer.innerHTML = `
+                <div style="text-align: center; width: 100%; padding: 40px; color: #777;">
+                    <i class="ri-star-line" style="font-size: 3rem; color: #ccc;"></i>
+                    <p style="font-size: 1.2rem; margin-top: 10px;">Aún no tienes elementos guardados como favoritos.</p>
                 </div>
+            `;
+            return;
+        }
+
+        favoritos.forEach(item => {
+            if (item.type === "word") {
+                const card = document.createElement("div");
+                card.className = `card ${item.bgClass || 'pink'}`;
+                card.innerHTML = `
+                    <button class="fav-btn active" data-id="${item.id}" data-type="word">
+                        <i class="ri-star-fill"></i>
+                    </button>
+                    <img src="${item.img}" alt="${item.title}">
+                    <h3>${item.title}</h3>
+                    <audio src="${item.audio}" controls></audio>
                 `;
-            } 
-            else if (idLower.includes('salarrue') || idLower.includes('claudia') || idLower.includes('espino') || idLower.includes('dalton') || idLower.includes('ayala') || idLower.includes('llort')) {
-                let rol = item.subtitle;
-                if (!rol) {
-                    if (idLower.includes('salarrue')) rol = "Writer and Painter";
-                    else if (idLower.includes('claudia')) rol = "Poet";
-                    else if (idLower.includes('espino')) rol = "Poet";
-                    else if (idLower.includes('dalton')) rol = "Poet and Writer";
-                    else if (idLower.includes('ayala')) rol = "Social Activist";
-                    else if (idLower.includes('llort')) rol = "Artist and Painter";
-                    else rol = "Historical Figure";
-                }
+                favoritosContainer.appendChild(card);
 
-                let primerNombre = item.title.split(' ')[0].split('(')[0].trim();
-                let rutaImagen = item.imgSrc || `img/${primerNombre.toLowerCase()}.png`;
+            } else if (item.type === "character") {
+                const card = document.createElement("div");
+                card.className = "character-flip-card";
+                card.setAttribute("data-id", item.id);
+                
+                const rutaImagen = item.img && !item.img.includes('undefined') ? item.img : 'img/salarrue.jpg'; 
 
-                contenedor.innerHTML += `
-                <div class="character-flip-card" data-id="${item.id}">
+                card.innerHTML = `
                     <div class="character-card-inner">
+                        <!-- CARA FRONTAL -->
                         <div class="character-card-front">
                             <img src="${rutaImagen}" alt="${item.title}" class="flip-card-img">
                             <div class="front-info-overlay">
                                 <h3>${item.title}</h3>
-                                <p class="character-role">${rol}</p>
-                                <span class="hover-hint">Hover to discover</span>
+                                <p class="character-role">${item.role || ''}</p>
+                                <span class="hover-hint">Hover to discover <i class="ri-arrow-turn-forward-line"></i></span>
                             </div>
                         </div>
-                        <div class="character-card-back">
-                            <h3>${primerNombre}</h3>
-                            <p class="character-bio">${item.description}</p>
-                            <div class="character-fav-star-container">
-                                <span class="character-fav-star active" onclick="removerFavoritoDirecto('${item.id}')">★</span>
+
+                        
+                        <div class="character-card-back" style="background-color: #ffffff !important; color: #333333 !important; display: flex !important; flex-direction: column !important; justify-content: space-between !important; align-items: center !important; position: relative !important; padding: 15px 10px !important; height: 100% !important; box-sizing: border-box !important;">
+                            
+                            
+                            <div class="character-bio-content" style="width: 100% !important; text-align: center !important; margin-bottom: 40px !important;">
+                                <h3 style="color: #0f4fa8 !important; margin: 0 0 4px 0 !important; font-size: 1.15rem !important; font-weight: 600 !important;">${item.title}</h3>
+                                <p class="character-bio" style="color: #4f4f4f !important; font-size: 0.85rem !important; line-height: 1.4 !important; margin: 0 auto !important; text-align: center !important; max-height: 140px !important; overflow-y: auto !important;">${item.bio || item.description || ''}</p>
+                            </div>
+                            
+                            
+                           
+                            <div class="character-fav-star-container" style="position: absolute !important; bottom: 15px !important; left: 50% !important; transform: translateX(-50%) !important; display: block !important; visibility: visible !important; opacity: 1 !important; z-index: 999 !important;">
+                                <span class="character-fav-star active" data-id="${item.id}" data-type="character" style="color: #FFD700 !important; font-size: 24px !important; display: inline-block !important; visibility: visible !important;">
+                                    <i class="ri-star-fill" style="color: #FFD700 !important; font-size: 24px !important; display: inline-block !important; visibility: visible !important;"></i>
+                                </span>
                             </div>
                         </div>
                     </div>
-                </div>
                 `;
-            } 
-            else {
-                contenedor.innerHTML += `
-                <div class="card-container" data-id="${item.id}">
+                favoritosContainer.appendChild(card);
+
+            } else if (item.type === "funfact") {
+                const card = document.createElement("div");
+                card.className = "card-container";
+                card.innerHTML = `
                     <div class="card-inner">
                         <div class="card-front">
-                            <img src="${item.imgSrc}" alt="${item.title}">
+                            <img src="${item.img}" alt="${item.title}">
                             <h3>${item.title}</h3>
-                            <p class="tap-hint"><i class="ri-hand-pointer-line"></i> Hover to discover</p>
+                            <span class="tap-hint">Girar <i class="ri-arrow-turn-forward-line"></i></span>
                         </div>
                         <div class="card-back">
-                            <h3>Did you know?</h3>
-                            <p>${item.description}</p>
+                            <h3>${item.title}</h3>
+                            <p>${item.description || ''}</p>
                             <div class="card-back-action">
-                                <span class="character-fav-star active" onclick="removerFavoritoDirecto('${item.id}')">★</span>
+                                <span class="character-fav-star active" data-id="${item.id}" data-type="funfact">
+                                    <i class="ri-star-fill"></i>
+                                </span>
                             </div>
                         </div>
                     </div>
-                </div>
                 `;
+                favoritosContainer.appendChild(card);
             }
+        });
 
-        } else if (typeof item === 'string' && diccionarioPalabras[item]) {
-            const data = diccionarioPalabras[item];
-            contenedor.innerHTML += `
-            <div class="card ${data.colorClass}" data-id="${item}">
-                <button class="fav-btn active" onclick="removerFavoritoDirecto('${item}')">★</button>
-                <img src="${data.img}" alt="${data.title}">
-                <h3>${data.title}</h3>
-                <audio controls>
-                    <source src="${data.audio}" type="audio/mp3">
-                </audio>
-            </div>
-            `;
-        }
-    }); 
-}
+        asignarEventosEliminar();
+    }
 
-mostrarFavoritos();
+    function asignarEventosEliminar() {
+        const botonesEstrella = favoritosContainer.querySelectorAll(".fav-btn, .character-fav-star");
+        
+        botonesEstrella.forEach(boton => {
+            boton.addEventListener("click", (e) => {
+                e.stopPropagation(); 
+                
+                const id = boton.getAttribute("data-id");
+                
+                favoritos = favoritos.filter(item => item.id !== id);
+                localStorage.setItem("favoritos", JSON.stringify(favoritos));
+                
+                const tarjetaContenedora = boton.closest(".card, .character-flip-card, .card-container");
+                if (tarjetaContenedora) {
+                    tarjetaContenedora.style.opacity = "0";
+                    setTimeout(() => {
+                        renderFavoritos();
+                    }, 200);
+                }
+            });
+        });
+    }
+
+    renderFavoritos();
+});
