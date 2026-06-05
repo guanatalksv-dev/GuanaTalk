@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -11,7 +15,7 @@
 
 <header class="navbar">
     <div class="logo">
-        <a href="index.html" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit;">
+        <a href="index.php" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit;">
             <img src="img/guanatalk.logo.png" alt="GuanaTalk Logo">
         </a>
     </div>
@@ -20,20 +24,31 @@
         <a href="favoritos.html">Favorites</a>
         <a href="aboutus.html">About us</a>
     </nav>
-    <div class="profile-section">
-        <div class="menu-lines-dropdown" id="menuLinesDropdown">
-            <div class="menu-lines-btn">
-                <i class="ri-menu-line"></i>
-            </div>
-            <div class="dropdown-content">
+   <div class="profile-section">
+
+ <div class="profile-section">
+
+    <div class="menu-lines-dropdown" id="menuLinesDropdown">
+        <div class="menu-lines-btn">
+            <i class="ri-menu-line"></i>
+        </div>
+
+        <div class="dropdown-content">
+            <?php if(isset($_SESSION['usuario_id'])): ?>
+                <a href="php/logout.php">Log Out</a>
+            <?php else: ?>
                 <a href="login.html">Login</a>
                 <div class="divider"></div>
                 <a href="register.html">Register</a>
-            </div>
+            <?php endif; ?>
         </div>
-
-        <button class="profile-btn">My Profile</button>
     </div>
+
+    <button class="profile-btn" onclick="window.location.href='php/profile.php'">
+        My Profile
+    </button>
+
+</div>
 </header>
 
 <section class="hero">

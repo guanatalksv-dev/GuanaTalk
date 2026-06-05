@@ -2,7 +2,7 @@
     $servername = 'localhost';
     $username = 'root';
     $password = "";
-    $dbname = 'sistema_usuarios';
+    $dbname = 'guanatalk_db';
 
     $conn = new mysqli($servername, $username, $password, $dbname);
 
