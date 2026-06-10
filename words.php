@@ -1,3 +1,10 @@
+<?php
+include("conexionleyendas.php");
+
+$sql = "SELECT * FROM words WHERE palabra = 'Canchita'";
+$resultado = mysqli_query($conexion, $sql);
+$word = mysqli_fetch_assoc($resultado);
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -78,13 +85,16 @@
     </div>
 
     <div class="card peach2" data-id="canchita">
-        <button class="fav-btn">★</button>
-        <img src="img/canchita.png" alt="Canchita">
-        <h3>Canchita</h3>
-        <audio controls>
-            <source src="audio/canchita.mp3" type="audio/mp3">
-        </audio>
-    </div>
+            <button class="fav-btn">★</button>
+
+            <img src="img/canchita.png" alt="<?php echo $word['palabra']; ?>">
+
+            <h3><?php echo $word['palabra']; ?></h3>
+
+            <audio controls>
+                <source src="<?php echo $word['audio']; ?>" type="audio/mp3">
+             </audio>
+</div>
 
     <div class="card orange2" data-id="chero">
         <button class="fav-btn">★</button>
