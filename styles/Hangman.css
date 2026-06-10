@@ -100,11 +100,11 @@
     text-shadow: 0 2px 4px rgba(255,255,255,0.6); letter-spacing: 1px;
 }
 .streak-badge {
-    background: #004b6e; color: white; font-weight: 800; padding: 6px 16px; border-radius: 50px;
+    background: #004b6e; color: white; font-weight: 800; padding: 6px 16px; border-radius: 30px;
 }
 .help-btn {
     background: white; color: #004b6e; font-family: 'Fredoka One', cursive;
-    width: 35px; height: 35px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    width: 35px; height: 35px; border-radius: 30px; display: flex; align-items: center; justify-content: center;
 }
 
 .game-panels { display: grid; grid-template-columns: 1.2fr 1fr; gap: 25px; margin-bottom: 25px; }
