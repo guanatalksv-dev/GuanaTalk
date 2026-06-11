@@ -23,18 +23,28 @@ $resultado = $conn->query($query);
 <body>
 
     <header class="navbar">
+<<<<<<< HEAD
             <div class="logo">
                <a href="index.php" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit;">
                     <img src="img/GuanaTalk.png" alt="GuanaTalk Logo">
                 </a>
             </div>
+=======
+        <div class="logo">
+            <a href="index.php" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit;">
+                <img src="img/GuanaTalk.png" alt="GuanaTalk Logo">
+            </a>
+        </div>
+>>>>>>> 7517943549cdedc7821a0f939bce34a30f4318de
         <nav>
-            <a href="traditions.php">Home</a>
-            <a href="favoritos.html">Favorite</a>
+            <a href="index.php">Home</a>
+            <a href="favoritos.html">Favorites</a>
             <a href="aboutus.html">About us</a>
         </nav>
         <div class="profile-section">
-            <button class="profile-btn">My Profile</button>
+            <button class="profile-btn" onclick="window.location.href='php/profile.php'">
+                My Profile
+            </button>
         </div>
     </header>
 
