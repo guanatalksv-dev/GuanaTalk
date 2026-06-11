@@ -117,28 +117,46 @@ nav a {
     background: #3fa332;
 }
 
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 60px;
+    background-color: #FBF2EB;
+    position: relative;
+}
+
 .hero-text {
     padding: 30px;
 }
 
 .hero-text h1 {
-    font-size: 60px;
-    font-weight: bold;
-    color: black;
+    font-size: 2.75rem;
+    color: #111;
 }
 
 .hero-text h2 {
-    font-size: 45px;
+    font-size: 2.2rem;
     color: #4f8f61;
     margin-bottom: 15px;
 }
 
 .hero-text p {
-    font-size: 25px;
-    line-height: 40px;
+    font-size: 1.3rem;
+    line-height: 1.5;
     color: #333;
 }
 
+.hero-img {
+  flex: 1;
+  width: 100%;
+  max-width: 400px; 
+  height: 225px;
+  object-fit: contain;
+  mix-blend-mode: multiply; 
+  margin-right: -20px;
+  margin-top: 30px;
+}
 
 .cards, .cards-container, #favoritos-container {
     display: flex;   
