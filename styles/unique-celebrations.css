@@ -1,0 +1,172 @@
+/* unique-celebrations.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.navbar {
+    background-color: #72A11E;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    padding: 10px 40px;
+    color: white;
+    position: relative;
+    z-index: 10; 
+}
+
+.logo img {
+    height: 70px;
+    display: block;
+}
+
+.navbar nav {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    display: inline-block;
+}
+
+.profile-section {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.profile-btn {
+    background-color: #E2F6A2; 
+    border: 4px solid #8FA61C; 
+    padding: 10px 30px; 
+    border-radius: 12px; 
+    color: #000000; 
+    font-weight: 800; 
+    font-size: 1.1rem; 
+    cursor: pointer;
+    display: inline-block;
+    transition: background-color 0.2s;
+}
+
+.profile-btn:hover {
+    background-color: #3fa332; 
+}
+
+.celebrations-bg {
+    background-color: #52C685; 
+    min-height: 100vh;
+    width: 100%;
+    padding-bottom: 50px;
+}
+
+.celebrations-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 40px;
+}
+
+.celebrations-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #111111;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.celebrations-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.celebration-card {
+    background-color: #31A762; 
+    border-radius: 30px;
+    padding: 35px 25px;
+    flex: 1;
+    max-width: 310px; 
+    margin: 0 auto; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.celebration-img-box {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.celebration-img-box img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.celebration-card h2 {
+    color: white;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.celebration-card p {
+    color: white;
+    font-size: 1.2rem;
+    line-height: 1.4;
+}
+
+.celebrations-dyk-banner {
+    background-color: #38B06C;
+    border-radius: 25px;
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    color: white;
+    margin-top: 20px;
+}
+
+.dyk-badge {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 160px;
+}
+
+.dyk-badge span {
+    font-size: 2rem;
+}
+
+.dyk-badge strong {
+    font-size: 1.2rem;
+    line-height: 1.1;
+    font-weight: 800;
+}
+
+.dyk-message {
+    font-size: 1.1rem;
+    line-height: 1.3;
+}
