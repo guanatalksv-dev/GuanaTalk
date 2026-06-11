@@ -308,3 +308,75 @@ nav a {
     overflow-y: auto;
     padding: 10px;
 }
+
+/* ==========================
+   CELULARES
+========================== */
+@media (max-width: 768px){
+
+    .navbar{
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .logo img{
+        height: 55px;
+    }
+
+    nav{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    nav a{
+        margin: 0;
+    }
+
+    .profile-section{
+        margin-top: 10px;
+    }
+
+    .hero-text{
+        padding: 20px;
+        text-align: center;
+    }
+
+    .hero-text h1{
+        font-size: 35px;
+    }
+
+    .hero-text h2{
+        font-size: 28px;
+    }
+
+    .hero-text p{
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .cards,
+    .cards-container,
+    #favoritos-container{
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .character-flip-card,
+    .card-container{
+        width: 90%;
+        max-width: 300px;
+    }
+
+    .extended-card{
+        width: 95%;
+        padding: 20px;
+    }
+
+    .profile-btn{
+        width: 100%;
+        justify-content: center;
+    }
+}
