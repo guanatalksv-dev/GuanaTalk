@@ -7,13 +7,13 @@
     }
 
 body {
-    background: #f5fadc;
+    background: linear-gradient(#b5e4ff, #d4ffbb);
     margin: 0;
     padding: 0;
 }
 
 .navbar {
-    background-color: #6f9d13;
+    background:linear-gradient(#6f9d13, #9bdb1c);
     display: flex;
     justify-content: space-between;
     align-items:center;
@@ -201,7 +201,7 @@ nav a {
     justify-content: space-between;
     align-items: center;
     padding: 5px 60px;
-    background: linear-gradient(180deg, #f5fadc 0%, #f5fadc 100%);
+    background: linear-gradient(#d5ffbd, #cfe8f7);
     position: relative;
 }
 
@@ -274,27 +274,27 @@ nav a {
 
 
 .card-pink{
-  background:linear-gradient(#ff96ab,#ff3d67);
+  background:linear-gradient(#fda1b3,#ff3964);
 }
 
 .card-green{
-  background:linear-gradient(#93e288,#00a71c);
+  background:linear-gradient(#74ff61,#00a71c);
 }
 
 .card-orange{
-  background:linear-gradient(#fccb61,#ffa705);
+  background:linear-gradient(#fcec61,#ffa705);
 }
 
 .card-blue{
-  background:linear-gradient(#7ccdff,#0ca2ff);
+  background:linear-gradient(#7cf6ff,#0ca2ff);
 }
 
 .card-gray{
-  background:linear-gradient(#f7e2e2,#6b6969);
+  background:linear-gradient(#e2e2e2,#6b6969);
 }
 
 .fun-fact-box {
-    background-color: #d5e464;
+    background: linear-gradient(#5ec4ff, #bbff3c);
     color: black;
     border-radius: 25px;
     padding: 10px 10px;
