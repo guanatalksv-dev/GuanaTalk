@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 04, 2026 at 10:04 PM
+-- Generation Time: Jun 11, 2026 at 07:23 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -20,6 +20,28 @@ SET time_zone = "+00:00";
 --
 -- Database: `guanatalk_db`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `folklore_dances`
+--
+
+CREATE TABLE `folklore_dances` (
+  `id` int(11) NOT NULL,
+  `nombre` varchar(150) NOT NULL,
+  `descripcion` text NOT NULL,
+  `imagen` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `folklore_dances`
+--
+
+INSERT INTO `folklore_dances` (`id`, `nombre`, `descripcion`, `imagen`) VALUES
+(1, 'Danza del Venado', 'It is a traditional dance that reenacts the ritual hunting of a deer, symbolizing the ancestral bond between humans and nature.', 'danza-venado.png'),
+(2, 'Adentro Cojutepeque', 'The song is a tribute to the city of Cojutepeque in the department of Cuscatlán. It captures the joyful spirit of its local festivities and the pride of its people.', 'adentro-cojutepeque.png'),
+(3, 'Torito Pinto', 'El Torito Pinto is a traditional Salvadoran dance mimicking a bullfight. It features a dancer in a bull frame performing to rhythmic music during festive celebrations.', 'torito-pinto.png');
 
 -- --------------------------------------------------------
 
@@ -95,6 +117,53 @@ INSERT INTO `tradiciones` (`id`, `titulo`, `imagen`, `color_clase`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `traditional_games`
+--
+
+CREATE TABLE `traditional_games` (
+  `id` int(11) NOT NULL,
+  `nombre` varchar(150) NOT NULL,
+  `imagen` varchar(255) NOT NULL,
+  `paso1` text NOT NULL,
+  `paso2` text NOT NULL,
+  `paso3` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `traditional_games`
+--
+
+INSERT INTO `traditional_games` (`id`, `nombre`, `imagen`, `paso1`, `paso2`, `paso3`) VALUES
+(1, 'El Trompo', 'trompor.png', '1. Wind: Wrap the string tightly from the tip upward.', '2. Throw: Hold the end of the string and toss it toward the ground.', '3. Pull: Tug the string back quickly to make it spin.'),
+(2, 'El Capirucho', 'capirucho.png', '1. Grip: Hold the wooden handle with your dominant hand.', '2. Swing: Let the cup hang and toss it upward with a smooth motion.', '3. Catch: Align the tip of the stick to catch the cup in mid-air.'),
+(3, 'Chibolas', 'chibolas.png', '1. Position: Place the marble on your bent index finger.', '2. Aim: Use your thumb to build tension and point at the target.', '3. Flick: Push with your thumb to launch the marble toward the others.'),
+(4, 'Piscuchas', 'piscuchas.png', '1. Set up: Hold the string and have someone hold the kite downwind.', '2. Run: Run against the wind, releasing the string bit by bit.', '3. Maneuver: Tug the string gently to gain height and stability.');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `unique_celebrations`
+--
+
+CREATE TABLE `unique_celebrations` (
+  `id` int(11) NOT NULL,
+  `nombre` varchar(150) NOT NULL,
+  `descripcion` text NOT NULL,
+  `imagen` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `unique_celebrations`
+--
+
+INSERT INTO `unique_celebrations` (`id`, `nombre`, `descripcion`, `imagen`) VALUES
+(1, 'Day of the Cross', 'A symbol of protection where decorated wooden crosses with fruit and flowers are placed in homes.', 'day-of-the-cross.png'),
+(2, 'Fiesta de las Flores y Palmas', 'A unique celebration featuring stylized floral palm arrangements symbolizing peace and community.', 'flores-y-palmas.png'),
+(3, 'Festival of Lanterns', 'A spectacular display of thousands of hand-crafted lanterns that transforms the city.', 'festival-of-lanterns.png');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `usuarios`
 --
 
@@ -125,6 +194,12 @@ INSERT INTO `usuarios` (`usuarioID`, `nombre`, `email`, `nacionalidad`, `passwor
 --
 
 --
+-- Indexes for table `folklore_dances`
+--
+ALTER TABLE `folklore_dances`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `leyendas`
 --
 ALTER TABLE `leyendas`
@@ -144,6 +219,18 @@ ALTER TABLE `tradiciones`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `traditional_games`
+--
+ALTER TABLE `traditional_games`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `unique_celebrations`
+--
+ALTER TABLE `unique_celebrations`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `usuarios`
 --
 ALTER TABLE `usuarios`
@@ -155,6 +242,12 @@ ALTER TABLE `usuarios`
 --
 
 --
+-- AUTO_INCREMENT for table `folklore_dances`
+--
+ALTER TABLE `folklore_dances`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT for table `leyendas`
 --
 ALTER TABLE `leyendas`
@@ -164,13 +257,25 @@ ALTER TABLE `leyendas`
 -- AUTO_INCREMENT for table `sub_tradiciones`
 --
 ALTER TABLE `sub_tradiciones`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `tradiciones`
 --
 ALTER TABLE `tradiciones`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `traditional_games`
+--
+ALTER TABLE `traditional_games`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `unique_celebrations`
+--
+ALTER TABLE `unique_celebrations`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `usuarios`
