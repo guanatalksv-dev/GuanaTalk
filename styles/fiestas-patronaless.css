@@ -6,58 +6,68 @@
 }
 
 body {
-    background-color: #FDF9F2; 
-    color: #111;
+    background-color: #F9F5EB; 
+    color: #333;
+    padding-bottom: 80px; 
 }
 
-header {
-    background-color: #1552B3; 
-    width: 100%;
-}
-
-.navbar{
-    background-color: #0f4fa8;
+/* NAVBAR LOOK GLOBAL */
+.navbar {
+    background-color: #72A11E;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 12px 25px;
+    margin: auto;
+    padding: 10px 40px;
+    color: white;
+    position: relative;
+    z-index: 10; 
+}
+
+.logo img {
+    height: 70px;
+    display: block;
+}
+
+.navbar nav {
+    display: flex;
+    align-items: center;
+    list-style: none;
 }
 
 nav a {
     color: white;
     margin: 0 15px;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: bold;
+    font-size: 1.1rem;
+    display: inline-block;
 }
 
-.logo img{
-    width: 80px;
-    height: 80px;
-}
-
-.nav-links{
+.profile-section {
     display: flex;
-    gap: 40px;
-    list-style: none;
+    align-items: center;
+    gap: 12px;
 }
 
-.nav-links a{
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-}
-
-.profile-btn{
-    background-color: #5bc834;
-    color: white;
-    border: none;
-    padding: 10px 25px;
-    border-radius: 20px;
-    font-size: 18px;
+.profile-btn {
+    background-color: #E2F6A2; 
+    border: 4px solid #8FA61C; 
+    padding: 10px 30px; 
+    border-radius: 12px; 
+    color: #000000; 
+    font-weight: 800; 
+    font-size: 1.1rem; 
     cursor: pointer;
+    display: inline-block;
+    transition: background-color 0.2s;
 }
 
-.main-container, .fiestas-container {
+.profile-btn:hover {
+    background-color: #d2e793; 
+}
+
+.fiestas-container {
     max-width: 1100px;
     margin: 0 auto;
     padding: 40px 20px;

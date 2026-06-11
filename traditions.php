@@ -25,7 +25,7 @@ $resultado = $conn->query($query);
     <header class="navbar">
             <div class="logo">
                <a href="index.php" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit;">
-                    <img src="img/guanatalk.logo.png" alt="GuanaTalk Logo">
+                    <img src="img/GuanaTalk.png" alt="GuanaTalk Logo">
                 </a>
             </div>
         <nav>
@@ -45,7 +45,7 @@ $resultado = $conn->query($query);
                 <p>Explore the vibrant heritage of El Salvador through its customs and arts.</p>
             </div>
             <div class="hero-image-container">
-                <img src="hero_illustration.png" alt="El Salvador Traditions" class="hero-img">
+                <img src="img/ilustracion.png.png" alt="El Salvador Traditions" class="hero-img">
             </div>
         </section>
 
@@ -55,8 +55,15 @@ $resultado = $conn->query($query);
             if ($resultado && $resultado->num_rows > 0) {
                 while ($fila = $resultado->fetch_assoc()) {
                     
+                    // Conexión dinámica de todas las tarjetas incluyendo Unique Celebrations
                     if ($fila['titulo'] == 'Fiestas Patronales') {
                         $enlace = "fiestas-patronales.php";
+                    } elseif ($fila['titulo'] == 'Folklore Dances') {
+                        $enlace = "folklore-dances.php";
+                    } elseif ($fila['titulo'] == 'Traditional Games') {
+                        $enlace = "traditional-games.php";
+                    } elseif ($fila['titulo'] == 'Unique Celebrations') {
+                        $enlace = "unique-celebrations.php"; // Enlace añadido aquí
                     } else {
                         $enlace = "#"; 
                     }

@@ -11,22 +11,22 @@ $resultado = $conn->query($query_elementos);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fiestas Patronales - GuanaTalk</title>
-    <link rel="stylesheet" href="styles/patronales.css">
+    <link rel="stylesheet" href="styles/fiestas-patronaless.css">
 </head>
 <body>
 
-   <header>
-        <nav class="navbar">
-            <div class="logo">
-                <a href="traditions.php"><img src="img/guanatalk.logo.png" alt="Logo"></a>
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.php">Home</a></li>
-                <li><a href="favoritos.html">Favorite</a></li>
-                <li><a href="aboutus.html">About us</a></li>
-            </ul>
-            <button class="profile-btn">My Profile</button>
+    <header class="navbar">
+        <div class="logo">
+            <a href="index.php"><img src="img/GuanaTalk.png" alt="Logo"></a>
+        </div>
+        <nav class="nav-links">
+            <a href="index.php">Home</a>
+            <a href="favoritos.html">Favorite</a>
+            <a href="aboutus.html">About us</a>
         </nav>
+        <div class="profile-section">
+            <button class="profile-btn">My Profile</button>
+        </div>
     </header>
 
     <main class="fiestas-container">
