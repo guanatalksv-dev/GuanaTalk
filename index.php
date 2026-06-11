@@ -70,7 +70,7 @@ session_start();
     <p>Traditions</p>
   </button>
 
-  <button type="button" class="card card-orange" onclick="window.location.href='php/legends.php'">
+  <button type="button" class="card card-orange" onclick="window.location.href='legends.php'">
     <img src="img/legends.png" alt="Legends" class="card-img">
     <p>Legends</p>
   </button>
