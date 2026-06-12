@@ -16,21 +16,24 @@ $resultado = mysqli_query($conexion, $query);
     
 </head>
 <body>
-     <header>
-        <nav class="navbar">
-            <div class="logo">
-                <a href="index.php">
-                 <img src="img/guanatalk.logo.png" alt="Logo">
-                </a>
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.php">Home</a></li>
-                <li><a href="favoritos.html">Favorite</a></li>
-                <li><a href="aboutus.html">About us</a></li>
-            </ul>
-            <button class="profile-btn">My Profile</button>
-        </nav>
-    </header>
+     <header class="navbar">
+    <div class="logo">
+        <a href="index.php" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit;">
+            <img src="img/GuanaTalk.png" alt="GuanaTalk Logo">
+        </a>
+    </div>
+    <nav>
+        <a href="index.php">Home</a>
+        <a href="favoritos.html">Favorites</a>
+        <a href="aboutus.html">About us</a>
+    </nav>
+   <div class="profile-section">
+    <button class="profile-btn" onclick="window.location.href='php/profile.php'">
+        My Profile
+    </button>
+
+</div>
+</header>
 
     <section class="hero">
       <div class="hero-text">
@@ -41,7 +44,7 @@ $resultado = mysqli_query($conexion, $query);
             </div>
         </div>
         <div class="hero-image">
-            <img src="img/legend.girl.png" alt="Legend Girl">
+            <img src="img/leyendas.png  " alt="Legend Girl">
       </div>
     </section>
 
