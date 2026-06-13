@@ -18,7 +18,7 @@ $resultado = mysqli_query($conexion, $query);
 <body>
      <header class="navbar">
     <div class="logo">
-        <a href="index.php" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit;">
+        <a href="" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit;">
             <img src="img/GuanaTalk.png" alt="GuanaTalk Logo">
         </a>
     </div>
