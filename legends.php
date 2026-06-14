@@ -13,35 +13,18 @@ $resultado = mysqli_query($conexion, $query);
     <title>Legends</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="styles/legends.css">
-    
+     <link rel="stylesheet" href="styles/navbar.css">
+
 </head>
 <body>
-     <header class="navbar">
-    <div class="logo">
-        <a href="" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit;">
-            <img src="img/GuanaTalk.png" alt="GuanaTalk Logo">
-        </a>
-    </div>
-    <nav>
-        <a href="index.php">Home</a>
-        <a href="favoritos.html">Favorites</a>
-        <a href="aboutus.html">About us</a>
-    </nav>
-   <div class="profile-section">
-    <button class="profile-btn" onclick="window.location.href='php/profile.php'">
-        My Profile
-    </button>
-
-</div>
-</header>
+    <?php include("nabvar.php"); ?>
 
     <section class="hero">
       <div class="hero-text">
         <h1>Legends</h1>
-        <p>Discover traditional tales filled with mystery, culture, and imagination</p><br>
-         <div class="search-box">
-                <input type="text" placeholder="🔍 Search...">
-            </div>
+            <p>
+                 Discover traditional tales filled with mystery, culture, and imagination, where every story carries the wisdom of the past and the spirit of different generations. These narratives invite you to explore magical worlds, ancient traditions, and unforgettable characters that bring history and creativity to life in a unique and captivating way.
+                </p>        
         </div>
         <div class="hero-image">
             <img src="img/leyendas.png  " alt="Legend Girl">
@@ -71,7 +54,7 @@ $resultado = mysqli_query($conexion, $query);
         }
         ?>
     </div>
-
+         <script src="JavaScript/navbar.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/js/bootstrap.min.js"></script>
 </body>
 </html>

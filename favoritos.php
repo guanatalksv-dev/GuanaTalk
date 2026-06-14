@@ -7,26 +7,14 @@
   <link rel="stylesheet" href="styles/characters-style.css">
   <link rel="stylesheet" href="styles/funfacts-style.css">
   <link rel="stylesheet" href="styles/words.css">
-  
+ <link rel="stylesheet" href="styles/navbar.css">
+
   <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
 </head>
 
 <body>
-<header class="navbar">
-    <div class="logo">
-        <a href="index.php" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit;">
-            <img src="img/guanatalk.logo.png" alt="GuanaTalk Logo">
-        </a>
-    </div>
-    <nav>
-        <a href="index.php">Home</a>
-        <a href="favoritos.html">Favorite</a>
-        <a href="aboutus.html">About us</a>
-    </nav>
-    <div class="profile-section">
-        <button class="profile-btn">My Profile</button>
-    </div>
-</header>
+<?php include("nabvar.php"); ?>
+
 
 <div class="back-navigation">
      <a href="index.php" class="btn-back">← Back to homepage</a>
@@ -36,7 +24,7 @@
     <section id="favoritos-container" class="cards-grid">
         </section>
 </main>
-
+ <script src="JavaScript/navbar.js"></script>
 <script src="favoritos.js?v=2"></script>
 </body>
 </html>

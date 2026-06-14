@@ -6,34 +6,17 @@
     <title>About Us</title>
 
     <link rel="stylesheet" href="styles/about us-style.css">
+    <link rel="stylesheet" href="styles/navbar.css">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-
+<body>
 <body>
 
-    <header class="navbar">
+<?php include("nabvar.php"); ?>
 
-        <div class="logo">
-            <a href="index.php" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit;">
-                <img src="img/GuanaTalk.png" alt="GuanaTalk Logo">
-            </a>
-        </div>
-
-        <nav>
-            <a href="index.php">Home</a>
-            <a href="favoritos.html">Favorites</a>
-            <a href="aboutus.html">About Us</a>
-        </nav>
-
-        <div class="profile-section">
-            <button class="profile-btn" onclick="window.location.href='php/profile.php'">
-                My Profile
-            </button>
-        </div>
-
-    </header>
-
+</body>
+   
     <section class="about-section">
 
         <h1>About Us</h1>
@@ -45,7 +28,7 @@
 
             <div class="carousel-inner">
 
-                <!-- Slide 1 -->
+          
                 <div class="carousel-item active">
 
                     <div class="about-card">
@@ -70,7 +53,7 @@
 
                 </div>
 
-                <!-- Slide 2 -->
+                
                 <div class="carousel-item">
 
                     <div class="about-card">
@@ -93,7 +76,7 @@
 
                 </div>
 
-                <!-- Slide 3 -->
+               
                 <div class="carousel-item">
 
                     <div class="about-card">
@@ -118,7 +101,6 @@
 
             </div>
 
-            <!-- Controls -->
             <button class="carousel-control-prev"
                     type="button"
                     data-bs-target="#aboutCarousel"
@@ -225,6 +207,7 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+ <script src="JavaScript/navbar.js"></script>
 
 </body>
 </html>
