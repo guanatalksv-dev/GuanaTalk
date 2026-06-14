@@ -17,7 +17,28 @@ $resultado = mysqli_query($conexion, $query);
 
 </head>
 <body>
+<<<<<<< HEAD
     <?php include("nabvar.php"); ?>
+=======
+     <header class="navbar">
+    <div class="logo">
+        <a href="" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit;">
+            <img src="img/GuanaTalk.png" alt="GuanaTalk Logo">
+        </a>
+    </div>
+    <nav>
+        <a href="index.php">Home</a>
+        <a href="favoritos.html">Favorites</a>
+        <a href="aboutus.html">About us</a>
+    </nav>
+   <div class="profile-section">
+    <button class="profile-btn" onclick="window.location.href='php/profile.php'">
+        My Profile
+    </button>
+
+</div>
+</header>
+>>>>>>> 21b7f0c9c9897305ebc81a593b017934fde64d1a
 
     <section class="hero">
       <div class="hero-text">

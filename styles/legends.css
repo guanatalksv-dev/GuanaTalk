@@ -214,6 +214,10 @@ body{
     cursor: pointer;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 21b7f0c9c9897305ebc81a593b017934fde64d1a
 
 .main-container{
     display: flex;
@@ -222,6 +226,10 @@ body{
     padding: 50px;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 21b7f0c9c9897305ebc81a593b017934fde64d1a
 
 .legend-card{
     background-color: #f5f0e6;
@@ -234,6 +242,10 @@ body{
     box-shadow: 0px 3px 10px rgba(0,0,0,0.2);
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 21b7f0c9c9897305ebc81a593b017934fde64d1a
 
 .image-box img{
     width: 320px;
@@ -242,6 +254,10 @@ body{
     border-radius: 15px;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 21b7f0c9c9897305ebc81a593b017934fde64d1a
 
 .text-box{
     flex: 1;
@@ -261,6 +277,10 @@ body{
     font-weight: bold;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 21b7f0c9c9897305ebc81a593b017934fde64d1a
 
 .back-btn{
     margin-top: 15px;
@@ -280,6 +300,7 @@ body{
 }
 
 
+<<<<<<< HEAD
 
 @media (max-width: 768px) {
 
@@ -328,6 +349,8 @@ body{
         padding: 20px;
     }
 }
+=======
+>>>>>>> 21b7f0c9c9897305ebc81a593b017934fde64d1a
 
 
 
