@@ -15,19 +15,7 @@ $resultado = $conn->query($query_elementos);
 </head>
 <body>
 
-    <header class="navbar">
-        <div class="logo">
-            <a href="index.php"><img src="img/GuanaTalk.png" alt="Logo"></a>
-        </div>
-        <nav class="nav-links">
-            <a href="index.php">Home</a>
-            <a href="favoritos.html">Favorite</a>
-            <a href="aboutus.html">About us</a>
-        </nav>
-        <div class="profile-section">
-            <button class="profile-btn">My Profile</button>
-        </div>
-    </header>
+   <?php include("nabvar.php"); ?>
 
     <main class="fiestas-container">
         
@@ -66,6 +54,6 @@ $resultado = $conn->query($query_elementos);
         </section>
 
     </main>
-
+     <script src="JavaScript/navbar.js"></script>
 </body>
 </html>

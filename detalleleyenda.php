@@ -1,8 +1,6 @@
 <?php
-// 1. Importamos tu archivo de conexión real
 include("conexionleyendas.php");
 
-// 2. Validamos el parámetro 'id' que viene desde el botón Read More
 if (isset($_GET['id']) && is_numeric($_GET['id'])) {
     $id = $_GET['id'];
 

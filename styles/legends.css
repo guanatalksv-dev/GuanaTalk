@@ -86,6 +86,7 @@ nav a {
 }
 
 .hero-text h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 55px;
     margin-bottom: 15px;
     color: black;
@@ -213,7 +214,6 @@ body{
     cursor: pointer;
 }
 
-/* MAIN SECTION */
 
 .main-container{
     display: flex;
@@ -222,7 +222,6 @@ body{
     padding: 50px;
 }
 
-/* CARD */
 
 .legend-card{
     background-color: #f5f0e6;
@@ -235,7 +234,6 @@ body{
     box-shadow: 0px 3px 10px rgba(0,0,0,0.2);
 }
 
-/* IMAGE */
 
 .image-box img{
     width: 320px;
@@ -244,7 +242,6 @@ body{
     border-radius: 15px;
 }
 
-/* TEXT */
 
 .text-box{
     flex: 1;
@@ -264,7 +261,6 @@ body{
     font-weight: bold;
 }
 
-/* BUTTON */
 
 .back-btn{
     margin-top: 15px;
@@ -283,33 +279,140 @@ body{
     background-color: #c9921d;
 }
 
-/* RESPONSIVE */
 
-@media(max-width: 900px){
 
-    .legend-card{
+@media (max-width: 768px) {
+
+    .navbar {
         flex-direction: column;
-        align-items: center;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .nav-links {
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        flex-direction: column;
         text-align: center;
+        padding: 20px;
     }
 
-    .image-box img{
-        width: 250px;
-        height: 380px;
-    }
-
-    .text-box h1{
+    .hero-text h1 {
         font-size: 40px;
     }
 
-    .text-box p{
-        font-size: 18px;
+    .hero-image img {
+        width: 100%;
+        max-width: 350px;
     }
 
-    .back-btn{
-        font-size: 25px;
-        padding: 12px 40px;
+    .search-box input {
+        width: 100%;
+        max-width: 300px;
     }
 
+    .card {
+        width: 280px;
+    }
+
+    .main-container {
+        padding: 20px;
+    }
+
+    .legend-card {
+        width: 100%;
+        padding: 20px;
+    }
 }
+
+
+
+@media (max-width: 480px) {
+
+    .logo img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .nav-links a {
+        font-size: 16px;
+    }
+
+    .profile-btn {
+        width: 100%;
+        max-width: 200px;
+    }
+
+    .hero {
+        padding: 15px;
+    }
+
+    .hero-text h1 {
+        font-size: 32px;
+    }
+
+    .hero-text p {
+        font-size: 14px;
+    }
+
+    .hero-image img {
+        max-width: 280px;
+    }
+
+    .search-box input {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .cards-container {
+        padding: 15px;
+        gap: 20px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .card h2 {
+        font-size: 24px;
+    }
+
+    .card p {
+        font-size: 16px;
+    }
+
+    .image-box img {
+        width: 100%;
+        max-width: 250px;
+        height: auto;
+    }
+
+    .text-box h1 {
+        font-size: 30px;
+    }
+
+    .text-box p {
+        font-size: 16px;
+    }
+
+    .back-btn {
+        width: 100%;
+        max-width: 250px;
+        font-size: 20px;
+        padding: 12px;
+    }
+}
+
+
 

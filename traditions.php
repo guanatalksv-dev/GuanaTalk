@@ -22,21 +22,7 @@ $resultado = $conn->query($query);
 </head>
 <body>
 
-    <header class="navbar">
-            <div class="logo">
-               <a href="index.php" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit;">
-                    <img src="img/GuanaTalk.png" alt="GuanaTalk Logo">
-                </a>
-            </div>
-        <nav>
-            <a href="traditions.php">Home</a>
-            <a href="favoritos.html">Favorite</a>
-            <a href="aboutus.html">About us</a>
-        </nav>
-        <div class="profile-section">
-            <button class="profile-btn">My Profile</button>
-        </div>
-    </header>
+    <?php include("nabvar.php"); ?>
 
     <main class="main-container">
         <section class="hero-section">
@@ -92,6 +78,7 @@ $resultado = $conn->query($query);
             </div>
         </section>
     </main>
+ <script src="JavaScript/navbar.js"></script>
 
 </body>
 </html>
