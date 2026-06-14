@@ -6,6 +6,7 @@
     <title>About Us</title>
 
     <link rel="stylesheet" href="styles/about us-style.css">
+    <link rel="stylesheet" href="styles/navbar.css">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
@@ -52,7 +53,7 @@
 
                 </div>
 
-                <!-- Slide 2 -->
+                
                 <div class="carousel-item">
 
                     <div class="about-card">
@@ -75,7 +76,7 @@
 
                 </div>
 
-                <!-- Slide 3 -->
+               
                 <div class="carousel-item">
 
                     <div class="about-card">
@@ -100,7 +101,6 @@
 
             </div>
 
-            <!-- Controls -->
             <button class="carousel-control-prev"
                     type="button"
                     data-bs-target="#aboutCarousel"

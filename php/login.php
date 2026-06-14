@@ -6,7 +6,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    // Usamos usuarioID porque así aparece en tu phpMyAdmin
     $sql = "SELECT usuarioID, nombre, email, nacionalidad, password FROM usuarios WHERE email = ?";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("s", $email);
@@ -22,7 +21,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['email'] = $usuario['email'];
             $_SESSION['nacionalidad'] = $usuario['nacionalidad'];
 
-            // Redirección a la HomePage (index.php)
     
             header("Location: ../index.php");
             exit(); 

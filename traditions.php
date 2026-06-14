@@ -11,6 +11,9 @@ $resultado = $conn->query($query);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Traditions</title>
     <link rel="stylesheet" href="styles/traditions.css">
+     <link rel="stylesheet" href="styles/navbar.css">
+
+    
     <style>
         .categories-grid a {
             text-decoration: none;
@@ -79,6 +82,5 @@ $resultado = $conn->query($query);
         </section>
     </main>
  <script src="JavaScript/navbar.js"></script>
-
 </body>
 </html>
