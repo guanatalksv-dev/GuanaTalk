@@ -13,7 +13,6 @@ $resultado = mysqli_query($conexion, $query);
     <title>Legends</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="styles/legends.css">
-     <link rel="stylesheet" href="styles/navbar.css">
 
 </head>
 <body>
@@ -54,7 +53,6 @@ $resultado = mysqli_query($conexion, $query);
         }
         ?>
     </div>
-         <script src="JavaScript/navbar.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/js/bootstrap.min.js"></script>
 </body>
 </html>

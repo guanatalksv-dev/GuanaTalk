@@ -27,6 +27,13 @@ body{
     color: black;
 }
 
+.hero-text p{
+    font-size: 18px;
+    line-height: 1.5;
+    color: #333131;
+    margin-bottom: 15px;
+}
+
 .hero-image img{
     width: 500px;
     border-radius: 20px;
@@ -112,8 +119,6 @@ body{
     background-color: #f0d0b0;
 }
 
-
-
 .navbar{
     background-color:#CA4B10;
     display: flex;
@@ -123,28 +128,29 @@ body{
 }
 
 .logo img{
-    width: 80px;
-    height: 80px;
+    height: 70px;
 }
 
 .nav-links{
     display: flex;
     gap: 40px;
     list-style: none;
+    justify-self: center;
 }
 
 .nav-links a{
     text-decoration: none;
     color: white;
+    font-weight: bold;
     font-size: 18px;
 }
 
 .profile-btn{
-    background-color: #5bc834;
-    color: white;
-    border: none;
+    background-color: #ffd4ac;
+    color: black;
+    border: 2px solid #fc9866;
     padding: 10px 25px;
-    border-radius: 20px;
+    border-radius: 10px;
     font-size: 18px;
     cursor: pointer;
 }
