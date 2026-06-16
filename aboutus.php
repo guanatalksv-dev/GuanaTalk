@@ -7,13 +7,11 @@
 
     <link rel="stylesheet" href="styles/about us-style.css">
     <link rel="stylesheet" href="styles/navbar.css">
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-<body>
 
-<?php include("nabvar.php"); ?>
+<?php include("components/navbar.php"); ?>
 
 </body>
    

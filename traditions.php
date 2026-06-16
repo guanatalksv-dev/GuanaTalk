@@ -11,7 +11,7 @@ $resultado = $conn->query($query);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Traditions</title>
     <link rel="stylesheet" href="styles/traditions.css">
-     <link rel="stylesheet" href="styles/navbar.css">
+    <link rel="stylesheet" href="styles/navbar.css">
 
     
     <style>
@@ -25,7 +25,7 @@ $resultado = $conn->query($query);
 </head>
 <body>
 
-    <?php include("nabvar.php"); ?>
+    <?php include("components/navbar.php"); ?>
 
     <main class="main-container">
         <section class="hero-section">

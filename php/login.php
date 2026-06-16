@@ -1,6 +1,6 @@
 <?php
 session_start();
-include("conexion.php"); // Asegúrate que esté en la carpeta php/
+include("conexion.php");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'];

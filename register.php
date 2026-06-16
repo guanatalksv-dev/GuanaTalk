@@ -8,20 +8,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles/register.css">
+    <link rel="stylesheet" href="styles/navbar.css">
 </head>
 <body>
  
-<header class="navbar">
-    <div class="logo">
-        <a href="index.php" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit;">
-            <img src="img/guanatalk.logo.png" alt="GuanaTalk Logo">
-            <span>GuanaTalk</span>
-        </a>
-    </div>
-    <div class="profile-section">
-        <button class="profile-btn">My Profile</button>
-    </div>
-</header>
+    <?php include("components/navbar-simple.php"); ?>
  
     <div class="main-container">
        

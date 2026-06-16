@@ -36,58 +36,6 @@ body::before{
 }
 
 
-.navbar{
-    background-color: #6F9D13;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 50px;
-    box-shadow: 0 4px 20px rgba(0,0,0,.15);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.logo img{
-    height: 65px;
-}
-
-nav{
-    display: flex;
-    align-items: center;
-}
-
-nav a{
-    color: white;
-    margin: 0 25px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1.05rem;
-    transition: .3s;
-}
-
-nav a:hover{
-    color: #D8DCC1;
-}
-
-.profile-btn {
-    background: #3ea531;
-    border: 2px solid #455e45;
-    padding: 10px 20px;
-    border-radius: 30px;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background 0.2s;
-}
-
-.profile-btn:hover {
-    background: #3fa332;
-}
-
-
-
 .about-section{
     width: 90%;
     max-width: 1400px;

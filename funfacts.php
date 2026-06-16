@@ -19,12 +19,14 @@ $resultado = $conexion->query($sql);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GuanaTalk - Fun Facts</title>
-    <link rel="stylesheet" href="funfacts-style.css">
+    <link rel="stylesheet" href="styles/navbar.css">
+    <link rel="stylesheet" href="styles/funfacts-style.css">
+    <link rel="stylesheet" href="styles/funfacts-style(1).css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
 </head>
 <body>
 
-        <?php include("nabvar.php"); ?>
+   <?php include("components/navbar.php"); ?>
     <main class="content-container">
 
         <section class="hero-section">

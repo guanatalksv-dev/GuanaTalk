@@ -13,7 +13,7 @@
 
 <body>
 
-<?php include("nabvar.php"); ?>
+<?php include("components/navbar.php"); ?>
 
 <section class="hero">
     <div class="hero-text">
