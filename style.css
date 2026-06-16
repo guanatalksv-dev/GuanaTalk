@@ -13,14 +13,14 @@ body {
 }
 
 .navbar {
-    background:linear-gradient(#6f9d13, #9bdb1c);
+    background-color: #96D41B;
     display: flex;
     justify-content: space-between;
     align-items:center;
     margin: auto;
     padding: 10px;
     color: white;
-}
+} 
 
 
 
@@ -44,11 +44,11 @@ nav a {
 }
 
 .profile-btn {
-    background: #46BA37;
+    background: #d9fd90;
     border: none;
     padding: 10px 20px;
-    border-radius: 25px;
-    color: white;
+    border-radius: 10px;
+    color: black;
     cursor: pointer;
     font-weight: bold;
     display: flex;
@@ -58,7 +58,7 @@ nav a {
 }
 
 .profile-btn:hover {
-    background: #46BA37;
+    background: #d9fd90;
 }
 
 .dropdown-content {
@@ -141,7 +141,7 @@ nav a {
 }
 
 .profile-btn:hover {
-    background: #3fa332;
+    background: #E2F6A2;
 }
 
 

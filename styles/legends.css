@@ -27,6 +27,13 @@ body{
     color: black;
 }
 
+.hero-text p{
+    font-size: 18px;
+    line-height: 1.5;
+    color: #333131;
+    margin-bottom: 15px;
+}
+
 .hero-image img{
     width: 500px;
     border-radius: 20px;

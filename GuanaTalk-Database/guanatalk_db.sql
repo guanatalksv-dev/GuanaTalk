@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 11, 2026 at 07:23 AM
+-- Generation Time: Jun 16, 2026 at 03:02 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -42,6 +42,62 @@ INSERT INTO `folklore_dances` (`id`, `nombre`, `descripcion`, `imagen`) VALUES
 (1, 'Danza del Venado', 'It is a traditional dance that reenacts the ritual hunting of a deer, symbolizing the ancestral bond between humans and nature.', 'danza-venado.png'),
 (2, 'Adentro Cojutepeque', 'The song is a tribute to the city of Cojutepeque in the department of Cuscatlán. It captures the joyful spirit of its local festivities and the pride of its people.', 'adentro-cojutepeque.png'),
 (3, 'Torito Pinto', 'El Torito Pinto is a traditional Salvadoran dance mimicking a bullfight. It features a dancer in a bull frame performing to rhythmic music during festive celebrations.', 'torito-pinto.png');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `funfacts`
+--
+
+CREATE TABLE `funfacts` (
+  `id_fact` int(11) NOT NULL,
+  `titulo` varchar(150) NOT NULL,
+  `descripcion` text NOT NULL,
+  `imagen` varchar(255) DEFAULT 'img/default.jpg'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `funfacts`
+--
+
+INSERT INTO `funfacts` (`id_fact`, `titulo`, `descripcion`, `imagen`) VALUES
+(1, 'Bandera', 'El Salvador’s flag was adopted in 1912 and is inspired by the former Central American Federation. Its blue and white colors represent the sky and oceans, while the five volcanoes in the coat of arms symbolize the nations of Central America.', 'img/bandera.png'),
+(3, 'Ave Nacional', 'The torogoz is El Salvador’s national bird. Its bright blue, green, and turquoise feathers make it easy to recognize. It also represents family unity because both the male and female work together to build and protect their nest and care for their young. For this reason, it is a symbol of both freedom and cooperation.', 'img/ave-nacional.png'),
+(4, 'Flor Nacional', 'El Salvador’s national flower. Besides its beauty, it is valued because its blossoms are edible and are used in traditional Salvadoran cuisine. It represents cultural identity, simplicity, and the strong connection between Salvadorans and nature.', 'img/flor-nacional.png'),
+(5, 'Escudo Nacional', 'El Salvador’s national coat of arms features five volcanoes representing the five nations of Central America. It also includes a rainbow, symbolizing peace, and the motto “God, Union, Liberty,” reflecting the nation’s values and identity.', 'img/escudo.png'),
+(6, 'Árbol Nacional', 'El Salvador’s national tree. During the dry season, its pink and purple flowers cover its branches, creating colorful landscapes. This tree symbolizes natural beauty, strength, and Salvadoran national pride.', 'img/arbol-nacional.png'),
+(7, 'Platillo Típico', 'Pupusas are El Salvador’s national dish and an important part of its culture. They are made from corn or rice dough and can be filled with cheese, beans, pork, or other ingredients. They are so popular that National Pupusa Day is celebrated every second Sunday of November.', 'img/pupusas.png'),
+(8, 'Traje típico', 'The traditional dress of El Salvador reflects the traditions and joy of its people. Women typically wear dresses in vibrant colors such as red, blue, white, yellow, and green, adorned with embroidery and ruffles, while men wear white clothing and hats. These outfits are worn during festivals and folk dances to celebrate Salvadoran cultural identity.', 'img/traje-tipico.png'),
+(9, 'Palacio Nacional', 'The National Palace is one of El Salvador’s most important historic buildings. Located in San Salvador, it was inaugurated in 1911 and served as the seat of government for many years. Its architecture combines elegance and historical significance, making it a symbol of Salvadoran cultural heritage.', 'img/palacio-nacional.png');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `historical_characters`
+--
+
+CREATE TABLE `historical_characters` (
+  `id_character` int(11) NOT NULL,
+  `nombre` varchar(150) NOT NULL,
+  `descripcion` text NOT NULL,
+  `imagen` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `historical_characters`
+--
+
+INSERT INTO `historical_characters` (`id_character`, `nombre`, `descripcion`, `imagen`) VALUES
+(1, 'Roque Dalton', 'He was one of the most important poets and writers in El Salvador and Latin America. His work combined poetry, essays, and narrative with a profound reflection on the social and political realities of his time. He studied in several countries and actively participated in social movements. Among his most renowned works are Taberna y otros lugares and Poemas clandestinos.', 'img/roque-dalton.png'),
+(2, 'Salarrué', 'Salarrué, pseudonym of Salvador Salazar Arrué, was a prominent Salvadoran writer, painter, and diplomat. He is especially known for his work Cuentos de barro, a collection of stories that portrays rural life and Salvadoran traditions with great sensitivity and linguistic richness. In addition to his literary work, he developed a significant artistic career in painting. His work helped strengthen El Salvador\'s cultural identity and continues to be studied and admired today.', 'img/Salarrue.png'),
+(3, 'Claudia Lars', 'Her real name was Margarita del Carmen Brannon Vega, and she is considered one of El Salvador\'s most important poets. Her poetry addresses themes such as love, nature, motherhood, and spirituality. She published numerous works that received recognition both within and outside the country. Her elegant and emotive language made her one of the most prominent voices in 20th-century Central American literature.', 'img/ClaudiaLars.png'),
+(4, 'Prudencia Ayala', 'She was a writer, journalist, and pioneer of women\'s rights in El Salvador. In 1930, she attempted to run for president of the Republic, even though the laws of the time did not allow women to vote or participate in politics. Her candidacy became a symbol of the struggle for gender equality. In addition to her political activism, she wrote articles and books in which she defended human rights and social justice.', 'img/prudencia-ayala.png'),
+(5, 'Fernando Llort', 'He was a renowned Salvadoran painter, sculptor, and designer. He is famous for creating a unique artistic style inspired by daily life, nature, and the traditions of El Salvador. His works are characterized by vibrant colors, simple figures, and messages of peace. His work had a significant influence on the country\'s cultural and tourism development, especially in the city of La Palma, where he fostered a major artisan movement.', 'img/fernando-llort.png'),
+(6, 'Alfredo Espino', 'He is considered one of El Salvador\'s most representative poets. Although his life was short, he left a profound mark on national literature thanks to his work, Jícaras tristes. His poems extol the beauty of Salvadoran landscapes, nature, customs, and national identity. His simple and musical style has ensured that his work continues to be read by generations of students and poetry lovers.', 'img/alfredo-espino.png'),
+(7, 'Jorge \"Mágico\" González', 'He is considered the best footballer in the history of El Salvador. He stood out for his extraordinary technical skill, creativity, and ability to make spectacular plays. He spent much of his career in Spain, especially with Cádiz CF, where he became a legend. His talent was admired internationally, and many consider him one of the most brilliant players Latin America has ever produced.', 'img/jorge-magico.png'),
+(8, 'Manuela Antonia Arce', 'She was a prominent Salvadoran patriot linked to the Central American independence movements during the 19th century. She is recognized for her support of the cause of freedom and for her participation in activities that contributed to strengthening the ideals of independence. Her example represents the role that many women played in building the Salvadoran nation, although for a long time their contributions received little visibility in official history.', 'img/manuela-antonia-arce.png'),
+(9, 'María Felipa Aranzamendi', 'She was an educator and promoter of academic development in El Salvador. She dedicated much of her life to teaching and training new generations. Her work contributed to strengthening national education at a time when access to instruction was limited for a large part of the population. She is remembered as a figure committed to the intellectual and social progress of the country.', 'img/maria-felipa.png'),
+(10, 'María Isabel Arrieta Gálvez', 'She was a prominent Salvadoran model, diplomat, and beauty queen. She achieved international recognition by winning the 1955 Miss Universe pageant, becoming the first and only Salvadoran to hold that title. After her reign, she represented the country in various diplomatic and cultural capacities. Her victory placed El Salvador on the international stage and made her a symbol of national pride.', 'img/maribel-arrieta.png');
 
 -- --------------------------------------------------------
 

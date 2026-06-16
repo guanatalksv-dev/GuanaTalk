@@ -54,7 +54,6 @@ $resultado = mysqli_query($conexion, $query);
         }
         ?>
     </div>
-         <script src="JavaScript/navbar.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/js/bootstrap.min.js"></script>
 </body>
 </html>
