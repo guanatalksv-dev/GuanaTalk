@@ -94,7 +94,41 @@
 .navbar-back-btn:hover { transform: scale(1.05); }
 
 .hangman-container { max-width: 1050px; width: 92%; margin: 0 auto; position: relative; z-index: 10; }
-.hangman-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+
+.header-right {
+    display: flex;
+    align-items: center;       
+    gap: 12px;                 
+}
+
+.streak-badge {
+    background: #004b6e; 
+    color: white; 
+    font-weight: 800; 
+    padding: 6px 16px; 
+    border-radius: 30px;
+    flex-shrink: 0;            
+}
+
+.help-btn {
+    background: white; 
+    color: #004b6e; 
+    font-family: 'Fredoka One', cursive;
+    width: 35px; 
+    height: 35px; 
+    border-radius: 30px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    cursor: pointer;           
+    transition: transform 0.1s ease;
+    flex-shrink: 0;            
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+}
+
+.help-btn:hover {
+    transform: scale(1.08);
+}
 .hangman-header h1 {
     font-family: 'Fredoka One', cursive; color: #004b6e; font-size: 2.2rem; margin: 0;
     text-shadow: 0 2px 4px rgba(255,255,255,0.6); letter-spacing: 1px;
@@ -207,4 +241,65 @@
     background: #fff9eb; border: 1px dashed #e6c280;
     padding: 12px; border-radius: 12px; text-align: center;
     color: #513e17; font-size: 0.9rem;
+}
+
+@media (max-width: 768px)   {
+    .hangman-beach-theme {
+        padding-top: 90px;
+        padding-bottom: 40px;
+    }
+
+    .hangman-header h1 {
+        font-size: 1.6rem;
+        text-align: center;
+    }
+
+    .game-panels {
+        grid-template-columns: 1fr !important; 
+        gap: 15px;
+        margin-bottom: 15px;
+    }
+
+    .hangman-container {
+        width: 95%;
+    }
+
+    .panel {
+        padding: 15px;
+    }
+
+    .letter-space {
+        font-size: 1.5rem;
+        width: 25px;
+        border-bottom-width: 3px;
+    }
+
+    .keyboard-container {
+        gap: 6px;
+        padding: 0 5px;
+    }
+
+    .keyboard-row {
+        gap: 4px;
+    }
+
+    .key-btn {
+        width: calc(100% / 13 - 4px); 
+        min-width: 24px;
+        height: 42px;
+        font-size: 0.95rem;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .modal-content {
+        padding: 20px;
+        width: 90%;
+    }
+    
+    .modal-content h2 {
+        font-size: 1.3rem;
+    }
 }

@@ -294,7 +294,7 @@ nav a {
 }
 
 .fun-fact-box {
-    background: linear-gradient(#5ec4ff, #bbff3c);
+    background: linear-gradient(#beff88, #b0ff70);
     color: black;
     border-radius: 25px;
     padding: 10px 10px;
@@ -413,8 +413,6 @@ nav a {
   font-size:17px;
   line-height:1.5;
 }
-
-/* WHY */
 
 .why{
   margin-top:40px;
