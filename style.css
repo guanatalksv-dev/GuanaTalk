@@ -312,24 +312,6 @@ nav a {
     font-size: 1.5rem;
 }
 
-@media (max-width: 768px) {
-  .hero {
-    flex-direction: column;
-    text-align: center;
-    padding: 40px 20px;
-  }
-  .hero-img {
-    margin-right: 0;
-    max-width: 300px;
-    margin-top: 20px;
-  }
-}
-
-.container{
-  background:#FBF2EB;
-  padding:40px;
-}
-
 .about h2{
   text-align:center;
   font-size:30px;
@@ -470,4 +452,136 @@ nav a {
 
 .green{
   background:#6b9467;
+}
+
+@media(max-width: 425) {
+  html, body {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow-x: hidden !important; 
+  }
+
+  nav, .navbar, .guanatalk-navbar { 
+    display: flex !important;
+    flex-direction: row !important; 
+    justify-content: space-between !important;
+    padding: 10px 15px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .nav-links, nav a:not(.profile-btn), .guanatalk-navbar .nav-links {
+    display: none !important; 
+  }
+
+  .hero {
+    display: flex !important;
+    flex-direction: column !important; 
+    text-align: center !important;
+    padding: 30px 15px !important;
+    align-items: center !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .hero-text h1 {
+    font-size: 1.7rem !important;
+    line-height: 1.2 !important;
+    margin-bottom: 10px !important;
+  }
+
+  .hero-text p {
+    font-size: 1rem !important;
+    margin: 0 auto 15px auto !important;
+    max-width: 100% !important;
+  }
+
+  .hero-img {
+    margin: 15px auto 0 auto !important;
+    max-width: 250px !important; 
+    height: auto !important;
+  }
+
+  .cards { 
+    display: flex !important;
+    flex-direction: column !important; 
+    align-items: center !important;
+    gap: 16px !important; 
+    padding: 15px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .card {
+    width: 85% !important;   
+    max-width: 260px !important; 
+    height: auto !important;     
+    margin: 0 auto !important;
+    border-radius: 30px !important; 
+    padding: 20px 15px !important;
+    box-sizing: border-box !important;
+  }
+
+  .card p {
+    font-size: 16px !important;
+    margin-bottom: 0 !important;
+  }
+
+  .fun-fact-box {
+    margin: 15px !important;
+    padding: 12px !important;
+    box-sizing: border-box !important;
+  }
+
+  .fun-fact-content {
+    font-size: 0.95rem !important;
+    flex-direction: column !important;
+    text-align: center !important;
+  }
+}
+
+@media (max-width: 768px) {
+  nav, .navbar, .hangman-navbar { 
+    flex-direction: row !important; 
+    justify-content: space-between;
+    padding: 10px 15px;
+    height: auto;
+  }
+
+  .nav-links, nav ul {
+    display: none; 
+  }
+
+  .hero {
+    display: flex;
+    flex-direction: column !important; 
+    text-align: center;
+    padding: 40px 20px;
+    align-items: center;
+  }
+
+  .hero-img, .hero img {
+    margin-right: 0 !important;
+    max-width: 280px; 
+    margin-top: 20px;
+    height: auto;
+  }
+
+  .categories-container, .menu-grid, .game-panels { 
+    display: flex !important;
+    flex-direction: column !important; 
+    align-items: center;
+    gap: 20px; 
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+
+  .card, .panel {
+    width: 100% !important;   
+    max-width: 340px;          
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
 }

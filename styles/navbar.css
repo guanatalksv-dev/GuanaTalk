@@ -77,3 +77,24 @@
     font-size: 1.5rem;
     cursor: pointer;
 }
+@media (max-width: 768px) {
+    .guanatalk-navbar .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #1f4e8c;
+        position: absolute;
+        top: 60px;
+        right: 40px;
+        width: 150px;
+        padding: 10px 0;
+        border-radius: 8px;
+    }
+
+    .guanatalk-navbar .nav-links.active {
+        display: flex;
+    }
+
+    .guanatalk-navbar .menu-toggle {
+        display: block;
+    }
+}
