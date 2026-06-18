@@ -90,7 +90,7 @@
                         </div>
 
                         <div class="about-image">
-                            <img src="img/vision.png" alt="Vision">
+                            <img src="vision.png" alt="Vision">
                         </div>
 
                     </div>
@@ -117,90 +117,53 @@
 
     </section>
 
+<div class="colors-section">
 
-    <section class="colors-section">
-    <h2>Our Brand Colors</h2>
-    <p>
-        These are the colors that represent GuanaTalk.
-    </p>
+    <h2>Our color palette</h2>
+     <span>At GunaTalk we use colors inspired of our beautiful country!.</span>
 
     <div class="colors-container">
 
+
         <div class="color-card">
-            <div class="color-box color1"></div>
-            <h3>#B6D004</h3>
-            <span>Main Green</span>
+            <div class="color-box color5"></div>
+            <h3>🌊 Azul Bahía</h3>
+            <span>The beaches of El Tunco and El Zonte.</span>
         </div>
 
         <div class="color-card">
             <div class="color-box color2"></div>
-            <h3>#D4E55B</h3>
-            <span>Light Green</span>
-        </div>
-
-        <div class="color-card">
-            <div class="color-box color3"></div>
-            <h3>#CA4B10</h3>
-            <span>Orange</span>
-        </div>
-
-        <div class="color-card">
-            <div class="color-box color4"></div>
-            <h3>#F0D0B0</h3>
-            <span>Beige</span>
-        </div>
-
-        <div class="color-card">
-            <div class="color-box color5"></div>
-            <h3>#07C5D8</h3>
-            <span>Turquoise</span>
-        </div>
-
-        <div class="color-card">
-            <div class="color-box color6"></div>
-            <h3>#ACDBDF</h3>
-            <span>Soft Blue</span>
+            <h3>🌿 Verde Maquilishuat</h3>
+            <span>Inspired by El Salvador's national tree.</span>
         </div>
 
         <div class="color-card">
             <div class="color-box color7"></div>
-            <h3>#0D2D00</h3>
-            <span>Dark Green</span>
+            <h3>🍃 Verde Café de Montaña</h3>
+            <span>The coffee farms of Apaneca and Ilamatepec.</span>
         </div>
 
         <div class="color-card">
-            <div class="color-box color8"></div>
-            <h3>#B4DFA2</h3>
-            <span>Nature Green</span>
+            <div class="color-box color4"></div>
+            <h3>🌺 Rosa Maquilishuat</h3>
+            <span>Inspired by El Salvador's national flower.</span>
         </div>
 
         <div class="color-card">
-            <div class="color-box color9"></div>
-            <h3>#090A0B</h3>
-            <span>Black</span>
+            <div class="color-box color3"></div>
+            <h3>🏔️ Coral volcánico</h3>
+            <span>Light sand and volcanic landscapes.</span>
         </div>
 
         <div class="color-card">
-            <div class="color-box color10"></div>
-            <h3>#B7DCFF</h3>
-            <span>Sky Blue</span>
-        </div>
-
-        <div class="color-card">
-            <div class="color-box color11"></div>
-            <h3>#0285CE</h3>
-            <span>Ocean Blue</span>
-        </div>
-
-        <div class="color-card">
-            <div class="color-box color12"></div>
-            <h3>#C4E9FF</h3>
-            <span>Light Blue</span>
+            <div class="color-box color1"></div>
+            <h3>☀️ Oro Pipil</h3>
+            <span>Indigenous crafts and cultural heritage.</span>
         </div>
 
     </div>
-</section>
 
+</div>
 
 
 

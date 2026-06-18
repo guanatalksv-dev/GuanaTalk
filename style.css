@@ -6,11 +6,10 @@
     font-size: 100%;
     }
 
-body {
-    background: linear-gradient(#b5e4ff, #d4ffbb);
-    margin: 0;
-    padding: 0;
+    body{
+    background: #f8f8f8;
 }
+
 
 .navbar {
     background-color: #96D41B;

@@ -23,8 +23,7 @@ $resultado = mysqli_query($conexion, $query);
       <div class="hero-text">
         <h1>Legends</h1>
             <p>
-                 Discover traditional tales filled with mystery, culture, and imagination, where every story carries the wisdom of the past and the spirit of different generations. These narratives invite you to explore magical worlds, ancient traditions, and unforgettable characters that bring history and creativity to life in a unique and captivating way.
-                </p>        
+                 Discover traditional tales filled with mystery, culture, and imagination, where every story carries the wisdom of the past and the spirit of different generations. 
         </div>
         <div class="hero-image">
             <img src="img/leyendas.png  " alt="Legend Girl">
