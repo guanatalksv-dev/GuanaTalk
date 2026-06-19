@@ -3,10 +3,9 @@ if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 ?>
-<!-- components/navbar.php -->
 <header class="guanatalk-navbar"> <div class="logo">
         <a href="index.php">
-            <img src="img/GuanaTalk.png" alt="GuanaTalk Logo">
+            <img src="img/GuanaTalk logo.png.png" alt="GuanaTalk Logo">
         </a>
     </div>
     
