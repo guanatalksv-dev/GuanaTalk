@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us</title>
-
     <link rel="stylesheet" href="styles/about us-style.css">
     <link rel="stylesheet" href="styles/navbar.css">
+        <link rel="stylesheet" href="styles/footer.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 
 <?php include("components/navbar.php"); ?>
 
-</body>
-   
+
+
     <section class="about-section">
 
         <h1>About Us</h1>
@@ -166,9 +166,9 @@
 </div>
 
 
+<?php include("php/footer.php"); ?>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
  <script src="JavaScript/navbar.js"></script>
-
 </body>
 </html>

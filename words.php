@@ -1,116 +1,65 @@
 <?php
-include("conexionleyendas.php");
-
-$sql = "SELECT * FROM words WHERE palabra = 'Canchita'";
-$resultado = mysqli_query($conexion, $sql);
-$word = mysqli_fetch_assoc($resultado);
+include("php/conexion.php");
+$resultado = mysqli_query($conn, "SELECT * FROM words");
 ?>
+
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Words - GuanaTalk</title>
-    <link rel="stylesheet" href="styles/words.css">
-    
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Words - GuanaTalk</title>
+
+<link rel="stylesheet" href="styles/words.css">
+<link rel="stylesheet" href="styles/navbar.css">
+
 </head>
+
 <body>
 
-    <header class="navbar">
-    <div class="logo">
-        <a href="index.php" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit;">
-            <img src="img/GuanaTalk.png" alt="GuanaTalk Logo">
-        </a>
-    </div>
-    <nav>
-        <a href="index.php">Home</a>
-        <a href="favoritos.html">Favorites</a>
-        <a href="aboutus.html">About us</a>
-    </nav>
-   <div class="profile-section">
-    <button class="profile-btn" onclick="window.location.href='php/profile.php'">
-        My Profile
-    </button>
+<?php include("components/navbar.php"); ?>
 
-    </div>
-    </header>
+<section class="hero">
 
-    <section class="hero">
-        <div class="hero-text">
-        <h1>Words</h1>
-        <h2>that accompany you</h2>
-        <p>Learn new words in a fun way.<br>
-            Explore categories and improve your vocabulary</p>
-        </div>
-        <img class="hero-img" src="img/words.elsalvador.png" alt="El Salvador">
-    </section>
+    <div class="hero-text">
+        <h1>Words that accompany you</h1>
 
-    <section class="cards">
-        <div class="cards-container">
-
-    <div class="card pink" data-id="bicho">
-        <button class="fav-btn">★</button>
-        <img src="img/bicho.png" alt="Bicho/a">
-        <h3>Bicho/a</h3>
-        <audio controls>
-            <source src="audio/bicho.mp3" type="audio/mp3">
-        </audio>
+        <p>
+            Discover popular Salvadoran expressions,
+            learn their meaning and listen to their pronunciation.
+        </p>
     </div>
 
-    <div class="card orange" data-id="pulgarcito">
-        <button class="fav-btn">★</button>
-        <img src="img/pulgarcito.png" alt="Pulgarcito">
-        <h3>Pulgarcito</h3>
-        <audio controls>
-            <source src="audio/pulgarcito.mp3" type="audio/mp3">
-        </audio>
-    </div>
+    <img src="img/words.elsalvador.png"
+         alt="Words"
+         class="hero-img">
 
-    <div class="card lightpink" data-id="apiate">
-        <button class="fav-btn">★</button>
-        <img src="img/apiate.png" alt="Apiate">
-        <h3>Apiate</h3>
-        <audio controls>
-            <source src="audio/apiate.mp3" type="audio/mp3">
-        </audio>
-    </div>
+</section>
 
-    <div class="card peach" data-id="volado">
-        <button class="fav-btn">★</button>
-        <img src="img/volado.png" alt="Volado">
-        <h3>Volado</h3>
-        <audio controls>
-            <source src="audio/volado.mp3" type="audio/mp3">
-        </audio>
-    </div>
+<section class="cards-container">
 
-    <div class="card peach2" data-id="canchita">
-            <button class="fav-btn">★</button>
+<?php while($word = mysqli_fetch_assoc($resultado)){ ?>
 
-            <img src="img/canchita.png" alt="<?php echo $word['palabra']; ?>">
+<div class="card">
 
-            <h3><?php echo $word['palabra']; ?></h3>
+    <img src="<?php echo $word['imagen']; ?>" alt="">
 
-            <audio controls>
-                <source src="<?php echo $word['audio']; ?>" type="audio/mp3">
-             </audio>
+    <h3><?php echo $word['palabra']; ?></h3>
+
+    <p><?php echo $word['significado']; ?></p>
+
+    <audio controls>
+        <source src="<?php echo $word['audio']; ?>" type="audio/mpeg">
+    </audio>
+
+        
 </div>
 
-    <div class="card orange2" data-id="chero">
-        <button class="fav-btn">★</button>
-        <img src="img/chero.png" alt="Chero/a">
-        <h3>Chero/a</h3>
-        <audio controls>
-            <source src="audio/chero.mp3" type="audio/mp3">
-        </audio>
-    </div>
+<?php } ?>
 
-</div> <script src="JavaScript/words.js"></script>
-    </section>
+</section>
 
-    
-
-</body>
-</html>
 </body>
 </html>

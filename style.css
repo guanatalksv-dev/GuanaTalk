@@ -453,6 +453,8 @@ nav a {
   background:#6b9467;
 }
 
+
+
 @media(max-width: 425) {
   html, body {
     width: 100% !important;

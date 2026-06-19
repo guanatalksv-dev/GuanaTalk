@@ -26,7 +26,7 @@
 
 <section class="cards">
 
-    <button type="button" class="card card-pink" onclick="window.location.href='words.html'">
+    <button type="button" class="card card-pink" onclick="window.location.href='words.php'">
         <img src="img/words.png" alt="Words" class="card-img">
         <p>Words</p>
     </button>
