@@ -1,5 +1,6 @@
 .guanatalk-navbar {
-    background: linear-gradient(#6f9d13, #9bdb1c);
+    background: linear-gradient(to right, #fff9f9 4%, #0283ce 40%, #00264b 105%);
+    border-bottom: 2px solid #0283ce;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -40,15 +41,15 @@
 }
 
 .guanatalk-navbar .nav-links li a:hover {
-    color: #e2e2e2;
+    color: #1a2439;
 }
 
 .guanatalk-navbar .profile-btn {
-    background-color: #d9fd90 !important; 
-    border: 2px solid #b6cf04 !important; 
+    background-color: #c4e9ff !important; 
+    border: 3px solid #ffcc00 !important; 
     color: #000000 !important; 
     padding: 10px 24px !important;
-    border-radius: 25px !important; 
+    border-radius: 10px !important; 
     font-weight: 800 !important;
     font-size: 1rem !important;
     text-decoration: none !important; 
@@ -63,7 +64,7 @@
 }
 
 .guanatalk-navbar .profile-btn:hover {
-    background-color: #b6cf04 !important;
+    background-color: #0283ce !important;
     transform: translateY(-2px) !important;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2) !important;
     color: #000000 !important;
@@ -81,7 +82,7 @@
     .guanatalk-navbar .nav-links {
         display: none;
         flex-direction: column;
-        background-color: #1f4e8c;
+        background-color: #0283ce;
         position: absolute;
         top: 60px;
         right: 40px;

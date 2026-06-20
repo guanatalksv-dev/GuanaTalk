@@ -9,27 +9,15 @@
     <link rel="stylesheet" href="styles/navbar.css">
 </head>
 <body>
+<?php include("components/navbar.php"); ?>
 
-<header class="navbar">
-    <div class="logo">
-       <a href="index.php" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit;">
-            <img src="img/GuanaTalk.png" alt="GuanaTalk Logo">
-        </a>
-    </div>
-    <nav>
-        <a href="index.php">Home</a>
-        <a href="favoritos.html">Favorite</a>
-        <a href="aboutus.html">About us</a>
-    </nav>
-    <div class="profile-section">
-        <button class="profile-btn">My Profile</button>
-    </div>
-</header>
+<div class="bandera-css bandera-css-izq"></div>
+<div class="bandera-css bandera-css-der"></div>
 
 <section class="hero">
     <div class="hero-text">
-        <h1>Mini-games</h1>
-        <p>Put your “Guanaco Power” to the test! <br> Have fun and learn through play.</p>
+        <h1 class="pop-title">Mini-games</h1>
+        <p class="pop-subtitle">Put your “Guanaco Power” to the test! <br> Have fun and learn through play.</p>
     </div>
     <img class="hero-img" src="img/minigames.ES.png" alt="El Salvador">
 </section>
@@ -47,7 +35,7 @@
     </a>
 
     <a href="wordsearch.html" class="card-game card-gradient-3">
-        <img src="img/wordsearch.png" alt="Word Swordsearch.pngearch" class="card-game-img">
+        <img src="img/wordsearch.png" alt="Word Search" class="card-game-img">
         <p>Word Search</p>
     </a>
 
@@ -63,11 +51,8 @@
 
 </section>
 
-<div class="funfact">
-    <span class="mega-icon">📢</span> 
-    <p><b>Fun Fact:</b> Did you know the marble game is known in El Salvador as “chibolas”?</p>
-</div>
-
 <script src="JavaScript/minigames.js"></script>
+
+<script src="JavaScript/navbar.js"></script> 
 </body>
 </html>

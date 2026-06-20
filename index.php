@@ -17,6 +17,9 @@
 
 <?php include("components/navbar.php"); ?>
 
+<div class="bandera-css bandera-css-izq"></div>
+<div class="bandera-css bandera-css-der"></div>
+
 <section class="hero">
     <div class="hero-text">
         <h1>Welcome to GuanaTalk</h1>
@@ -48,15 +51,18 @@
         <p>Fun Facts</p>
     </button>
 
-    <button type="button" class="card card-gray" onclick="window.location.href='minigames.html'">
+    <button type="button" class="card card-gray" onclick="window.location.href='minigames.php'">
         <img src="img/hangman.png" alt="Mini-games" class="card-img">
         <p>Mini-games</p>
     </button>
 
 </section>
+<<<<<<< HEAD
 
 
 <?php include("php/footer.php"); ?>
+=======
+>>>>>>> 9d10277772b7ba82447e353c3bf67a7ef5a5d90e
  <script src="JavaScript/navbar.js"></script>
 </body>
 </html>
