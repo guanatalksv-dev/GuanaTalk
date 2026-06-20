@@ -7,12 +7,43 @@
 }
 
 body {
-  background: linear-gradient(#d4eeff, #c6ffa5);
+  background-color: #f0f0f0;
 }
 
+.bandera-css {
+    position: fixed;
+    top: 100px; 
+    width: 45px;
+    height: 27px;
+    z-index: 1000;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    background: linear-gradient(to bottom, 
+        #0056b3 0%, #0056b3 33.33%, 
+        #ffffff 33.33%, #ffffff 66.66%, 
+        #0056b3 66.66%, #0056b3 100%
+    );
+}
+
+.bandera-css-izq {
+    left: 25px;
+}
+
+.bandera-css-der {
+    right: 25px;
+}
+
+.bandera-css {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bandera-css:hover {
+    transform: translateY(-4px); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
+}
 
 .navbar {
-  background-color: #96D41B;
+  background-color: #0283ce;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -85,7 +116,7 @@ nav a {
 
 .dropdown-content a:hover {
   background-color: #f1f1f1;
-  color: #1f4e8c;
+  color: #0283ce;
 }
 
 .divider {
@@ -107,8 +138,8 @@ nav a {
 
 
 .menu-lines-btn {
-  border: 2px solid #b6cf04;
-  background: #d9fd90;
+  border: 2px solid #0283ce;
+  background: #c4e9ff;
   color: black;
   width: 45px;
   height: 42px;
@@ -128,8 +159,8 @@ nav a {
 
 
 .profile-btn {
-  background: #d9fd90;
-  border: 2px solid #b6cf04;
+  background: #c4e9ff;
+  border: 2px solid #ffcc00;
   padding: 10px 20px;
   border-radius: 10px;
   color: black;
@@ -201,21 +232,24 @@ nav a {
   justify-content: space-between;
   align-items: center;
   padding: 5px 60px;
-  background: linear-gradient(#c6ffa5, #d4eeff);
+  background-color: #f0f0f0;
   position: relative;
 }
 
 .hero-text h1 {
-  font-size: 2.2rem;
-  color: #111;
-  margin-bottom: 10px;
+    font-size: 2.2rem;
+    color: #111;
+    margin-bottom: 10px;
+    text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.12);
 }
 
 .hero-text p {
-  font-size: 1.2rem;
-  color: #555;
-  max-width: 400px;
-  line-height: 1.5;
+    font-family: 'Fredoka', sans-serif; 
+    font-size: 1.25rem;
+    color: #2b2b2b; 
+    max-width: 420px;
+    line-height: 1.6; 
+    text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.9); 
 }
 
 .hero-img {
@@ -407,7 +441,7 @@ nav a {
 }
 
 .why-title h3 {
-  background: #d89b1e;
+  background: #ffcc00;
   padding: 12px 40px;
   border-radius: 20px;
   font-size: 22px;
@@ -534,18 +568,6 @@ nav a {
   .card p {
     font-size: 16px !important;
     margin-bottom: 0 !important;
-  }
-
-  .fun-fact-box {
-    margin: 15px !important;
-    padding: 12px !important;
-    box-sizing: border-box !important;
-  }
-
-  .fun-fact-content {
-    font-size: 0.95rem !important;
-    flex-direction: column !important;
-    text-align: center !important;
   }
 }
 
