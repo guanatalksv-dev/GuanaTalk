@@ -13,7 +13,7 @@ $resultado = $conn->query($query);
     <link rel="stylesheet" href="styles/traditions.css">
     <link rel="stylesheet" href="styles/navbar.css">
 
-    
+
     <style>
         .categories-grid a {
             text-decoration: none;
@@ -73,14 +73,5 @@ $resultado = $conn->query($query);
             ?>
 
         </section>
-
-        <section class="fun-fact-box">
-            <div class="fun-fact-content">
-                <span class="megaphone-icon">📢</span>
-                <p><strong>Fun Fact:</strong> Did you know that the Salvadoran capirucho is hand-carved from cedar wood?</p>
-            </div>
-        </section>
-    </main>
- <script src="JavaScript/navbar.js"></script>
 </body>
 </html>

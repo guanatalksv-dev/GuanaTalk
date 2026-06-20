@@ -21,6 +21,8 @@ $resultado = $conexion->query($sql);
     <title>Guanatalk - Historical Characters</title>
     <link rel="stylesheet" href="styles/characters-style.css?v=abc">
     <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+            <link rel="stylesheet" href="styles/footer.css">
+
 </head>
 <body>
 
@@ -78,6 +80,7 @@ $resultado = $conexion->query($sql);
 
             </div> </section>
     </main>
+<?php include("php/footer.php"); ?>
 
 </body>
 </html>

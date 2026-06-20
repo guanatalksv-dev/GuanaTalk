@@ -14,6 +14,8 @@ $resultado = $conn->query($query);
         <title>Folklore Dances - GuanaTalk</title>
         <link rel="stylesheet" href="styles/folklores.css">
         <link rel="stylesheet" href="styles/navbar.css">
+         <link rel="stylesheet" href="styles/footer.css">
+
     </head>
     <body>
 
@@ -53,14 +55,7 @@ $resultado = $conn->query($query);
                     ?>
                 </section>
 
-                <section class="folklore-dyk-banner">
-                    <div class="dyk-badge">
-                        <span>📢</span>
-                        <strong>Did you<br>know?</strong>
-                    </div>
-                    <p class="dyk-message">El Salvador has over 100 documented traditional dances, each with its unique history.</p>
-                </section>
-
+                <?php include("php/footer.php"); ?>
             </main>
         </div>
         <script src="JavaScript/navbar.js"></script>

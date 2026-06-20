@@ -23,6 +23,8 @@ $resultado = $conexion->query($sql);
     <link rel="stylesheet" href="styles/funfacts-style.css">
     <link rel="stylesheet" href="styles/funfacts-style(1).css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+   <link rel="stylesheet" href="styles/footer.css">
+
 </head>
 <body>
 
@@ -187,5 +189,6 @@ $resultado = $conexion->query($sql);
         });
     </script>
      <script src="JavaScript/navbar.js"></script>
+             <?php include("php/footer.php"); ?>
 </body>
 </html>

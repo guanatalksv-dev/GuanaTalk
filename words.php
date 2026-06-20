@@ -14,6 +14,8 @@ $resultado = mysqli_query($conn, "SELECT * FROM words");
 
 <link rel="stylesheet" href="styles/words.css">
 <link rel="stylesheet" href="styles/navbar.css">
+ <link rel="stylesheet" href="styles/footer.css">
+
 
 </head>
 
@@ -60,6 +62,6 @@ $resultado = mysqli_query($conn, "SELECT * FROM words");
 <?php } ?>
 
 </section>
-
+<?php include("php/footer.php"); ?>
 </body>
 </html>

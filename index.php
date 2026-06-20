@@ -9,6 +9,8 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="styles/navbar.css">
+     <link rel="stylesheet" href="styles/footer.css">
+
 </head>
 
 <body>
@@ -53,13 +55,8 @@
 
 </section>
 
-<section class="fun-fact-box">
-    <div class="fun-fact-content">
-        <span class="megaphone-icon">📢</span>
-        <p><strong>Fun Fact:</strong> Did you know that the Salvadoran capirucho is hand-carved from cedar wood?</p>
-    </div>
-</section>
 
+<?php include("php/footer.php"); ?>
  <script src="JavaScript/navbar.js"></script>
 </body>
 </html>

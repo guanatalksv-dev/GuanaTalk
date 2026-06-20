@@ -13,6 +13,8 @@ $resultado = $conn->query($query_elementos);
         <title>Fiestas Patronales - GuanaTalk</title>
         <link rel="stylesheet" href="styles/fiestas-patronaless.css">
         <link rel="stylesheet" href="styles/navbar.css">
+          <link rel="stylesheet" href="styles/footer.css">
+
     </head>
     <body>
 
@@ -48,12 +50,7 @@ $resultado = $conn->query($query_elementos);
                 ?>
             </section>
 
-            <section class="did-you-know-banner">
-                <div class="dyk-icon">📢</div>
-                <div class="dyk-title">Did you<br>know?</div>
-                <div class="dyk-text">Most towns in El Salvador celebrate a Patronal Festival dedicated to their saint.</div>
-            </section>
-
+         <?php include("php/footer.php"); ?>
         </main>
         <script src="JavaScript/navbar.js"></script>
     </body>

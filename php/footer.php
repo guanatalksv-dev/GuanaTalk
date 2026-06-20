@@ -14,7 +14,7 @@
         </div>
 
         <div class="footer-copy">
-            <p>© 2026 GuanaTalk | Descubriendo la cultura salvadoreña.</p>
+            <p>© 2026 GuanaTalk | your gateway to Salvadorean culture.</p>
         </div>
 
     </div>
