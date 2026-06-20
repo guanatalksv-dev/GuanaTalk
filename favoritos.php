@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="styles/funfacts-style.css">
   <link rel="stylesheet" href="styles/words.css">
  <link rel="stylesheet" href="styles/navbar.css">
-  <link rel="stylesheet" href="styles/footer.css">
 
   <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
 </head>
@@ -28,5 +27,6 @@
   
   <script src="JavaScript/navbar.js"></script>
   <script src="favoritos.js?v=2"></script>
+
 </body>
 </html>

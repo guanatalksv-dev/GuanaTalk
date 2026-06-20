@@ -13,6 +13,8 @@ $resultado = $conn->query($query);
         <link rel="stylesheet" href="styles/traditions.css">
         <link rel="stylesheet" href="styles/traditional-games.css">
         <link rel="stylesheet" href="styles/navbar.css">
+        <link rel="stylesheet" href="styles/footer.css">
+
     </head>
     <body>
 
@@ -50,17 +52,10 @@ $resultado = $conn->query($query);
                     ?>
                 </section>
 
-                <section class="games-fun-fact">
-                    <div class="ff-icon">📢</div>
-                    <div class="ff-text">
-                        <strong>Fun Fact:</strong> Did you know that the Salvadoran capirucho is hand-carved from cedar wood?
-                    </div>
-                </section>
-
             </main>
         </div>
 
     <script src="JavaScript/navbar.js"></script>
-    
+            <?php include("php/footer.php"); ?>
     </body>
 </html>

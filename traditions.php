@@ -12,6 +12,8 @@ $resultado = $conn->query($query);
     <title>Traditions</title>
     <link rel="stylesheet" href="styles/traditions.css">
     <link rel="stylesheet" href="styles/navbar.css">
+    <link rel="stylesheet" href="styles/footer.css">
+
 
 
     <style>
@@ -71,7 +73,7 @@ $resultado = $conn->query($query);
                 echo "<p style='color: #666; text-align: center; width: 100%;'>No se encontraron tradiciones disponibles en este momento.</p>";
             }
             ?>
-
         </section>
+           <?php include("php/footer.php"); ?>
 </body>
 </html>

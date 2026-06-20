@@ -2,8 +2,7 @@
     <div class="footer-content">
 
         <div class="footer-logo">
-            <img src="img/minimalista.png" alt="GuanaTalk Logo">
-            <h3>GuanaTalk</h3>
+            <img src="img/logo-blanco.png" alt="GuanaTalk Logo">
         </div>
 
         <div class="footer-contact">

@@ -8,15 +8,14 @@
 body {
     background-color: #F9F5EB; 
     color: #333;
-    padding-bottom: 80px; 
 }
 
 .main-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 40px 20px;
+    flex: 1;
 }
-
 .hero-section {
     display: flex;
     justify-content: space-between;
@@ -134,3 +133,4 @@ body {
 .bottom-link .icon {
     font-size: 1.2rem;
 }
+

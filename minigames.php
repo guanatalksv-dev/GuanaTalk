@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="styles/minigames.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="styles/navbar.css">
+     <link rel="stylesheet" href="styles/footer.css">
+
 </head>
 <body>
 <?php include("components/navbar.php"); ?>
@@ -54,5 +56,6 @@
 <script src="JavaScript/minigames.js"></script>
 
 <script src="JavaScript/navbar.js"></script> 
+  <?php include("php/footer.php"); ?>
 </body>
 </html>

@@ -1,5 +1,6 @@
 .footer{
-    background:#baa01d;
+    background:#00264b
+;
     color:white;
     padding:8px 20px;
     margin-top:20px;
@@ -23,7 +24,7 @@
 
 .footer-logo img{
     width:60px;
-    height:auto;
+    height:50%;
 }
 
 .footer-logo h3{

@@ -189,6 +189,6 @@ $resultado = $conexion->query($sql);
         });
     </script>
      <script src="JavaScript/navbar.js"></script>
-             <?php include("php/footer.php"); ?>
+       <?php include("php/footer.php"); ?>
 </body>
 </html>

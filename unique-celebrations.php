@@ -13,6 +13,7 @@ $resultado = $conn->query($query);
         <link rel="stylesheet" href="styles/traditions.css">
         <link rel="stylesheet" href="styles/unique-celebrations.css">
         <link rel="stylesheet" href="styles/navbar.css">
+
     </head>
     <body>
 
@@ -44,16 +45,7 @@ $resultado = $conn->query($query);
                     ?>
                 </section>
 
-                <!-- BANNER DID YOU KNOW ESPECÍFICO -->
-                <section class="celebrations-dyk-banner">
-                    <div class="dyk-badge">
-                        <span>📢</span>
-                        <strong>Did you<br>know?</strong>
-                    </div>
-                    <p class="dyk-message">Unique celebrations like the Día de la Cruz blend indigenous and colonial customs.</p>
-                </section>
-
-            </main>
+           
         </div>
     <script src="JavaScript/navbar.js"></script>
     </body>

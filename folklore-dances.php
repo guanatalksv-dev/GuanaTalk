@@ -55,10 +55,10 @@ $resultado = $conn->query($query);
                     ?>
                 </section>
 
-                <?php include("php/footer.php"); ?>
             </main>
         </div>
         <script src="JavaScript/navbar.js"></script>
-
+    
+      <?php include("php/footer.php"); ?>
     </body>
 </html>
