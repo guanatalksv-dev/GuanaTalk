@@ -57,12 +57,7 @@
     </button>
 
 </section>
-<<<<<<< HEAD
-
-
 <?php include("php/footer.php"); ?>
-=======
->>>>>>> 9d10277772b7ba82447e353c3bf67a7ef5a5d90e
  <script src="JavaScript/navbar.js"></script>
 </body>
 </html>
