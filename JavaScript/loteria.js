@@ -1,27 +1,27 @@
 const juegoCincoRondas = {
     ronda1: [
         { id: 1, palabra: "CIPOTE", pista: "A typical Salvadoran word used to refer to a kid, child, or teenager.", img: "img/cipote.png" },
-        { id: 2, palabra: "EL CHERO", pista: "Your close friend, buddy, or homie that you hang out with.", img: "img/chero.png" },
+        { id: 2, palabra: "CHERO", pista: "Your close friend, buddy, or homie that you hang out with.", img: "img/chero-mini.png" },
         { id: 3, palabra: "PUCHICA", pista: "A very popular expression used to show surprise, frustration, or amazement.", img: "img/puchica.png" },
-        { id: 4, palabra: "LA CACHUCHA", pista: "A very local, affectionate, and informal way to say 'cap' or 'hat'.", img: "img/chachucha.png" },
+        { id: 4, palabra: "LA CACHUCHA", pista: "A very local, affectionate, and informal way to say 'cap' or 'hat'.", img: "img/cachucha.png" },
         { id: 5, palabra: "CHORREADO", pista: "An adjective used when something is completely stained, dirty, or messy.", img: "img/chorreado.png" },
-        { id: 6, palabra: "BAYUNCO", pista: "Someone who acts like a clown, makes silly jokes, or behaves ridiculous.", img: "img/bayunco.png" }
+        { id: 6, palabra: "BAYUNCO", pista: "Someone who acts like a clown, makes silly jokes, or behaves ridiculous.", img: "img/bayunco-mini.png" }
     ],
     ronda2: [
         { id: 7, palabra: "BOLO", pista: "A person who is completely drunk or intoxicated after drinking alcohol.", img: "img/bolo.png" },
-        { id: 8, palabra: "LA CORA", pista: "The Salvadoran slang for a quarter coin (25 US cents). It comes from 'quarter'.", img: "img/cora.png" },
+        { id: 8, palabra: "LA CORA", pista: "The Salvadoran slang for a quarter coin (25 US cents). It comes from 'quarter'.", img: "img/lacora.png" },
         { id: 9, palabra: "CAPIRUCHO", pista: "A traditional wooden toy where you must catch a base using a small stick.", img: "img/capirucho.png" },
         { id: 10, palabra: "GUANACA", pista: "A proud, hardworking, and smart Salvadoran woman.", img: "img/guanaca.png" },
         { id: 11, palabra: "BOLADO", pista: "The universal word! It means 'thing' or 'object' when you forget its real name.", img: "img/bolado.png" },
-        { id: 12, palabra: "TAMAL", pista: "A delicious traditional dish made of corn dough, stuffed and wrapped in banana leaves.", img: "img/tamal.png" }
+        { id: 12, palabra: "TAMAL", pista: "A delicious traditional dish made of corn dough, stuffed and wrapped in banana leaves.", img: "img/tamales.png" }
     ],
     ronda3: [
         { id: 13, palabra: "SANGANO", pista: "A very lazy person who hates working and avoids any type of effort.", img: "img/sangano.png" },
         { id: 14, palabra: "AGUADO", pista: "Someone with no energy, or something that turned out too watery or soft.", img: "img/aguado.png" },
         { id: 15, palabra: "CHINDONDO", pista: "A bump or swelling on the head, usually caused by an accidental hit.", img: "img/chindondo.png" },
         { id: 16, palabra: "PASMADO", pista: "A distracted or clueless person who stares into space without reacting.", img: "img/pasmado.png" },
-        { id: 17, palabra: "CHIVO", pista: "Cool, awesome, or great! Used when something is excellent.", img: "img/chivo.png" },
-        { id: 18, palabra: "GUACALA", pista: "An exclamation used to express disgust, yuck, or immediate dislike.", img: "img/guacate.png" }
+        { id: 17, palabra: "QUE CHIVO", pista: "Cool, awesome, or great! Used when something is excellent.", img: "img/que-chivo.png" },
+        { id: 18, palabra: "GUACALA", pista: "An exclamation used to express disgust, yuck, or immediate dislike.", img: "img/guacala.png" }
     ],
     ronda4: [
         { id: 19, palabra: "CHILILLO", pista: "A thin branch or stick used in the past by parents for discipline.", img: "img/chilillo.png" },

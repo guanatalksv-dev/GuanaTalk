@@ -198,27 +198,43 @@ body::before {
 }
 
 .illustration-container {
-    width: 95px;
-    height: 95px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #fff5dc; 
-    border: 2px dashed #e6c280;
-    border-radius: 50%;
-    padding: 10px;
-    transition: transform 0.3s ease;
-}
-
-.card-artesanal:hover .illustration-container {
-    transform: scale(1.08) rotate(5deg);
-    background: #fff0cb;
+    width: 100% !important;   
+    height: 120px !important;  
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: transparent !important; 
+    border: none !important;            
+    padding: 5px !important;
+    transition: transform 0.3s ease !important;
 }
 
 .card-artesanal img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important; 
+    filter: drop-shadow(0px 6px 8px rgba(0,0,0,0.12)) !important; 
+}
+
+.card-artesanal {
+    background: #ffffff;
+    border: 3px solid #f7ebd2;
+    border-radius: 24px !important; 
+    padding: 30px 15px 15px 15px !important; 
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 230px !important; 
+    box-shadow: 0 8px 0px #e6c280, 0 12px 20px rgba(0,0,0,0.06) !important; 
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    overflow: hidden;
+}
+
+.card-artesanal:hover .illustration-container {
+    transform: scale(1.05) rotate(3deg) !important; 
 }
 
 .card-artesanal span {

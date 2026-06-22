@@ -6,7 +6,7 @@
 }
 
 body{
-    background-color: #fff;
+    background-color: #f0f0f0;
 }
 
 
@@ -21,10 +21,11 @@ body{
     max-width: 400px;
 }
 
-.hero-text h1{
-    font-size: 55px;
-    margin-bottom: 15px;
-    color: black;
+.hero-text h1 {
+    font-size: 3.5rem;
+    color: #111;
+    margin-bottom: 10px;
+    text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.15);
 }
 
 .hero-text p{
@@ -61,6 +62,7 @@ body{
     background-color: #CA4B10;
     width: 240px;
     border-radius: 20px;
+    border: 2px solid #00264b;
     padding: 18px;
     text-align: center;
     color: white;
@@ -74,7 +76,7 @@ body{
     object-fit: cover;
     border-radius: 15px;
     margin-bottom: 15px;
-    
+    border: 2px solid #ffcc00;
 }
 
 .card h2{
