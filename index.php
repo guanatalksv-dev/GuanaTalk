@@ -9,11 +9,16 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="styles/navbar.css">
+     <link rel="stylesheet" href="styles/footer.css">
+
 </head>
 
 <body>
 
 <?php include("components/navbar.php"); ?>
+
+<div class="bandera-css bandera-css-izq"></div>
+<div class="bandera-css bandera-css-der"></div>
 
 <section class="hero">
     <div class="hero-text">
@@ -46,20 +51,13 @@
         <p>Fun Facts</p>
     </button>
 
-    <button type="button" class="card card-gray" onclick="window.location.href='minigames.html'">
+    <button type="button" class="card card-gray" onclick="window.location.href='minigames.php'">
         <img src="img/hangman.png" alt="Mini-games" class="card-img">
         <p>Mini-games</p>
     </button>
 
 </section>
-
-<section class="fun-fact-box">
-    <div class="fun-fact-content">
-        <span class="megaphone-icon">📢</span>
-        <p><strong>Fun Fact:</strong> Did you know that the Salvadoran capirucho is hand-carved from cedar wood?</p>
-    </div>
-</section>
-
+<?php include("php/footer.php"); ?>
  <script src="JavaScript/navbar.js"></script>
 </body>
 </html>

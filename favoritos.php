@@ -36,6 +36,16 @@ $fav_funfacts = $stmt2->get_result();
     
     <link rel="stylesheet" href="styles/favoritos-style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css">
+  <meta charset="UTF-8">
+  <title>Favoritos</title>
+
+  <link rel="stylesheet" href="styles/characters-style.css">
+  <link rel="stylesheet" href="styles/funfacts-style.css">
+  <link rel="stylesheet" href="styles/words.css">
+ <link rel="stylesheet" href="styles/navbar.css">
+  <link rel="stylesheet" href="styles/footer.css">
+
+  <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
 </head>
 <body>
 
@@ -114,5 +124,12 @@ $fav_funfacts = $stmt2->get_result();
         }
     });
     </script>
+  <main class="favoritos-page">
+      <section id="favoritos-container" class="cards-grid">
+          </section>
+  </main>
+  
+  <script src="JavaScript/navbar.js"></script>
+  <script src="favoritos.js?v=2"></script>
 </body>
 </html>

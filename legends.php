@@ -15,6 +15,8 @@ $resultado = mysqli_query($conexion, $query);
     <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="styles/legends.css">
     <link rel="stylesheet" href="styles/navbar.css">
+      <link rel="stylesheet" href="styles/footer.css">
+
 
 </head>
 <body>
@@ -55,6 +57,7 @@ $resultado = mysqli_query($conexion, $query);
         }
         ?>
     </div>
+        <?php include("php/footer.php"); ?>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/js/bootstrap.min.js"></script>
 </body>
 </html>

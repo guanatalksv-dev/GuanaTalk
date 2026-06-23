@@ -6,7 +6,7 @@
 }
 
 body {
-    background: #FBF2EB;
+    background: #f0f0f0;
     margin: 0;
     padding: 0;
 }
@@ -108,6 +108,7 @@ nav a {
     mix-blend-mode: multiply; 
     margin-right: -20px;
     margin-top: 15px;
+    border-radius: 30px;
 }
 
 .cards-grid {
@@ -164,35 +165,144 @@ nav a {
 
 .card-gradient-5 { background: linear-gradient(135deg, #4fc3f7 0%, #0288d1 100%); }
 
-.funfact {
-    background-color: #cfe3f8;
-    border-radius: 30px;
-    margin: 30px 60px; 
-    padding: 15px 30px;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.04);
+.pop-title {
+    font-family: 'Righteous', sans-serif !important;
+    text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.12) !important;
 }
 
-.mega-icon {
-    font-size: 1.8rem;
+.pop-subtitle {
+    font-family: 'Fredoka', sans-serif !important;
+    color: #2b2b2b !important;
+    text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.9) !important;
 }
 
-.funfact p {
-    margin: 0;
-    color: #1b3a61;
-    font-size: 1.1rem;
+.bandera-css {
+    position: fixed;
+    top: 95px; 
+    width: 45px;
+    height: 27px;
+    z-index: 1000;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    background: linear-gradient(to bottom, 
+        #0056b3 0%, #0056b3 33.33%, 
+        #ffffff 33.33%, #ffffff 66.66%, 
+        #0056b3 66.66%, #0056b3 100%
+    );
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.bandera-css:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.bandera-css-izq { left: 25px; }
+.bandera-css-der { right: 25px; }
 
 @media (max-width: 768px) {
-    .cards-grid { grid-template-columns: repeat(3, 1fr); }
-    .hero { flex-direction: column; text-align: center; gap: 20px; }
-    .hero-img { margin-right: 0; }
+    .navbar, .hero, .cards-grid, .funfact {
+        padding-left: 30px !important;
+        padding-right: 30px !important;
+        margin-left: 30px !important;
+        margin-right: 30px !important;
+    }
+
+    .hero {
+        flex-direction: column !important;
+        text-align: center !important;
+        gap: 20px !important;
+    }
+
+    .hero-img {
+        margin-right: 0 !important;
+        max-width: 300px !important;
+    }
+
+    .cards-grid {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 15px !important;
+    }
+
+    .card-game {
+        height: 190px !important;
+        padding: 15px 10px !important;
+    }
+
+    .bandera-css {
+        display: none !important;
+    }
 }
 
-@media (max-width: 600px) {
-    .cards-grid { grid-template-columns: 1fr; }
-    .navbar { flex-direction: column; gap: 10px; }
-}
+@media (max-width: 425px) {
+    html, body {
+        width: 100% !important;
+        overflow-x: hidden !important;
+    }
 
+    .navbar, .hero, .cards-grid {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        margin-left: 10px !important;
+        margin-right: 10px !important;
+    }
+
+    .navbar {
+        padding: 10px 15px !important;
+    }
+
+    .right-side {
+        display: flex !important;
+        flex-direction: row-reverse !important;
+        align-items: center !important;
+        gap: 12px !important;
+    }
+
+    .profile-btn {
+        padding: 8px 15px !important;
+        font-size: 0.9rem !important;
+    }
+
+    .hero-text h1 {
+        font-size: 1.8rem !important;
+    }
+
+    .hero-text p {
+        font-size: 1rem !important;
+    }
+
+    .hero-img {
+        max-width: 220px !important;
+        height: auto !important;
+    }
+
+    .cards-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px !important;
+    }
+
+    .card-game {
+        width: 100% !important;
+        height: 170px !important;
+        padding: 15px 10px !important;
+        border: 3px solid rgba(0, 0, 0, 0.25) !important; 
+    }
+
+    .card-game-img {
+        width: 70px !important;
+        height: 70px !important;
+        margin-bottom: 8px !important;
+    }
+
+    .card-game p {
+        font-size: 1.1rem !important;
+    }
+
+    .card-game:nth-child(5) {
+        grid-column: span 2 !important;
+        max-width: 160px !important;
+        justify-self: center !important;
+    }
+}
