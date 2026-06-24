@@ -32,17 +32,6 @@ $resultado = $conexion->query($sql);
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<<<<<<< HEAD
-  <meta charset="UTF-8">
-  <title>Favoritos</title>
-
-  <link rel="stylesheet" href="styles/characters-style.css">
-  <link rel="stylesheet" href="styles/funfacts-style.css">
-  <link rel="stylesheet" href="styles/words.css">
- <link rel="stylesheet" href="styles/navbar.css">
-
-  <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
-=======
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GuanaTalk - My Favorites</title>
@@ -50,7 +39,6 @@ $resultado = $conexion->query($sql);
     <link rel="stylesheet" href="styles/favoritos-style.css"> 
     <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="styles/footer.css">
->>>>>>> 9657890a97c92957897bc288eb195c55705d8d76
 </head>
 <body>
 
@@ -60,16 +48,6 @@ $resultado = $conexion->query($sql);
         <a href="funfacts.php" class="btn-back"><i class="ri-arrow-left-line"></i> Back to Fun Facts</a>
     </div>
 
-<<<<<<< HEAD
-  <main class="favoritos-page">
-      <section id="favoritos-container" class="cards-grid">
-          </section>
-  </main>
-  
-  <script src="JavaScript/navbar.js"></script>
-  <script src="favoritos.js?v=2"></script>
-
-=======
     <main class="favoritos-page">
         
         <div style="text-align: center; margin-bottom: 30px;">
@@ -109,6 +87,5 @@ $resultado = $conexion->query($sql);
 
     <script src="JavaScript/navbar.js"></script>
     <?php include("php/footer.php"); ?>
->>>>>>> 9657890a97c92957897bc288eb195c55705d8d76
 </body>
 </html>
