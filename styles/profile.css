@@ -1,7 +1,7 @@
 body{
     margin:0;
     font-family:Poppins, sans-serif;
-    background:#b1b1b1;
+    background:#ffffff;
     display:flex;
     justify-content:center;
     align-items:center;
@@ -24,7 +24,8 @@ body{
 }
 
 .profile-card h1{
-    color:#2d6a4f;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:#c44f10;
     margin-bottom:25px;
 }
 
@@ -56,16 +57,72 @@ body{
 }
 
 .home-btn{
-    background:#4dabf7;
+    background:#1e4308;
     color:white;
 }
 
 .logout-btn{
-    background:#ff6b6b;
+    background:#c44f10;
     color:white;
 }
 
 .home-btn:hover,
 .logout-btn:hover{
     transform:translateY(-2px);
+
+
+@media (max-width: 768px) {
+
+    .profile-card{
+        width: 85%;
+        padding: 30px;
+    }
+
+    .profile-card h1{
+        font-size: 1.8rem;
+    }
+
+    .profile-info p{
+        font-size: 0.95rem;
+    }
+}
+
+
+
+@media (max-width: 480px) {
+
+    body{
+        padding: 15px;
+    }
+
+    .profile-card{
+        width: 100%;
+        padding: 20px;
+        border-radius: 18px;
+    }
+
+    .profile-card h1{
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+
+    .profile-info p{
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .profile-actions{
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .home-btn,
+    .logout-btn{
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+    }
+}
+
+
 }
