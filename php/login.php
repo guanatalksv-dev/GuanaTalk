@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($usuario = $result->fetch_assoc()) {
         
         if (password_verify($password, $usuario['password'])) {
-            // Guardamos los datos en la sesión
+          
             $_SESSION['usuario_id'] = $usuario['usuarioID'];
             $_SESSION['nombre'] = $usuario['nombre'];
             $_SESSION['email'] = $usuario['email'];

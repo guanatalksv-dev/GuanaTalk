@@ -1,4 +1,3 @@
-
 * {
   margin: 0;
   padding: 0;
@@ -307,16 +306,9 @@ nav a {
   margin-bottom: 5px;
 }
 
-
-<<<<<<< HEAD
 .card-pink{
-  background:#ffe0d0;
-=======
-.card-pink {
-  background: linear-gradient(#fda1b3, #ff3964);
->>>>>>> 9d10277772b7ba82447e353c3bf67a7ef5a5d90e
+  background:linear-gradient(#ffe0d0, #ff979a);
 }
-
 .card-green {
   background: linear-gradient(#74ff61, #00a71c);
 }

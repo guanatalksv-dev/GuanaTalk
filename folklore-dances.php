@@ -1,8 +1,7 @@
 <?php
-// 1. Incluimos tu archivo de conexión real
+
 include("php/conexion.php"); 
 
-// 2. Consultamos los datos de la nueva tabla que creamos
 $query = "SELECT * FROM folklore_dances";
 $resultado = $conn->query($query);
 ?>
