@@ -273,25 +273,31 @@ nav a {
 }
 
 .card {
-  width: 160px;
-  height: 200px;
-  border-radius: 100px;
-  text-align: center;
-  color: #FBF2EB;
-  font-weight: bold;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 10px;
-  transition: 0.3s;
-  box-shadow: 0 15px 30px rgba(12, 12, 12, 0.1);
-  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 24px;
+    padding: 25px 15px;
+    height: 210px;
+    text-align: center;
+    text-decoration: none; 
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid rgba(0, 0, 0, 0.25) !important;
+    box-shadow: 
+        0px 8px 0px rgba(0, 0, 0, 0.10),                  
+        inset 0px 4px 0px rgba(255, 255, 255, 0.4),          
+        inset 0px -4px 0px rgba(0, 0, 0, 0.10) !important; 
+    transition: transform 0.2s ease, box-shadow 0.2s ease !important;
 }
 
 
 .card:hover {
-  transform: translateY(-8px);
+  transform: translateY(4px) !important; 
+    box-shadow: 
+        0px 4px 0px rgba(0, 0, 0, 0.10),                    
+        inset 0px 4px 0px rgba(255, 255, 255, 0.4), 
+        inset 0px -4px 0px rgba(0, 0, 0, 0.10) !important;
 }
 
 
@@ -307,41 +313,22 @@ nav a {
 }
 
 .card-pink{
-  background:linear-gradient(#ffe0d0, #ff979a);
+  background:linear-gradient(#ffbebe, #ff5050);
 }
 .card-green {
-  background: linear-gradient(#74ff61, #00a71c);
+  background: linear-gradient(#caffab, #5deb0c);
 }
 
 .card-orange {
-  background: linear-gradient(#fcec61, #ffa705);
+  background: linear-gradient(#ffc8ac, #ff661a);
 }
 
 .card-blue {
-  background: linear-gradient(#7cf6ff, #0ca2ff);
-}
+  background: linear-gradient(#b2e3ff, #01a2ff);
+} 
 
 .card-gray {
-  background: linear-gradient(#e2e2e2, #6b6969);
-}
-
-.fun-fact-box {
-  background: linear-gradient(#beff88, #b0ff70);
-  color: black;
-  border-radius: 25px;
-  padding: 10px 10px;
-  margin: 20px;
-}
-
-.fun-fact-content {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  font-size: 1.1rem;
-}
-
-.megaphone-icon {
-  font-size: 1.5rem;
+  background: linear-gradient(#afd7ff, #0080ff);
 }
 
 .about h2 {
@@ -486,86 +473,66 @@ nav a {
   background: #6b9467;
 }
 
-
-
-@media(max-width: 425) {
-
-  html,
-  body {
-    width: 100% !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    overflow-x: hidden !important;
-  }
-
-  nav,
-  .navbar,
-  .guanatalk-navbar {
-    display: flex !important;
-    flex-direction: row !important;
-    justify-content: space-between !important;
-    padding: 10px 15px !important;
-    width: 100% !important;
-    box-sizing: border-box !important;
-  }
-
-  .nav-links,
-  nav a:not(.profile-btn),
-  .guanatalk-navbar .nav-links {
+@media (max-width: 425px) {
+ 
+  .bandera-css {
     display: none !important;
   }
 
-  .hero {
+  .guanatalk-navbar .right-side {
     display: flex !important;
-    flex-direction: column !important;
-    text-align: center !important;
-    padding: 30px 15px !important;
+    flex-direction: row-reverse !important; 
     align-items: center !important;
-    width: 100% !important;
-    box-sizing: border-box !important;
+    gap: 15px !important;
   }
 
-  .hero-text h1 {
-    font-size: 1.7rem !important;
-    line-height: 1.2 !important;
-    margin-bottom: 10px !important;
+  .guanatalk-navbar .profile-btn {
+    background-color: #3cae2b !important;
+    color: white !important;
+    padding: 8px 16px !important;
+    border-radius: 20px !important; 
+    font-size: 0.9rem !important;
+    text-decoration: none !important;
+    font-weight: bold !important;
   }
 
-  .hero-text p {
-    font-size: 1rem !important;
-    margin: 0 auto 15px auto !important;
-    max-width: 100% !important;
+  .guanatalk-navbar .menu-toggle {
+    font-size: 1.6rem !important;
+    color: white !important;
+    background: none !important;
+    border: none !important;
+    cursor: pointer !important;
+    order: 1 !important; 
   }
 
-  .hero-img {
-    margin: 15px auto 0 auto !important;
-    max-width: 250px !important;
-    height: auto !important;
-  }
-
-  .cards {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    gap: 16px !important;
-    padding: 15px !important;
-    width: 100% !important;
-    box-sizing: border-box !important;
-  }
-
-  .card {
-    width: 85% !important;
-    max-width: 260px !important;
-    height: auto !important;
-    margin: 0 auto !important;
-    border-radius: 30px !important;
+  .cards, .cards-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important; 
+    gap: 15px !important;
     padding: 20px 15px !important;
-    box-sizing: border-box !important;
+    justify-content: center !important;
   }
 
-  .card p {
+  .card, .card-game {
+    width: 100% !important; 
+    max-width: 170px !important;
+    margin: 0 auto !important;
+    border-radius: 25px !important;
+    padding: 15px 10px !important;
+    box-sizing: border-box !important;
+    text-align: center !important;
+  }
+
+  .card:nth-child(5), .card-game:nth-child(5) {
+    grid-column: span 2 !important;
+    max-width: 170px !important; 
+    justify-self: center !important; 
+  }
+
+  .card p, .card-game p {
     font-size: 16px !important;
-    margin-bottom: 0 !important;
+    font-weight: bold !important;
+    margin-top: 8px !important;
   }
 }
 
