@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -14,7 +13,6 @@ body {
 html {
     scroll-behavior: smooth;
 }
-
 
 .navbar {
     background-color: #0f4fa8;
@@ -57,7 +55,6 @@ nav a {
     font-size: 18px;
     cursor: pointer;
 }
-
 
 .hero-section {
     display: flex;
@@ -114,7 +111,6 @@ nav a {
     color: #aaa;
 }
 
-
 .symbols-section {
     margin-top: 40px;
     padding: 0 40px;
@@ -150,7 +146,6 @@ nav a {
     margin-top: 20px;
 }
 
-
 .card-container {
     position: relative; 
     width: 240px;
@@ -167,7 +162,6 @@ nav a {
     transform-style: preserve-3d;
 }
 
-/* Efecto Hover para voltear */
 .card-container:hover .card-inner {
     transform: rotateY(180deg);
 }
@@ -184,13 +178,13 @@ nav a {
     border: 1px solid #eef0f2;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 .card-front {
     background-color: #ffffff;
     color: #333;
+    justify-content: center;
+    align-items: center;
 }
 
 .card-front img {
@@ -217,24 +211,39 @@ nav a {
     background-color: #0f4fa8; 
     color: #ffffff;
     transform: rotateY(180deg); 
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px 15px 50px 15px;
 }
 
 .card-back h3 {
     color: #f1c40f; 
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     font-size: 1.3rem;
+    flex-shrink: 0;
 }
 
 .card-back p {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     color: #ffffff;
-    line-height: 1.5;
+    line-height: 1.4;
     text-align: center;
+    overflow-y: auto;
+    max-height: 190px;
+    padding-right: 4px;
+}
+
+.card-back p::-webkit-scrollbar {
+    width: 4px;
+}
+.card-back p::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
 }
 
 .card-back-action {
     position: absolute;
-    bottom: 15px;
+    bottom: 12px;
     right: 15px;
     z-index: 15;
     transition: transform 0.2s;
@@ -244,6 +253,12 @@ nav a {
     transform: scale(1.2);
 }
 
+.card-back-action .favorite-toggle {
+    font-size: 24px;
+    color: #f1c40f;
+    cursor: pointer;
+    display: inline-block;
+}
 
 .card {
     background: white;
@@ -271,7 +286,6 @@ nav a {
     color: #555;
     line-height: 1.4;
 }
-
 
 .more-content-section {
     text-align: center;
@@ -364,7 +378,6 @@ nav a {
     color: #444;
     text-align: center;
 }
-
 
 .colors-section {
     padding: 20px;
@@ -474,7 +487,6 @@ nav a {
     margin-bottom: 4px;
 }
 
-
 @media (max-width: 768px) {
     .hero-section {
         flex-direction: column;
@@ -486,26 +498,4 @@ nav a {
         max-width: 300px;
         margin-top: 20px;
     }
-}
-
-
-.card-back-action {
-    position: absolute !important;
-    top: 100% !important;  
-    left: 100% !important; 
-    
-    transform: translate(-45px, -55px) !important; 
-    
-    width: auto !important;
-    height: auto !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    z-index: 9999 !important;
-}
-
-.card-back-action .favorite-toggle {
-    font-size: 24px !important;
-    color: #f1c40f !important;
-    display: inline-block !important;
-    cursor: pointer !important;
 }

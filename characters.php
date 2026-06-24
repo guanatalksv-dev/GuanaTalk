@@ -21,8 +21,7 @@ $resultado = $conexion->query($sql);
     <title>Guanatalk - Historical Characters</title>
     <link rel="stylesheet" href="styles/characters-style.css?v=abc">
     <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
-            <link rel="stylesheet" href="styles/footer.css">
-
+    <link rel="stylesheet" href="styles/footer.css">
 </head>
 <body>
 
@@ -44,7 +43,7 @@ $resultado = $conexion->query($sql);
                 if ($resultado && $resultado->num_rows > 0) {
                     while ($personaje = $resultado->fetch_assoc()) {
                 ?>
-                        <div class="character-flip-card" data-id="<?php echo $personaje['id_character']; ?>">
+                        <div class="character-flip-card">
                             <div class="character-card-inner">
                                 
                                 <div class="character-card-front">
@@ -63,24 +62,23 @@ $resultado = $conexion->query($sql);
                                             <?php echo htmlspecialchars($personaje['descripcion']); ?>
                                         </p>
                                     </div>
-                                    
-                                    <div class="character-fav-star-container">
-                                        <i class="ri-star-line character-fav-star" title="Add to favorites"></i>
                                     </div>
-                                </div>
 
                             </div>
                         </div>
                 <?php
                     }
                 } else {
-                    echo "<p style='text-align: center; color: #999; grid-column: 1/-1;'>No characters found yet. Add some in phpMyAdmin!</p>";
+                    echo "<p style='text-align: center; color: #999; grid-column: 1/-1;'>No characters found yet.</p>";
                 }
+                $conexion->close();
                 ?>
 
-            </div> </section>
+            </div> 
+        </section>
     </main>
-<?php include("php/footer.php"); ?>
 
+    <script src="JavaScript/navbar.js"></script>
+    <?php include("php/footer.php"); ?>
 </body>
 </html>
