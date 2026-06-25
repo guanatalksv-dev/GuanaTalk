@@ -180,11 +180,7 @@ $resultado = $conexion->query($sql);
             });
         });
     </script>
-<<<<<<< HEAD
      <script src="JavaScript/navbar.js"></script>
        <?php include("php/footer.php"); ?>
-=======
-    <?php include("php/footer.php"); ?>
->>>>>>> 9657890a97c92957897bc288eb195c55705d8d76
 </body>
 </html>

@@ -22,10 +22,6 @@ $resultado = $conexion->query($sql);
     <link rel="stylesheet" href="styles/characters-style.css?v=abc">
     <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="styles/footer.css">
-<<<<<<< HEAD
-
-=======
->>>>>>> 9657890a97c92957897bc288eb195c55705d8d76
 </head>
 <body>
 
