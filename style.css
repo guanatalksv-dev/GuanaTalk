@@ -475,6 +475,12 @@ nav a {
 
 @media (max-width: 425px) {
  
+  
+     html, body {
+        width: 100% !important;
+        overflow-x: hidden !important;
+    }
+    
   .bandera-css {
     display: none !important;
   }
