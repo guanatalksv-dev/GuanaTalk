@@ -6,11 +6,7 @@
 }
 
 body{
-<<<<<<< HEAD
-    background-color: #ffffff;
-=======
     background-color: #f0f0f0;
->>>>>>> 9657890a97c92957897bc288eb195c55705d8d76
 }
 
 
@@ -206,9 +202,12 @@ body{
     }
 
     .hero {
-        flex-direction: column;
-        text-align: center;
-        padding: 20px;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px 30px;
+
     }
 
     .hero-text h1 {

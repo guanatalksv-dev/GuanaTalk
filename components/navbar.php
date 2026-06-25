@@ -27,3 +27,11 @@ if (session_status() === PHP_SESSION_NONE) {
     </div>
 
 </header>
+<script>
+const menu = document.getElementById("menu-toggle");
+const links = document.getElementById("nav-links");
+
+menu.addEventListener("click", () => {
+    links.classList.toggle("active");
+});
+</script>
