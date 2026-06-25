@@ -11,21 +11,20 @@
     <link rel="stylesheet" href="styles/navbar.css">
 </head>
 <body>
- 
+
     <?php include("components/navbar-simple.php"); ?>
- 
+
     <div class="main-container">
        
         <div class="form-card">
             <div class="form-card-header">
                 <h2>GuanaTalk Registration</h2>
-                <p>                <p>Únete a la comunidad global más chiva de El SalvadorJoin the coolest global community in El Salvador</p></p>
+                <p>Únete a la comunidad global más chiva de El Salvador | Join the coolest global community in El Salvador</p>
             </div>
- 
+
             <form class="forms-body" action="php/register.php" method="POST">
                 <div class="form-grid">
- 
-                    <!-- 1. Nombre Completo -->
+
                     <div class="form-group-container">
                         <div class="icon-column">
                             <i class="fa-solid fa-user"></i>
@@ -35,8 +34,7 @@
                             <input type="text" name="nombre" placeholder="Ej. Juan Pérez" required>
                         </div>
                     </div>
- 
-                    <!-- 2. Correo Electrónico -->
+
                     <div class="form-group-container">
                         <div class="icon-column">
                             <i class="fa-solid fa-envelope"></i>
@@ -46,8 +44,7 @@
                             <input type="email" name="email" placeholder="correo@ejemplo.com" required>
                         </div>
                     </div>
- 
-                    <!-- 3. Contraseña -->
+
                     <div class="form-group-container">
                         <div class="icon-column">
                             <i class="fa-solid fa-lock"></i>
@@ -57,8 +54,7 @@
                             <input type="password" name="password" placeholder="Crea una contraseña" required>
                         </div>
                     </div>
- 
-                    <!-- 4. Confirmar Contraseña -->
+
                     <div class="form-group-container">
                         <div class="icon-column">
                             <i class="fa-solid fa-shield-halved"></i>
@@ -68,8 +64,7 @@
                             <input type="password" name="confirm_password" placeholder="Repite tu contraseña" required>
                         </div>
                     </div>
- 
-                    <!-- 5. Nacionalidad (Pasa al final con ancho completo) -->
+
                     <div class="form-group-container full-width-field">
                         <div class="icon-column">
                             <i class="fa-solid fa-earth-americas"></i>
@@ -83,9 +78,9 @@
                             </select>
                         </div>
                     </div>
- 
+
                 </div>
- 
+
                 <div class="text-center project-action">
                     <button class="register-btn" type="submit">
                         Registrarme Ahora <i class="fa-solid fa-arrow-right ms-2"></i>
@@ -93,7 +88,7 @@
                 </div>
             </form>
         </div>
- 
+
         <div class="fun-fact-card">
             <div class="fun-left">
                 <div class="megaphone-icon-box">
@@ -106,8 +101,8 @@
             </div>
             <i class="fa-solid fa-chevron-right arrow-detail"></i>
         </div>
- 
+
     </div>
- 
+
 </body>
 </html>

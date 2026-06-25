@@ -8,16 +8,7 @@
     width: 100%;
     box-sizing: border-box;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    position: relative;
 }
-
-.guanatalk-navbar .right-side{
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-
 
 .guanatalk-navbar .logo a {
     display: flex;
@@ -87,168 +78,24 @@
     font-size: 1.5rem;
     cursor: pointer;
 }
-
-@media (max-width:768px){
-
-    .guanatalk-navbar{
-        padding:10px 15px;
-        position:relative;
-    }
-
-    .guanatalk-navbar .logo img{
-        height:55px !important;
-    }
-
-    .guanatalk-navbar .right-side{
-        display:flex;
-        align-items:center;
-        gap:10px;
-    }
-
-    .guanatalk-navbar .profile-btn{
-        padding:8px 15px !important;
-        font-size:15px !important;
-    }
-
-    .guanatalk-navbar .menu-toggle{
-        display:block;
-        font-size:30px;
-    }
-
-    .guanatalk-navbar .nav-links{
-        display:none;
-        flex-direction:column;
-        position:absolute;
-        top:100%;
-        right:10px;
-        width:200px;
-        background:#0283ce;
-        border-radius:10px;
-        padding:15px;
-        gap:15px;
-        z-index:1000;
-    }
-
-    .guanatalk-navbar .nav-links.active{
-        display:flex;
-    }
-        }
-
-    @media (max-width: 400px) {
-
-    
-    .guanatalk-navbar {
-        padding: 10px;
-    }
-
-    .guanatalk-navbar .logo img {
-        height: 45px !important;
-    }
-
-    .right-side {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-    }
-
-    .profile-btn {
-        padding: 6px 10px !important;
-        font-size: 13px !important;
-    }
-
-    .menu-toggle {
-        display: block !important;
-        font-size: 26px;
-    }
-
-    .nav-links {
+@media (max-width: 768px) {
+    .guanatalk-navbar .nav-links {
         display: none;
         flex-direction: column;
+        background-color: #0283ce;
         position: absolute;
-        top: 70px;
-        right: 10px;
-        width: 170px;
-        background: #0283ce;
-        border-radius: 10px;
-        padding: 10px;
-        gap: 10px;
-        z-index: 1000;
+        top: 60px;
+        right: 40px;
+        width: 150px;
+        padding: 10px 0;
+        border-radius: 8px;
     }
 
-    .nav-links.active {
+    .guanatalk-navbar .nav-links.active {
         display: flex;
     }
 
-    .hero {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 15px;
-        gap: 20px;
-    }
-
-    .hero-text {
-        width: 100%;
-    }
-
-    .hero-text h1 {
-        font-size: 28px;
-    }
-
-    .hero-text p {
-        font-size: 14px;
-    }
-
-    .hero-image img {
-        width: 100%;
-        max-width: 220px;
-        height: auto;
-    }
-
-   
-    .cards-container {
-        padding: 10px;
-        gap: 15px;
-    }
-
-    .card {
-        width: 100%;
-        max-width: 280px;
-    }
-
-    .card h2 {
-        font-size: 22px;
-    }
-
-    .card p {
-        font-size: 15px;
-    }
-
-    /* Detalle de leyenda */
-    .legend-card {
-        flex-direction: column;
-        padding: 15px;
-        gap: 20px;
-    }
-
-    .image-box img {
-        width: 100%;
-        max-width: 220px;
-        height: auto;
-    }
-
-    .text-box h1 {
-        font-size: 28px;
-    }
-
-    .text-box p {
-        font-size: 16px;
-    }
-
-    .back-btn {
-        width: 100%;
-        font-size: 18px;
-        padding: 12px;
+    .guanatalk-navbar .menu-toggle {
+        display: block;
     }
 }
-

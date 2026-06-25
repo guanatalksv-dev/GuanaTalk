@@ -1,3 +1,6 @@
+/* ==========================================================================
+   ESTILOS GENERALES Y ESTRUCTURA BASE
+   ========================================================================== */
 * {
     margin: 0;
     padding: 0;
@@ -8,14 +11,27 @@
 body {
     background-color: #f0f0f0; 
     color: #333;
+    
+    /* SOLUCIÃ“N AL ESPACIO BLANCO: Forzamos al body a usar Flexbox */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
+/* El contenedor principal ahora SÃ“LO envuelve tu contenido, dejando libre al footer */
 .main-container {
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 40px 20px;
-    flex: 1;
+    
+    /* Hace que el contenido se estire y empuje al footer al fondo de la pantalla */
+    flex: 1; 
 }
+
+/* ==========================================================================
+   CONTENIDO DE LA PÃGINA
+   ========================================================================== */
 .hero-section {
     display: flex;
     justify-content: space-between;
@@ -100,6 +116,9 @@ body {
     font-size: 1.5rem;
 }
 
+/* ==========================================================================
+   NAVEGACIÃ“N INFERIOR (Opcional si la usas aquÃ­)
+   ========================================================================== */
 .bottom-nav {
     position: fixed;
     bottom: 20px;
@@ -134,3 +153,144 @@ body {
     font-size: 1.2rem;
 }
 
+@media screen and (max-width: 425px) {
+    
+    .guanatalk-navbar {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        padding-right: 5px !important;
+        position: relative !important;
+    }
+
+    .right-side {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        gap: 8px !important;
+        margin-left: auto !important;
+        margin-right: 0 !important;
+    }
+
+    .right-side .profile-btn { 
+        order: 1 !important; 
+    }
+
+    .right-side .menu-toggle { 
+        order: 2 !important; 
+        padding-right: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .nav-links {
+        display: none !important; 
+        flex-direction: column !important;
+        width: 180px !important;
+        position: absolute !important;
+        top: 100% !important; 
+        right: 5px !important;
+        left: auto !important;
+        background: #00264b !important; 
+        padding: 15px 0 !important;
+        box-sizing: border-box !important;
+        z-index: 999 !important;
+        border-radius: 15px !important;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2) !important;
+    }
+
+    .nav-links.active,
+    .nav-links.show {
+        display: flex !important;
+    }
+
+    .nav-links li {
+        width: 100% !important;
+        text-align: center !important;
+        margin: 8px 0 !important;
+    }
+
+    .nav-links li a {
+        display: block !important;
+        width: 100% !important;
+        color: white !important;
+        font-size: 1rem !important;
+        text-decoration: none !important;
+    }
+
+    .main-container {
+        padding: 20px 15px !important;
+    }
+
+    .hero-section {
+        flex-direction: column !important;
+        text-align: center !important;
+        gap: 20px !important;
+        margin-bottom: 30px !important;
+    }
+
+    .hero-text h1 {
+        font-size: 2rem !important;
+    }
+
+    .hero-text p {
+        font-size: 1rem !important;
+        max-width: 100% !important;
+        margin: 0 auto !important;
+    }
+
+    .hero-image-container .hero-img {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+
+    .categories-grid {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 15px !important;
+        margin-bottom: 30px !important;
+    }
+
+    .categories-grid a {
+        width: 100% !important;
+        display: flex !important;
+        justify-content: center !important;
+    }
+
+    .card {
+        width: 100% !important;
+        max-width: 280px !important;
+        padding: 20px !important;
+        border-radius: 20px !important;
+    }
+
+    .card img {
+        height: 75px !important;
+    }
+
+    .fun-fact-box {
+        padding: 15px 20px !important;
+        border-radius: 20px !important;
+    }
+
+    .fun-fact-content {
+        flex-direction: column !important;
+        text-align: center !important;
+        gap: 10px !important;
+        font-size: 1rem !important;
+    }
+
+    .bottom-nav {
+        width: 95% !important;
+        bottom: 10px !important;
+        padding: 10px !important;
+    }
+
+    .bottom-link {
+        font-size: 0.85rem !important;
+        gap: 5px !important;
+    }
+
+    .bottom-link .icon {
+        font-size: 1rem !important;
+    }
+}

@@ -8,14 +8,17 @@
 body {
     background-color: #F9F5EB; 
     color: #333;
-    padding-bottom: 80px; 
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
+
 .fiestas-container {
     max-width: 1100px;
     margin: 0 auto;
     padding: 40px 20px;
+    flex: 1; 
 }
-
 .page-title {
     text-align: center;
     font-size: 2.5rem;
@@ -114,4 +117,120 @@ body {
 .dyk-text {
     font-size: 1.1rem;
     line-height: 1.4;
+}
+
+@media screen and (max-width: 425px) {
+    
+    .guanatalk-navbar {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        padding-right: 5px !important;
+        position: relative !important;
+    }
+
+    .right-side {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        gap: 8px !important;
+        margin-left: auto !important;
+        margin-right: 0 !important;
+    }
+
+    .right-side .profile-btn { 
+        order: 1 !important; 
+    }
+
+    .right-side .menu-toggle { 
+        order: 2 !important; 
+        padding-right: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .nav-links {
+        display: none; 
+        flex-direction: column !important;
+        width: 180px !important;
+        position: absolute !important;
+        top: 100% !important; 
+        right: 5px !important;
+        left: auto !important;
+        background: #00264b !important; 
+        padding: 15px 0 !important;
+        box-sizing: border-box !important;
+        z-index: 999 !important;
+        border-radius: 15px !important;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2) !important;
+    }
+
+    .nav-links.active,
+    .nav-links.show {
+        display: flex !important;
+    }
+
+    .nav-links li {
+        width: 100% !important;
+        text-align: center !important;
+        margin: 8px 0 !important;
+    }
+
+    .nav-links li a {
+        display: block !important;
+        width: 100% !important;
+        color: white !important;
+        font-size: 1rem !important;
+        text-decoration: none !important;
+    }
+    
+    .fiestas-container {
+        padding: 20px 15px; 
+    }
+
+    .page-title {
+        font-size: 1.8rem; 
+        margin-bottom: 25px;
+    }
+
+    .zigzag-wrapper {
+        gap: 20px; 
+    }
+
+    .zigzag-row,
+    .zigzag-row.row-left, 
+    .zigzag-row.row-right {
+        display: flex !important;
+        justify-content: center !important; 
+        width: 100% !important;
+    }
+
+    .green-card-horizontal {
+        width: 100% !important; 
+        max-width: 100% !important;
+        flex-direction: column !important; 
+        text-align: center;
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .green-card-horizontal .card-thumb {
+        width: 100px;
+        height: 100px;
+    }
+
+    .did-you-know-banner {
+        flex-direction: column !important; 
+        text-align: center;
+        gap: 10px;
+        padding: 20px;
+    }
+
+    .dyk-title {
+        min-width: auto; 
+        font-size: 1.2rem;
+    }
+
+    .dyk-text {
+        font-size: 0.95rem;
+    }
 }

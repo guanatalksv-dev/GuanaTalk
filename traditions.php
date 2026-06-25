@@ -13,9 +13,6 @@ $resultado = $conn->query($query);
     <link rel="stylesheet" href="styles/traditions.css">
     <link rel="stylesheet" href="styles/navbar.css">
     <link rel="stylesheet" href="styles/footer.css">
-
-
-
     <style>
         .categories-grid a {
             text-decoration: none;
@@ -41,12 +38,9 @@ $resultado = $conn->query($query);
         </section>
 
         <section class="categories-grid">
-            
             <?php
             if ($resultado && $resultado->num_rows > 0) {
                 while ($fila = $resultado->fetch_assoc()) {
-                    
-                    // Conexión dinámica de todas las tarjetas incluyendo Unique Celebrations
                     if ($fila['titulo'] == 'Fiestas Patronales') {
                         $enlace = "fiestas-patronales.php";
                     } elseif ($fila['titulo'] == 'Folklore Dances') {
@@ -54,19 +48,17 @@ $resultado = $conn->query($query);
                     } elseif ($fila['titulo'] == 'Traditional Games') {
                         $enlace = "traditional-games.php";
                     } elseif ($fila['titulo'] == 'Unique Celebrations') {
-                        $enlace = "unique-celebrations.php"; // Enlace añadido aquí
+                        $enlace = "unique-celebrations.php";
                     } else {
                         $enlace = "#"; 
                     }
                     ?>
-                    
                     <a href="<?php echo $enlace; ?>">
                         <div class="card <?php echo $fila['color_clase']; ?>">
                             <img src="img/<?php echo $fila['imagen']; ?>" alt="<?php echo $fila['titulo']; ?>">
                             <h3><?php echo $fila['titulo']; ?></h3>
                         </div>
                     </a>
-
                     <?php
                 }
             } else {
@@ -74,6 +66,11 @@ $resultado = $conn->query($query);
             }
             ?>
         </section>
-           <?php include("php/footer.php"); ?>
+    </main>
+
+    <script src="JavaScript/navbar.js"></script>
+    <?php include("php/footer.php"); ?>
+    
+
 </body>
 </html>

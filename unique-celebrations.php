@@ -13,6 +13,7 @@ $resultado = $conn->query($query);
         <link rel="stylesheet" href="styles/traditions.css">
         <link rel="stylesheet" href="styles/unique-celebrations.css">
         <link rel="stylesheet" href="styles/navbar.css">
+        <link rel="stylesheet" href="styles/footer.css">
 
     </head>
     <body>
@@ -48,5 +49,6 @@ $resultado = $conn->query($query);
            
         </div>
     <script src="JavaScript/navbar.js"></script>
+    <?php include("php/footer.php"); ?>
     </body>
 </html>

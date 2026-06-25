@@ -51,7 +51,8 @@ $resultado = $conn->query($query_elementos);
             </section>
 
         </main>
-        <script src="JavaScript/navbar.js"></script>
+       <script src="JavaScript/navbar.js"></script>
+        
         <?php include("php/footer.php"); ?>
     </body>
 </html>
