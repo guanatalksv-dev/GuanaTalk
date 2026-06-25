@@ -126,6 +126,12 @@ audio{
 
 @media (max-width: 480px){
 
+    
+     html, body {
+        width: 100% !important;
+        overflow-x: hidden !important;
+    }
+    
     .hero{
         padding: 20px 15px;
     }

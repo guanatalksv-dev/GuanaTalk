@@ -244,6 +244,11 @@ body{
 
 @media (max-width: 480px) {
 
+     html, body {
+        width: 100% !important;
+        overflow-x: hidden !important;
+    }
+    
     .logo img {
         width: 60px;
         height: 60px;
