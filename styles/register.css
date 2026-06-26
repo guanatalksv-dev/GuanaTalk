@@ -76,10 +76,11 @@ body {
 }
  
 .main-container {
-    max-width: 950px;
+    max-width: 550px; 
     width: 100%;
     margin: auto; 
-    padding: 15px;
+    padding: 20px 15px;
+    z-index: 5;
 }
  
 .form-card {
@@ -97,7 +98,7 @@ body {
 }
  
 .form-card-header h2 {
-    font-size: 1.6rem; 
+    font-size: 1.45rem;
     font-weight: 700;
     margin-bottom: 3px;
 }
@@ -115,7 +116,7 @@ body {
  
 .form-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr; 
     gap: 16px; 
     margin-bottom: 20px;
 }
@@ -213,15 +214,63 @@ body {
     color: #94a3b8;
 }
  
+body > font, 
+body > div[style*="text-align"], 
+body > span:not(.logo span),
+.fa-bullhorn { 
+    display: none !important; 
+}
+
 @media (max-width: 768px) {
+    .navbar {
+        padding: 10px 20px;
+    }
+
     .main-container {
-        margin: 10px auto;
+        max-width: 500px;
+        padding: 10px;
     }
-    .form-grid {
-        grid-template-columns: 1fr;
-        gap: 12px;
-    }
+
     .forms-body {
-        padding: 15px 20px;
+        padding: 20px 25px;
+    }
+}
+
+@media (max-width: 425px) {
+    .navbar {
+        flex-direction: column;
+        gap: 8px;
+        padding: 12px 15px;
+        text-align: center;
+    }
+
+    .logo img {
+        height: 44px;
+    }
+
+    .profile-btn {
+        width: 100%;
+        padding: 8px 0;
+    }
+
+    .main-container {
+        max-width: 100%;
+        margin: 5px auto;
+    }
+
+    .form-card-header {
+        padding: 15px 10px;
+    }
+
+    .form-card-header h2 {
+        font-size: 1.25rem;
+    }
+
+    .forms-body {
+        padding: 15px 15px;
+    }
+
+    .register-btn {
+        width: 100%;
     }
 }
