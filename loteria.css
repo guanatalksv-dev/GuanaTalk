@@ -364,12 +364,138 @@ body::before {
     color: #1a529b;
 }
 
-@media (max-width: 900px) {
-    .tablero-artesanal { grid-template-columns: repeat(2, 1fr); padding: 20px; }
-    .radio-cantador h2 { font-size: 1.5rem; }
+@media (max-width: 768px) {
+    body {
+        padding-top: 105px;
+    }
+
+    .nav-container {
+        padding: 0 18px;
+    }
+
+    .logo img {
+        height: 48px;
+    }
+
+    .nav-actions {
+        gap: 10px;
+    }
+
+    .back-games-btn,
+    #ronda-badge {
+        font-size: 0.8rem;
+        padding: 7px 14px;
+    }
+
+    .help-circle-btn {
+        width: 38px;
+        height: 38px;
+        font-size: 1rem;
+    }
+
+    .loteria-container {
+        width: 94%;
+        gap: 20px;
+    }
+
+    .tablero-artesanal {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+        padding: 22px;
+    }
+
+    .card-artesanal {
+        min-height: 205px !important;
+        padding: 26px 12px 14px 12px !important;
+    }
+
+    .illustration-container {
+        height: 105px !important;
+    }
+
+    .radio-cantador h2 {
+        font-size: 1.5rem;
+    }
+
+    #pista-texto {
+        font-size: 1.15rem;
+    }
 }
 
-@media (max-width: 550px) {
-    .tablero-artesanal { grid-template-columns: 1fr; gap: 15px; }
-    body { padding-top: 95px; }
+@media (max-width: 425px) {
+    body {
+        padding-top: 140px;
+        padding-bottom: 30px;
+    }
+
+    .guanatalk-navbar {
+        height: auto;
+        min-height: 95px;
+        padding: 10px 0;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .nav-actions {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .radio-cantador {
+        padding: 18px;
+    }
+
+    .radio-cantador h2 {
+        font-size: 1.3rem;
+    }
+
+    .radio-screen {
+        padding: 14px;
+    }
+
+    #pista-texto {
+        font-size: 1rem;
+    }
+
+    .tablero-artesanal {
+        gap: 12px;
+        padding: 16px;
+        border-radius: 22px;
+    }
+
+    .card-artesanal {
+        border-radius: 18px !important;
+        min-height: 165px !important;
+        padding: 24px 8px 12px 8px !important;
+    }
+
+    .illustration-container {
+        height: 82px !important;
+    }
+
+    .card-artesanal span {
+        font-size: 0.9rem;
+        margin-top: 10px;
+        overflow-wrap: anywhere;
+    }
+
+    .card-number {
+        top: 8px;
+        left: 8px;
+        font-size: 0.7rem;
+        padding: 2px 6px;
+    }
+
+    .modal-card {
+        padding: 22px;
+    }
+
+    .modal-header h2 {
+        font-size: 1.25rem;
+    }
 }

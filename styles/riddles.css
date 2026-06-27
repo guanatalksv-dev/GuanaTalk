@@ -416,3 +416,212 @@ body {
     transform: translateY(-2px);
     box-shadow: 0 10px 22px rgba(255, 107, 129, 0.5);
 }
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px 25px;
+    }
+
+    .logo img {
+        height: 58px !important;
+    }
+
+    .back-btn {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+
+    .game-wrapper {
+        padding: 30px 15px;
+    }
+
+    .game-info {
+        margin-bottom: 25px;
+    }
+
+    .game-info h1 {
+        font-size: 1.9rem;
+    }
+
+    .game-info p {
+        font-size: 1rem;
+    }
+
+    .master-card-container {
+        flex-direction: column;
+        min-height: auto;
+        border-radius: 26px;
+    }
+
+    .question-section {
+        padding: 30px;
+        border-right: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .hints-section {
+        padding: 28px;
+    }
+
+    .hints-body {
+        gap: 18px;
+    }
+
+    #hint-text {
+        min-height: auto;
+    }
+
+    .riddle-content-box .text-es {
+        font-size: 1.2rem;
+    }
+
+    .riddle-content-box .text-en {
+        font-size: 1.05rem;
+    }
+
+    .option-btn {
+        padding: 14px 20px;
+        font-size: 1rem;
+    }
+
+    .result-card {
+        width: 90%;
+        padding: 32px 24px;
+    }
+}
+
+@media (max-width: 425px) {
+    .navbar {
+        padding: 10px 15px;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .logo img {
+        height: 48px !important;
+    }
+
+    .back-btn {
+        padding: 8px 14px;
+        font-size: 0.8rem;
+    }
+
+    .game-wrapper {
+        padding: 22px 10px;
+    }
+
+    .game-info h1 {
+        font-size: 1.45rem;
+        line-height: 1.2;
+    }
+
+    .game-info p {
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+
+    .master-card-container {
+        border-radius: 20px;
+    }
+
+    .question-section,
+    .hints-section {
+        padding: 20px 15px;
+    }
+
+    .riddle-badge {
+        gap: 10px;
+        margin-bottom: 16px;
+    }
+
+    .question-mark-icon {
+        width: 38px;
+        height: 38px;
+        font-size: 1.4rem;
+        flex-shrink: 0;
+    }
+
+    .riddle-badge span {
+        font-size: 1rem;
+    }
+
+    .game-instructions-popup {
+        width: 220px;
+        top: 52px;
+        left: 50%;
+        transform: translateX(-50%) scale(0.9);
+        font-size: 0.8rem;
+    }
+
+    .game-instructions-popup.show {
+        transform: translateX(-50%) scale(1);
+    }
+
+    .game-instructions-popup::after {
+        display: none;
+    }
+
+    .riddle-content-box {
+        margin-bottom: 22px;
+    }
+
+    .riddle-content-box .text-es {
+        font-size: 1.05rem;
+    }
+
+    .riddle-content-box .text-en {
+        font-size: 0.95rem;
+    }
+
+    .option-btn {
+        padding: 12px 14px;
+        font-size: 0.95rem;
+        border-radius: 12px;
+    }
+
+    .hints-header {
+        font-size: 1.1rem;
+        margin-bottom: 16px;
+    }
+
+    #hint-text {
+        padding: 15px;
+        font-size: 0.95rem;
+    }
+
+    .reveal-hint-btn,
+    .next-btn {
+        width: 100%;
+        justify-content: center;
+        padding: 12px 18px;
+        font-size: 0.95rem;
+    }
+
+    .result-card {
+        padding: 26px 18px;
+    }
+
+    .result-icon {
+        font-size: 3rem;
+    }
+
+    .result-content h2 {
+        font-size: 1.55rem;
+    }
+
+    .result-content p {
+        font-size: 0.95rem;
+    }
+
+    .score-box {
+        font-size: 1.6rem;
+        padding: 8px 28px;
+    }
+
+    .restart-btn {
+        width: 100%;
+        justify-content: center;
+        padding: 12px 20px;
+        font-size: 1rem;
+    }
+}

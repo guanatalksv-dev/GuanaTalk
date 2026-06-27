@@ -178,11 +178,6 @@
 .key-btn:hover { background-color: #fff9eb; transform: translateY(-2px); border-color: #ffcc00; }
 .key-btn.disabled { background-color: rgba(240,240,240,0.4); color: rgba(0,0,0,0.2); border-color: #e6e6e6; pointer-events: none; }
 
-@media (max-width: 850px) {
-    .game-panels { grid-template-columns: 1fr; }
-    .key-btn { width: 42px; height: 42px; font-size: 1rem; }
-}
-
 .custom-modal {
     display: none;
     position: fixed;
@@ -301,5 +296,97 @@
     
     .modal-content h2 {
         font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 425px) {
+    .hangman-beach-theme {
+        padding-top: 115px;
+        padding-bottom: 30px;
+    }
+
+    .hangman-navbar {
+        height: auto;
+        min-height: 88px;
+        padding: 10px 4%;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .navbar-logo img {
+        height: 44px;
+    }
+
+    .navbar-back-btn {
+        padding: 8px 16px;
+        font-size: 0.75rem;
+    }
+
+    .hangman-header h1 {
+        font-size: 1.35rem;
+    }
+
+    .header-right {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .streak-badge {
+        font-size: 0.85rem;
+        padding: 6px 12px;
+    }
+
+    .panel {
+        padding: 12px;
+        border-radius: 18px;
+    }
+
+    .card-canvas {
+        min-height: 280px;
+    }
+
+    .canvas-container {
+        padding: 6px;
+    }
+
+    #hangmanCanvas {
+        width: 210px;
+        height: 210px;
+    }
+
+    .word-display {
+        gap: 8px;
+        margin-top: 15px;
+    }
+
+    .letter-space {
+        width: 22px;
+        font-size: 1.25rem;
+    }
+
+    .info-section {
+        padding: 12px;
+    }
+
+    .keyboard-row {
+        gap: 3px;
+    }
+
+    .key-btn {
+        min-width: 20px;
+        height: 36px;
+        font-size: 0.8rem;
+        border-radius: 7px;
+    }
+
+    .modal-content {
+        padding: 18px;
+        width: 88%;
+    }
+
+    .step-item {
+        gap: 10px;
+        align-items: flex-start;
     }
 }
