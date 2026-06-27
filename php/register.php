@@ -21,7 +21,7 @@
             if ($stmt->execute()) { 
                 echo "¡Usuario registrado correctamente en GuanaTalk!"; 
                
-                header("refresh:2;url=../login.html");
+                header("refresh:2;url=../login.php");
                 exit();
             } else { 
                 echo "Error al registrar en la base de datos: " . $stmt->error; 
