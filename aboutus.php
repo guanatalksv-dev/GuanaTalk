@@ -89,8 +89,6 @@
 
                                 <li>Education: Facilitate the learning of Salvadoran words and cultural facts.</li>
 
-                                <li>Innovation: Using technological tools to bring culture closer to foreigners.</li>
-
                                 <li>Accessibility: Offering easy and interactive content for understanding and teaching.</li>
                             </ul>
                             </p>
