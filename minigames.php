@@ -27,28 +27,43 @@
 <section class="cards-grid">
 
     <a href="loteria.html" class="card-game card-gradient-1">
-        <img src="img/" alt="Lotería" class="card-game-img">
-        <p>Lotería</p>
+        <img src="img/loteria.png" class="card-game-img">
+            <p>Lotería</p>
+        <span class="play-label">
+            Play →
+        </span>
     </a>
 
     <a href="hangman.html" class="card-game card-gradient-2">
         <img src="img/hangman.png" alt="Hangman" class="card-game-img">
         <p>Hangman</p>
+        <span class="play-label">
+            Play →
+        </span>
     </a>
 
     <a href="wordsearch.html" class="card-game card-gradient-3">
         <img src="img/wordsearch.png" alt="Word Search" class="card-game-img">
         <p>Word Search</p>
+        <span class="play-label">
+            Play →
+        </span>
     </a>
 
     <a href="riddles.html" class="card-game card-gradient-4">
         <img src="img/riddles.png" alt="Riddles" class="card-game-img">
-        <p>Riddles</p>  
+        <p>Riddles</p> 
+        <span class="play-label">
+            Play →
+        </span> 
     </a>
 
     <a href="memory.html" class="card-game card-gradient-5">
         <img src="img/cards.png" alt="Memory Match" class="card-game-img">
         <p>Memory Match</p>
+        <span class="play-label">
+            Play →
+        </span>
     </a>
 
 </section>

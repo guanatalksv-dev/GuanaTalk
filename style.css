@@ -313,22 +313,22 @@ nav a {
 }
 
 .card-pink{
-  background:linear-gradient(#ffbebe, #ff5050);
+  background:linear-gradient(#ffaabb, #ff3964);
 }
 .card-green {
-  background: linear-gradient(#caffab, #5deb0c);
+  background: linear-gradient(#84ff73, #00a71c);
 }
 
 .card-orange {
-  background: linear-gradient(#ffc8ac, #ff661a);
+  background: linear-gradient(#fff16f, #ffa600);
 }
 
 .card-blue {
-  background: linear-gradient(#b2e3ff, #01a2ff);
+  background: linear-gradient(#9cf8ff, #0ca2ff);
 } 
 
 .card-gray {
-  background: linear-gradient(#afd7ff, #0080ff);
+  background: linear-gradient(#e2e2e2, #6b6969);
 }
 
 .about h2 {

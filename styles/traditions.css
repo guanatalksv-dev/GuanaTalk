@@ -1,6 +1,3 @@
-/* ==========================================================================
-   ESTILOS GENERALES Y ESTRUCTURA BASE
-   ========================================================================== */
 * {
     margin: 0;
     padding: 0;
@@ -12,26 +9,20 @@ body {
     background-color: #f0f0f0; 
     color: #333;
     
-    /* SOLUCIÃ“N AL ESPACIO BLANCO: Forzamos al body a usar Flexbox */
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
-/* El contenedor principal ahora SÃ“LO envuelve tu contenido, dejando libre al footer */
 .main-container {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 40px 20px;
     
-    /* Hace que el contenido se estire y empuje al footer al fondo de la pantalla */
     flex: 1; 
 }
 
-/* ==========================================================================
-   CONTENIDO DE LA PÃGINA
-   ========================================================================== */
 .hero-section {
     display: flex;
     justify-content: space-between;
@@ -116,9 +107,6 @@ body {
     font-size: 1.5rem;
 }
 
-/* ==========================================================================
-   NAVEGACIÃ“N INFERIOR (Opcional si la usas aquÃ­)
-   ========================================================================== */
 .bottom-nav {
     position: fixed;
     bottom: 20px;
