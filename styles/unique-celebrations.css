@@ -114,3 +114,88 @@ body {
     font-size: 1.1rem;
     line-height: 1.3;
 }
+
+@media screen and (max-width: 425px) {
+    
+    /* Contenedor principal */
+    .celebrations-container {
+        padding: 20px 20px;
+    }
+
+    /* Título de la página */
+    .celebrations-title {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+
+    /* Grid vertical */
+    .celebrations-grid {
+        flex-direction: column;
+        gap: 25px;
+        margin-bottom: 30px;
+    }
+
+    /* Tarjetas */
+    .celebration-card {
+        max-width: 100%;
+        width: 100%;
+        padding: 30px 20px;
+        border-radius: 25px;
+    }
+
+    /* AQUÍ ESTÁ EL CAMBIO: 
+       Hacemos el contenedor de la imagen mucho más grande 
+       para que la ilustración resalte y no se vea minúscula.
+    */
+
+    .right-side .menu-toggle { 
+        order: 2 !important; 
+        padding-right: 0 !important;
+        margin-right: 0 !important;
+        font-size: 2.2rem !important; /* <--- Agregalo aquí para cambiar el tamaño */
+    }
+    .celebration-img-box {
+        width: 170px;
+        height: 170px;
+        margin-bottom: 20px;
+    }
+
+    .celebration-card h2 {
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+    }
+
+    .celebration-card p {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    /* Banner inferior */
+    .celebrations-dyk-banner {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+        padding: 20px;
+        border-radius: 20px;
+    }
+
+    .dyk-badge {
+        justify-content: center;
+        min-width: auto;
+        width: 100%;
+    }
+
+    .dyk-message {
+        font-size: 0.95rem;
+    }
+
+    /* Footer */
+    .footer {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        gap: 15px !important;
+        padding: 25px 15px !important;
+    }
+}

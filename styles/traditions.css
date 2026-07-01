@@ -69,11 +69,11 @@ body {
 }
 
 .card-light-green {
-    background-color: #82D173; 
+    background-color: #14da0d; 
 }
 
 .card-dark-green {
-    background-color: #27B45F;
+    background-color: #00a71c;
 }
 
 .card img {
@@ -207,6 +207,13 @@ body {
 
     .main-container {
         padding: 20px 15px !important;
+    }
+
+    .right-side .menu-toggle { 
+        order: 2 !important; 
+        padding-right: 0 !important;
+        margin-right: 0 !important;
+        font-size: 2.2rem !important; /* <--- Agregalo aquí para cambiar el tamaño */
     }
 
     .hero-section {
