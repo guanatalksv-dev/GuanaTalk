@@ -44,7 +44,7 @@
                         </div>
 
                         <div class="about-image">
-                            <img src="img/GuanaTeam.png" alt="Developers">
+                            <img src="img/6 alumnos.png" alt="Developers">
                         </div>
 
                     </div>
@@ -67,7 +67,7 @@
                         </div>
 
                         <div class="about-image">
-                            <img src="img/mision.png" alt="Mission">
+                            <img src="img/kathy.adri.png" alt="Mission">
                         </div>
 
                     </div>
@@ -96,7 +96,7 @@
                         </div>
 
                         <div class="about-image">
-                            <img src="vision.png" alt="Vision">
+                            <img src="img/banderas.png" alt="Vision">
                         </div>
 
                     </div>
