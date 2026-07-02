@@ -1,5 +1,5 @@
 .guanatalk-navbar {
-    background: linear-gradient(to right, #fff9f9 4%, #0283ce 40%, #00264b 105%);
+    background: linear-gradient(to right, #fff9f9 3%, #0283ce 40%, #003a74 105%);
     border-bottom: 2px solid #0283ce;
     display: flex;
     justify-content: space-between;
@@ -46,7 +46,7 @@
 
 .guanatalk-navbar .profile-btn {
     background-color: #c4e9ff !important; 
-    border: 3px solid #ffcc00 !important; 
+    border: 3px solid #62a9f0 !important; 
     color: #000000 !important; 
     padding: 10px 24px !important;
     border-radius: 10px !important; 
