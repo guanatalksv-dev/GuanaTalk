@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['nacionalidad'] = $usuario['nacionalidad'];
 
     
-            header("Location: ../index.php");
+            header("refresh:2;url=../index.php");
             exit(); 
         } else {
             echo "La contraseña no coincide.";
