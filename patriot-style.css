@@ -1,3 +1,4 @@
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -50,14 +51,18 @@
 .profile-btn:hover {
     background: #3fa332;
 }
+
 .simbolo-row {
     display: flex;
-    align-items: center;       
+    align-items: flex-start;
     justify-content: center;   
-    gap: 50px;                 
+    gap: 40px;         
     width: 100%;
     max-width: 1100px;        
     margin: 0 auto 60px auto; 
+    flex-wrap: wrap; 
+    box-sizing: border-box;
+    padding: 0 20px;
 }
 
 .layout-margin-top {
@@ -85,6 +90,8 @@
 
 .extended-card {
     flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 500px; 
     max-width: 650px;         
     background: #ffffff;
     border: 1px solid #e2e8f0;
@@ -94,6 +101,7 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+    box-sizing: border-box;
 }
 
 .extended-badge.yellow-badge {
@@ -140,7 +148,7 @@
     width: 300px;
     height: 300px;
     perspective: 1000px;
-    flex-shrink: 0;           
+    flex-shrink: 0;          
 }
 
 .flip-card-inner {
@@ -252,4 +260,79 @@
 
 .download-link-btn:hover {
     background-color: #2f855a;
+}
+
+.toggle-lyric-btn {
+    display: none; 
+    background-color: #f1c40f;
+    color: #1a202c;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.85rem;
+    cursor: pointer;
+    margin: 10px auto 0 auto;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: background-color 0.2s ease;
+}
+
+.toggle-lyric-btn:hover {
+    background-color: #d4ac0d;
+}
+
+@media (max-width: 768px) {
+    
+    .simbolo-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        padding: 0 10px;
+        margin-bottom: 40px;
+    }
+
+    .extended-card {
+        width: 100%;
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    .flip-card {
+        width: 280px;
+        height: 280px;
+        margin: 0 auto;
+    }
+
+    .toggle-lyric-btn {
+        display: block;
+    }
+
+    .extended-scroll-box {
+        max-height: 220px !important; 
+        overflow: hidden !important;   
+        position: relative;
+        transition: max-height 0.4s ease-in-out; 
+    }
+
+    .extended-scroll-box::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 50px;
+        background: linear-gradient(transparent, #ffffff);
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+    }
+
+    .extended-scroll-box.expanded {
+        max-height: 2200px !important; 
+        overflow-y: visible !important;
+    }
+
+    .extended-scroll-box.expanded::after {
+        opacity: 0;
+    }
 }

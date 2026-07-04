@@ -462,8 +462,6 @@ nav a {
     color: #8cc63f; 
 }
 
-<<<<<<< HEAD
-=======
 .footer {
     position: fixed;
     bottom: 0;
@@ -488,9 +486,10 @@ nav a {
     color: #1f5aa6; 
     margin-bottom: 4px;
 }
->>>>>>> 9657890a97c92957897bc288eb195c55705d8d76
+
 
 @media (max-width: 768px) {
+  
     .hero-section {
         flex-direction: column;
         text-align: center;
@@ -500,5 +499,62 @@ nav a {
         margin-right: 0;
         max-width: 300px;
         margin-top: 20px;
+    }
+
+    .symbols-section {
+        padding: 0 10px; 
+    }
+
+    .cards-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important; 
+        gap: 12px; 
+        justify-items: center;
+        padding: 0;
+        width: 100%;
+    }
+
+    .card-container, .card {
+        width: 100% !important;        
+        max-width: 170px !important;  
+        height: 240px !important;    
+    }
+
+    .card-inner {
+        width: 100%;
+        height: 100%;
+    }
+
+    .card-front, .card-back {
+        padding: 15px 10px !important;
+        width: 100%;
+        height: 100%;
+    }
+
+    .card-front img, .card img {
+        max-width: 75px !important;
+        height: 75px !important;
+        margin-bottom: 8px;
+    }
+
+    .card-front h3, .card h3 {
+        font-size: 1rem !important; 
+    }
+
+    .tap-hint {
+        margin-top: 5px;
+        font-size: 0.65rem;
+    }
+
+  
+    .card-back h3 {
+        font-size: 0.95rem;
+        margin-bottom: 4px;
+    }
+
+    .card-back p {
+        font-size: 0.75rem;
+        max-height: 130px;
+        line-height: 1.3;
     }
 }
