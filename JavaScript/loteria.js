@@ -19,7 +19,7 @@ const juegoCincoRondas = {
         { id: 13, palabra: "SANGANO", pista: "A very lazy person who hates working and avoids any type of effort.", img: "img/sangano.png" },
         { id: 14, palabra: "AGUADO", pista: "Someone with no energy, or something that turned out too watery or soft.", img: "img/aguado.png" },
         { id: 15, palabra: "CHINDONDO", pista: "A bump or swelling on the head, usually caused by an accidental hit.", img: "img/chindondo.png" },
-        { id: 16, palabra: "PASMADO", pista: "A distracted or clueless person who stares into space without reacting.", img: "img/pasmado.png" },
+        { id: 16, palabra: "APIATE", pista: "A distracted or clueless person who stares into space without reacting.", img: "img/apiate.png" },
         { id: 17, palabra: "QUE CHIVO", pista: "Cool, awesome, or great! Used when something is excellent.", img: "img/que-chivo.png" },
         { id: 18, palabra: "GUACALA", pista: "An exclamation used to express disgust, yuck, or immediate dislike.", img: "img/guacala.png" }
     ],
@@ -27,14 +27,14 @@ const juegoCincoRondas = {
         { id: 19, palabra: "CHILILLO", pista: "A thin branch or stick used in the past by parents for discipline.", img: "img/chilillo.png" },
         { id: 20, palabra: "MALANDRO", pista: "A shady person, thug, or someone who is involved in bad actions.", img: "img/malandro.png" },
         { id: 21, palabra: "COCHINO", pista: "A dirty or messy person with very poor hygiene habits.", img: "img/cochino.png" },
-        { id: 22, palabra: "OSICO", pista: "A slightly rude or harsh way to refer to someone's mouth.", img: "img/osico.png" },
+        { id: 22, palabra: "CHUCHO", pista: "A slightly rude or harsh way to refer to someone's mouth.", img: "img/chucho.png" },
         { id: 23, palabra: "PAJA", pista: "A lie, fake story, or exaggeration that nobody believes.", img: "img/paja.png" }
     ],
     ronda5: [
         { id: 24, palabra: "QUIUBO", pista: "A fast, informal, and friendly greeting between friends. Short for '¿Qué hubo?'.", img: "img/quiubo.png" },
         { id: 25, palabra: "QUE ONDAS", pista: "A very popular and casual way to say: 'What's up?' or 'How is it going?'.", img: "img/queondas.png" },
         { id: 26, palabra: "IJOLE", pista: "An exclamation of surprise or worry when something goes wrong.", img: "img/ijole.png" },
-        { id: 27, palabra: "DUNDO", pista: "Silly, goofy, or a bit slow to understand things.", img: "img/dundo.png" },
+        { id: 27, palabra: "MOCOSO", pista: "Silly, goofy, or a bit slow to understand things.", img: "img/mocoso.png" },
         { id: 28, palabra: "CHAMACO", pista: "A young boy, kid, or young man from the neighborhood.", img: "img/chamaco.png" }
     ]
 };
