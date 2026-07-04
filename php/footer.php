@@ -6,14 +6,14 @@
         </div>
 
         <div class="footer-contact">
-            <p>📧 Contacto:</p>
+            <p>&#9993; Contacto:</p>
             <a href="mailto:guanatalksv@gmail.com">
                 guanatalksv@gmail.com
             </a>
         </div>
 
         <div class="footer-copy">
-            <p>© 2026 GuanaTalk | your gateway to Salvadorean culture.</p>
+            <p>&copy; 2026 GuanaTalk | your gateway to Salvadorean culture.</p>
         </div>
 
     </div>

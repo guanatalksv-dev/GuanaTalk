@@ -24,32 +24,32 @@ document.addEventListener("DOMContentLoaded", () => {
         3: [
             { id: 9, name: "Guanaco", type: "slang", content: "GUANACO", img: "img/guanaco.png" },
             { id: 9, name: "Guanaco", type: "meaning", content: "Salvadoran person", img: "img/meaning_person.png" },
-            { id: 10, name: "Diaybo", type: "slang", content: "DIAYBO", img: "img/diaybo.png" },
-            { id: 10, name: "Diaybo", type: "meaning", content: "Clever / Sharp", img: "img/meaning_sharp.png" },
+            { id: 10, name: "Que Ondas", type: "slang", content: "QUE ONDAS", img: "img/queondas.png" },
+            { id: 10, name: "Que Ondas", type: "meaning", content: "What's up?", img: "img/meaning_hello.png" },
             { id: 11, name: "Juela", type: "slang", content: "JUELA", img: "img/juela.png" },
             { id: 11, name: "Juela", type: "meaning", content: "Short for Hijole!", img: "img/meaning_shock.png" },
             { id: 12, name: "Chuco", type: "slang", content: "CHUCO", img: "img/chuco.png" },
             { id: 12, name: "Chuco", type: "meaning", content: "Dirty / Fermented", img: "img/meaning_dirty.png" }
         ],
         4: [
-            { id: 13, name: "Pana", type: "slang", content: "PANA", img: "img/pana.png" },
-            { id: 13, name: "Pana", type: "meaning", content: "Plastic Bowl", img: "img/meaning_bowl.png" },
+            { id: 13, name: "Pasmado", type: "slang", content: "PASMADO", img: "img/pasmado.png" },
+            { id: 13, name: "Pasmado", type: "meaning", content: "Surprised / Amazed", img: "img/meaning_surprised.png" },
             { id: 14, name: "Chucho", type: "slang", content: "CHUCHO", img: "img/chucho.png" },
             { id: 14, name: "Chucho", type: "meaning", content: "Dog / Stingy", img: "img/meaning_dog.png" },
             { id: 15, name: "Cora", type: "slang", content: "CORA", img: "img/cora.png" },
             { id: 15, name: "Cora", type: "meaning", content: "Quarter ($0.25)", img: "img/meaning_coin.png" },
-            { id: 16, name: "Pega", type: "slang", content: "PEGA", img: "img/pega.png" },
-            { id: 16, name: "Pega", type: "meaning", content: "Glue / Adhesive", img: "img/meaning_glue.png" }
+            { id: 16, name: "Pupusa", type: "slang", content: "PUPUSA", img: "img/pupusa.png" },
+            { id: 16, name: "Pupusa", type: "meaning", content: "Traditional Salvadoran dish", img: "img/meaning_food.png" }
         ],
         5: [
-            { id: 17, name: "Choto", type: "slang", content: "CHOTO", img: "img/choto.png" },
-            { id: 17, name: "Choto", type: "meaning", content: "Free / No cost", img: "img/meaning_free.png" },
-            { id: 18, name: "Marusa", type: "slang", content: "MARUSA", img: "img/marusa.png" },
-            { id: 18, name: "Marusa", type: "meaning", content: "Instant Noodles", img: "img/meaning_soup.png" },
-            { id: 19, name: "Chorcha", type: "slang", content: "CHORCHA", img: "img/chorcha.png" },
-            { id: 19, name: "Chorcha", type: "meaning", content: "Gossip group", img: "img/meaning_gossip.png" },
-            { id: 20, name: "Sirimba", type: "slang", content: "SIRIMBA", img: "img/sirimba.png" },
-            { id: 20, name: "Sirimba", type: "meaning", content: "Fainting / Spasm", img: "img/meaning_faint.png" }
+            { id: 17, name: "Chuña", type: "slang", content: "CHUÑA", img: "img/chuña.png" },
+            { id: 17, name: "Chuña", type: "meaning", content: "Free / No cost", img: "img/meaning_free.png" },
+            { id: 18, name: "Guacal", type: "slang", content: "GUACAL", img: "img/guacal.png" },
+            { id: 18, name: "Guacal", type: "meaning", content: "Instant Noodles", img: "img/meaning_soup.png" },
+            { id: 19, name: "Corcholata", type: "slang", content: "CORCHOLATA", img: "img/corcholata.png" },
+            { id: 19, name: "Corcholata", type: "meaning", content: "Gossip group", img: "img/meaning_gossip.png" },
+            { id: 20, name: "Chontoca", type: "slang", content: "CHONTOCA", img: "img/chontoca.png" },
+            { id: 20, name: "Chontoca", type: "meaning", content: "Fainting / Spasm", img: "img/meaning_faint.png" }
         ]
     };
 
