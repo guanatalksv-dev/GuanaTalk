@@ -364,6 +364,120 @@ body::before {
     color: #1a529b;
 }
 
+.resultado-overlay {
+    background: rgba(26, 82, 155, 0.58);
+}
+
+.resultado-card {
+    width: min(90%, 430px);
+    background:
+        radial-gradient(#f7ebd2 1px, transparent 1px),
+        #ffffff;
+    background-size: 16px 16px;
+    border: 4px solid #ffcc00;
+    border-radius: 26px;
+    box-shadow:
+        0 10px 0 #e6c280,
+        0 26px 55px rgba(26, 82, 155, 0.28);
+    padding: 34px 28px 30px;
+    text-align: center;
+    position: relative;
+    transform: translateY(18px) scale(0.9);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.resultado-overlay.active .resultado-card {
+    transform: translateY(0) scale(1);
+}
+
+.resultado-card::before,
+.resultado-card::after {
+    content: "";
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    background: #ff6b8b;
+    border: 3px solid #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 6px 14px rgba(255, 107, 139, 0.28);
+    transform: rotate(-10deg);
+}
+
+.resultado-card::before {
+    top: -18px;
+    left: 24px;
+}
+
+.resultado-card::after {
+    right: 24px;
+    bottom: -18px;
+    background: #3cb85c;
+    transform: rotate(10deg);
+}
+
+.resultado-badge {
+    width: fit-content;
+    margin: 0 auto 14px;
+    background: #1a529b;
+    color: #ffffff;
+    font-family: 'Fredoka One', cursive;
+    font-size: 0.82rem;
+    letter-spacing: 0.5px;
+    padding: 7px 14px;
+    border: 2px solid #ffffff;
+    border-radius: 999px;
+    box-shadow: 0 5px 12px rgba(26, 82, 155, 0.25);
+}
+
+.resultado-card h2 {
+    margin: 0;
+    color: #ff6b8b;
+    font-family: 'Fredoka One', cursive;
+    font-size: clamp(2rem, 8vw, 2.65rem);
+    line-height: 1.05;
+    text-shadow: 2px 2px 0 #fdf5e6;
+}
+
+.resultado-card p {
+    margin: 14px auto 0;
+    color: #1a529b;
+    font-size: 1.15rem;
+    font-weight: 800;
+    line-height: 1.45;
+    max-width: 330px;
+}
+
+.resultado-linea {
+    width: 78%;
+    height: 0;
+    margin: 22px auto;
+    border-top: 3px dashed #e6c280;
+}
+
+.resultado-btn {
+    background: #3cb85c;
+    color: #ffffff;
+    border: 3px solid #ffffff;
+    border-radius: 999px;
+    box-shadow: 0 7px 0 #2e9647, 0 12px 20px rgba(60, 184, 92, 0.22);
+    cursor: pointer;
+    font-family: 'Fredoka One', cursive;
+    font-size: 1rem;
+    padding: 12px 24px;
+    min-width: 150px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.resultado-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 0 #2e9647, 0 16px 24px rgba(60, 184, 92, 0.3);
+}
+
+.resultado-btn:active {
+    transform: translateY(3px);
+    box-shadow: 0 4px 0 #2e9647, 0 8px 15px rgba(60, 184, 92, 0.22);
+}
+
 @media (max-width: 768px) {
     body {
         padding-top: 105px;
@@ -497,5 +611,13 @@ body::before {
 
     .modal-header h2 {
         font-size: 1.25rem;
+    }
+
+    .resultado-card {
+        padding: 30px 22px 26px;
+    }
+
+    .resultado-card p {
+        font-size: 1rem;
     }
 }

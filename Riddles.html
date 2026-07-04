@@ -24,7 +24,7 @@
 
 <main class="game-wrapper">
     <div class="game-info">
-        <h1>🌸 Riddles & Salvadorean Curiosities</h1>
+        <h1>Riddles & Salvadoran Curiosities</h1>
         <p>Test your knowledge! Read the riddle, check the hints if needed, and select the correct option.</p>
     </div>
 
@@ -32,26 +32,27 @@
         <div class="question-section">
             <div class="riddle-badge">
                 <div class="question-mark-icon" onclick="toggleInstrucciones(event)">
-                    ❓
+                    ?
                     <div class="game-instructions-popup" id="instructions-popup">
                         <strong>How to play:</strong><br>
                         1. Read the riddle carefully.<br>
                         2. If you are stuck, click <strong>"Reveal Hint"</strong> on the right side.<br>
-                        3. Pick the best option. Green means correct, Red means incorrect!
+                        3. Pick the best option. Green means correct, red means incorrect!
                     </div>
                 </div>
-                <span id="riddle-number">Riddle 1 of 5</span>
+                <span id="riddle-number">Riddle 1 of 25</span>
             </div>
-            
+
             <div class="riddle-content-box">
                 <p class="text-es" id="riddle-text-es">Loading riddle...</p>
                 <p class="text-en" id="riddle-text-en">Cargando adivinanza...</p>
             </div>
 
-            <div class="options-container" id="options-container">
-            </div>
+            <div class="options-container" id="options-container"></div>
 
-            <button id="next-btn" class="next-btn hidden" onclick="siguienteRiddle()">Next Riddle <i class="fa-solid fa-arrow-right"></i></button>
+            <button id="next-btn" class="next-btn hidden" onclick="siguienteRiddle()">
+                Next Riddle <i class="fa-solid fa-arrow-right"></i>
+            </button>
         </div>
 
         <div class="hints-section">
@@ -67,22 +68,30 @@
     </div>
 </main>
 
+<div class="streak-card hidden" id="streak-card">
+    <div class="streak-icon"><i class="fa-solid fa-seedling"></i></div>
+    <div>
+        <h3 id="streak-title">Great streak!</h3>
+        <p id="streak-text">You are doing great.</p>
+    </div>
+</div>
+
 <div id="result-modal" class="modal-overlay hidden">
     <div class="result-card">
-        <span class="modal-flower top-left">🌸</span>
-        <span class="modal-flower top-right">🌸</span>
-        <span class="modal-flower bottom-left">🌸</span>
-        <span class="modal-flower bottom-right">🌸</span>
+        <span class="modal-flower top-left"><i class="fa-solid fa-seedling"></i></span>
+        <span class="modal-flower top-right"><i class="fa-solid fa-seedling"></i></span>
+        <span class="modal-flower bottom-left"><i class="fa-solid fa-seedling"></i></span>
+        <span class="modal-flower bottom-right"><i class="fa-solid fa-seedling"></i></span>
 
         <div class="result-content">
-            <div class="result-icon" id="result-emoji">🎉</div>
+            <div class="result-icon" id="result-emoji"><i class="fa-solid fa-star"></i></div>
             <h2 id="result-title">Amazing Job!</h2>
             <p id="result-text">You have completed the challenge.</p>
-            
+
             <div class="score-box">
-                <span id="score-count">0</span> / <span id="total-count">5</span>
+                <span id="score-count">0</span> / <span id="total-count">25</span>
             </div>
-            
+
             <button class="restart-btn" onclick="reiniciarJuego()">Play Again <i class="fa-solid fa-rotate-right"></i></button>
         </div>
     </div>

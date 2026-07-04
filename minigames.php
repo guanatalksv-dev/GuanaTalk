@@ -28,7 +28,7 @@
 
     <a href="loteria.html" class="card-game card-gradient-1">
         <img src="img/loteria.png" class="card-game-img">
-            <p>Lotería</p>
+            <p>Lottery</p>
         <span class="play-label">
             Play →
         </span>

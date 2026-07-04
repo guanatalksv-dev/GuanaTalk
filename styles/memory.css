@@ -295,6 +295,130 @@
     width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; cursor: pointer;
 }
 
-@media (max-width: 900px) {
-    .memory-game-layout { grid-template-columns: 1fr; }
+@media (max-width:768px){
+
+    .memory-navbar{
+        height:70px;
+        padding:0 20px;
+    }
+
+    .navbar-logo img{
+        height:55px;
+    }
+
+    .memory-body-theme{
+        padding-top:105px;
+    }
+
+    .memory-game-layout{
+        grid-template-columns:1fr;
+        width:92%;
+        max-width:700px;
+        margin:0 auto;
+        padding:0 12px;
+        box-sizing:border-box;
+    }
+
+    .board-wrapper,
+    .stats-card-artesanal,
+    .words-dictionary-card{
+        width:100%;
+        margin:0 auto 20px auto;
+        box-sizing:border-box;
+    }
+    
+    .tablero-artesanal-memory{
+        gap:16px;
+    }
+
+    .card-memory{
+        aspect-ratio:1/1.2;
+    }
+
+    .card-memory-front,
+    .card-memory-back{
+        border-radius:16px;
+        padding:10px;
+    }
+
+    .card-memory-back .illustration-container{
+        width:80px;
+        height:80px;
+    }
+
+    .card-memory-back span{
+        font-size:1rem;
+        margin-top:8px;
+    }
+
+    .stats-card-artesanal,
+    .words-dictionary-card{
+        width:100%;
+    }
+
+}
+
+@media (max-width:425px){
+
+    .memory-navbar{
+        height:65px;
+        padding:0 12px;
+    }
+
+    .navbar-logo img{
+        height:45px;
+    }
+
+    .navbar-back-btn{
+        padding:8px 14px;
+        font-size:.75rem;
+    }
+
+    .memory-body-theme{
+        padding-top:95px;
+    }
+
+    .game-info-bar{
+        flex-direction:column;
+        gap:12px;
+    }
+
+    .memory-game-layout{
+        width:100%;
+        padding:0 16px;
+        margin:0 auto;
+        box-sizing:border-box;
+        gap:18px;
+    }
+
+    .board-wrapper{
+        width:100%;
+        padding:14px;
+        box-sizing:border-box;
+        margin:0 auto;
+    }
+
+    .tablero-artesanal-memory{
+        grid-template-columns:repeat(2,1fr);
+        gap:14px;
+    }
+
+    .card-memory-back .illustration-container{
+        width:90px;
+        height:90px;
+    }
+
+    .card-memory-back span{
+        font-size:1rem;
+    }
+
+    .stats-card-artesanal,
+    .words-dictionary-card{
+        padding:15px;
+    }
+
+    .stat-row{
+        font-size:1rem;
+    }
+
 }

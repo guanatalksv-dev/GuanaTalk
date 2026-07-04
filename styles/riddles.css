@@ -6,10 +6,34 @@
 }
 
 body {
-    background: #FBF2EB;
+    background:
+        radial-gradient(circle at 15% 15%, rgba(255, 204, 221, 0.58), transparent 32%),
+        linear-gradient(135deg, #fff8f2 0%, #fbf2eb 48%, #ffe8f1 100%);
     min-height: 100vh;
     overflow-x: hidden;
     position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    right: -40px;
+    bottom: -35px;
+    width: 900px;
+    height:  900px;
+    background: url("../img/maquilisuat.prueba.jpg") center / contain no-repeat;
+    opacity: 0.2;
+    pointer-events: none;
+    z-index: 0;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(251, 242, 235, 0.72), rgba(251, 242, 235, 0.24));
+    pointer-events: none;
+    z-index: 0;
 }
 
 .maquilishuat-leaves-container {
@@ -24,9 +48,10 @@ body {
 
 .petal {
     position: absolute;
-    background: linear-gradient(135deg, #ff9ff3, #feca57);
+    background: linear-gradient(135deg, #ff82c6, #ffd1e4 58%, #f9a7d4);
     border-radius: 150% 0 150% 150%;
-    opacity: 0.7;
+    opacity: 0.78;
+    box-shadow: 0 2px 8px rgba(255, 130, 198, 0.22);
     animation: fall linear infinite;
 }
 
@@ -309,6 +334,72 @@ body {
 .next-btn:hover { background-color: #163966; }
 .hidden { display: none !important; }
 
+.streak-card {
+    position: fixed;
+    top: 105px;
+    right: 26px;
+    width: min(360px, calc(100% - 32px));
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background:
+        radial-gradient(#ffe1ee 1px, transparent 1px),
+        rgba(255, 255, 255, 0.96);
+    background-size: 15px 15px;
+    border: 3px solid #ff9ff3;
+    border-radius: 24px;
+    box-shadow: 0 16px 34px rgba(255, 107, 129, 0.24);
+    padding: 18px 20px;
+    z-index: 9500;
+    animation: streakSlideIn 0.36s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.streak-card::after {
+    content: "";
+    position: absolute;
+    inset: 8px;
+    border: 2px dashed rgba(223, 185, 105, 0.55);
+    border-radius: 18px;
+    pointer-events: none;
+}
+
+.streak-icon {
+    width: 54px;
+    height: 54px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #ff9ff3, #ff6b81);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 1.45rem;
+    box-shadow: 0 8px 18px rgba(255, 107, 129, 0.28);
+}
+
+.streak-card h3 {
+    color: #1f4e8c;
+    font-size: 1.12rem;
+    margin-bottom: 4px;
+}
+
+.streak-card p {
+    color: #555;
+    line-height: 1.35;
+    font-size: 0.95rem;
+}
+
+@keyframes streakSlideIn {
+    0% {
+        transform: translateX(35px) scale(0.92);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0) scale(1);
+        opacity: 1;
+    }
+}
+
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -367,6 +458,7 @@ body {
 .result-icon {
     font-size: 3.5rem;
     margin-bottom: 15px;
+    color: #ff6b81;
 }
 
 .result-content h2 {
@@ -418,6 +510,14 @@ body {
 }
 
 @media (max-width: 768px) {
+    body::before {
+        width: 360px;
+        height: 360px;
+        right: -100px;
+        bottom: -40px;
+        opacity: 0.14;
+    }
+
     .navbar {
         padding: 10px 25px;
     }
@@ -487,6 +587,12 @@ body {
     .result-card {
         width: 90%;
         padding: 32px 24px;
+    }
+
+    .streak-card {
+        top: auto;
+        right: 16px;
+        bottom: 18px;
     }
 }
 

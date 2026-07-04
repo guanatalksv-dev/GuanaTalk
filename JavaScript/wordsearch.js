@@ -1,9 +1,9 @@
 const rondasJuego = [
-    { titulo: "Round 1: Salvadoran Slang", palabras: ["CHERO", "CHIVO", "BICHO", "MAJE", "CIPOTE"] },
+    { titulo: "Round 1: Salvadoran Slang", palabras: ["CHERO", "CHIVO", "BICHO", "OSICO", "CIPOTE"] },
     { titulo: "Round 2: Traditional Food", palabras: ["PUPUSA", "TAMAL", "PASTEL", "ATOLE", "YUCA"] },
-    { titulo: "Round 3: Beautiful Towns", palabras: ["SUCHITOTO", "ATACO", "JUAYUA", "ILOBASCO", "APANECA"] },
-    { titulo: "Round 4: Nature & Icons", palabras: ["TOROGOZ", "AMATE", "IZALCO", "ILOPANGO", "CHINCHONTEPEC"] },
-    { titulo: "Round 5: Expressive Slang", palabras: ["PUCHICA", "BAYUNCO", "GUANACO", "CHOLINO", "TALAPO"] }
+    { titulo: "Round 3: Beautiful Towns", palabras: ["IlOPANGO", "ATACO", "JUAYUA", "ILOBASCO", "APANECA"] },
+    { titulo: "Round 4: Nature & Icons", palabras: ["TOROGOZ", "AMATE", "IZALCO", "CHUCHO", "JUELA"] },
+    { titulo: "Round 5: Expressive Slang", palabras: ["PUCHICA", "BAYUNCO", "GUANACO", "QUE ONDAS", "PASMADO"] }
 ];
 
 let rondaActual = 0;
