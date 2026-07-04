@@ -46,7 +46,7 @@
 
 .guanatalk-navbar .nav-links li a {
     text-decoration: none;
-    color: white;
+    color: black;
     font-weight: 700;
     font-family: 'Fredoka', sans-serif;
     font-size: 1.1rem;
@@ -54,7 +54,7 @@
 }
 
 .guanatalk-navbar .nav-links li a:hover {
-    color: #1a2439;
+    color: #62a9f0;
 }
 
 .guanatalk-navbar .profile-btn {
