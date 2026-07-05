@@ -3,53 +3,53 @@ document.addEventListener("DOMContentLoaded", () => {
     const roundsData = {
         1: [
             { id: 1, name: "Chivo", type: "slang", content: "CHIVO", img: "img/chivo.png" },
-            { id: 1, name: "Chivo", type: "meaning", content: "Cool / Awesome", img: "img/meaning_cool.png" },
-            { id: 2, name: "Chero", type: "slang", content: "CHERO", img: "img/chero.png" },
-            { id: 2, name: "Chero", type: "meaning", content: "Friend / Pal", img: "img/meaning_friend.png" },
+            { id: 1, name: "Chivo", type: "meaning", content: "Cool / Awesome", img: "img/chivo.png" },
+            { id: 2, name: "Chero", type: "slang", content: "CHERO", img: "img/chero-mini.png" },
+            { id: 2, name: "Chero", type: "meaning", content: "Friend / Pal", img: "img/chero-mini.png" },
             { id: 3, name: "Cipote", type: "slang", content: "CIPOTE", img: "img/cipote.png" },
-            { id: 3, name: "Cipote", type: "meaning", content: "Child / Kid", img: "img/meaning_kid.png" },
+            { id: 3, name: "Cipote", type: "meaning", content: "Child / Kid", img: "img/cipote.png" },
             { id: 4, name: "Puchica", type: "slang", content: "PÚCHICA", img: "img/puchica.png" },
-            { id: 4, name: "Puchica", type: "meaning", content: "Geez! / Wow!", img: "img/meaning_wow.png" }
+            { id: 4, name: "Puchica", type: "meaning", content: "Geez! / Wow!", img: "img/puchica.png" }
         ],
         2: [
-            { id: 5, name: "Bayunco", type: "slang", content: "BAYUNCO", img: "img/bayunco.png" },
-            { id: 5, name: "Bayunco", type: "meaning", content: "Silly / Goofy", img: "img/meaning_silly.png" },
+            { id: 5, name: "Bayunco", type: "slang", content: "BAYUNCO", img: "img/bayunco-mini.png" },
+            { id: 5, name: "Bayunco", type: "meaning", content: "Silly / Goofy", img: "img/bayunco-mini.png" },
             { id: 6, name: "Maje", type: "slang", content: "MAJE", img: "img/maje.png" },
             { id: 6, name: "Maje", type: "meaning", content: "Dude / Guy", img: "img/meaning_dude.png" },
             { id: 7, name: "Pupusas", type: "slang", content: "PUPUSAS", img: "img/pupusas.png" },
-            { id: 7, name: "Pupusas", type: "meaning", content: "National Dish", img: "img/meaning_food.png" },
+            { id: 7, name: "Pupusas", type: "meaning", content: "National Dish", img: "img/pupusas.png" },
             { id: 8, name: "Vaya Pues", type: "slang", content: "VAYA PUES", img: "img/vayapues.png" },
-            { id: 8, name: "Vaya Pues", type: "meaning", content: "Alright / OK", img: "img/meaning_ok.png" }
+            { id: 8, name: "Vaya Pues", type: "meaning", content: "Alright / OK", img: "img/vayapues.png" }
         ],
         3: [
             { id: 9, name: "Guanaco", type: "slang", content: "GUANACO", img: "img/guanaco.png" },
-            { id: 9, name: "Guanaco", type: "meaning", content: "Salvadoran person", img: "img/meaning_person.png" },
+            { id: 9, name: "Guanaco", type: "meaning", content: "Salvadoran person", img: "img/guanaco.png" },
             { id: 10, name: "Que Ondas", type: "slang", content: "QUE ONDAS", img: "img/queondas.png" },
-            { id: 10, name: "Que Ondas", type: "meaning", content: "What's up?", img: "img/meaning_hello.png" },
+            { id: 10, name: "Que Ondas", type: "meaning", content: "What's up?", img: "img/queondas.png" },
             { id: 11, name: "Juela", type: "slang", content: "JUELA", img: "img/juela.png" },
-            { id: 11, name: "Juela", type: "meaning", content: "Short for Hijole!", img: "img/meaning_shock.png" },
+            { id: 11, name: "Juela", type: "meaning", content: "Short for Hijole!", img: "img/juela.png" },
             { id: 12, name: "Chuco", type: "slang", content: "CHUCO", img: "img/chuco.png" },
-            { id: 12, name: "Chuco", type: "meaning", content: "Dirty / Fermented", img: "img/meaning_dirty.png" }
+            { id: 12, name: "Chuco", type: "meaning", content: "Dirty / Fermented", img: "img/chuco.png" }
         ],
         4: [
             { id: 13, name: "Pasmado", type: "slang", content: "PASMADO", img: "img/pasmado.png" },
-            { id: 13, name: "Pasmado", type: "meaning", content: "Surprised / Amazed", img: "img/meaning_surprised.png" },
+            { id: 13, name: "Pasmado", type: "meaning", content: "Surprised / Amazed", img: "img/pasmado.png" },
             { id: 14, name: "Chucho", type: "slang", content: "CHUCHO", img: "img/chucho.png" },
-            { id: 14, name: "Chucho", type: "meaning", content: "Dog / Stingy", img: "img/meaning_dog.png" },
-            { id: 15, name: "Cora", type: "slang", content: "CORA", img: "img/cora.png" },
-            { id: 15, name: "Cora", type: "meaning", content: "Quarter ($0.25)", img: "img/meaning_coin.png" },
-            { id: 16, name: "Pupusa", type: "slang", content: "PUPUSA", img: "img/pupusa.png" },
-            { id: 16, name: "Pupusa", type: "meaning", content: "Traditional Salvadoran dish", img: "img/meaning_food.png" }
+            { id: 14, name: "Chucho", type: "meaning", content: "Dog / Stingy", img: "img/chucho.png" },
+            { id: 15, name: "Cora", type: "slang", content: "CORA", img: "img/lacora.png" },
+            { id: 15, name: "Cora", type: "meaning", content: "Quarter ($0.25)", img: "img/lacora.png" },
+            { id: 16, name: "Pupusa", type: "slang", content: "PUPUSA", img: "img/pupusas.png" },
+            { id: 16, name: "Pupusa", type: "meaning", content: "Traditional Salvadoran dish", img: "img/pupusas.png" }
         ],
         5: [
             { id: 17, name: "Chuña", type: "slang", content: "CHUÑA", img: "img/chuña.png" },
-            { id: 17, name: "Chuña", type: "meaning", content: "Free / No cost", img: "img/meaning_free.png" },
+            { id: 17, name: "Chuña", type: "meaning", content: "Free / No cost", img: "chuña.png" },
             { id: 18, name: "Guacal", type: "slang", content: "GUACAL", img: "img/guacal.png" },
-            { id: 18, name: "Guacal", type: "meaning", content: "Instant Noodles", img: "img/meaning_soup.png" },
+            { id: 18, name: "Guacal", type: "meaning", content: "Instant Noodles", img: "img/guacal.png" },
             { id: 19, name: "Corcholata", type: "slang", content: "CORCHOLATA", img: "img/corcholata.png" },
-            { id: 19, name: "Corcholata", type: "meaning", content: "Gossip group", img: "img/meaning_gossip.png" },
+            { id: 19, name: "Corcholata", type: "meaning", content: "Gossip group", img: "img/corcholata.png" },
             { id: 20, name: "Chontoca", type: "slang", content: "CHONTOCA", img: "img/chontoca.png" },
-            { id: 20, name: "Chontoca", type: "meaning", content: "Fainting / Spasm", img: "img/meaning_faint.png" }
+            { id: 20, name: "Chontoca", type: "meaning", content: "Fainting / Spasm", img: "img/chontoca.png" }
         ]
     };
 
