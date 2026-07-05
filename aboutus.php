@@ -36,7 +36,7 @@
                             <h2>Who Develops <span>GuanaTalk</span>?</h2>
 
                             <p>
-                                GuanaTalk is developed by a team of six Salvadoran
+                                GuanaTalk is developed by a team of five Salvadoran
                                 students who want to share their country's culture,
                                 traditions, and language with the world.
                             </p>
