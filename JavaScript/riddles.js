@@ -4,28 +4,28 @@ const INTERVALO_FELICITACION = 5;
 const bancoRiddles = [
     {
         en: "Salvadorans do not usually say 'Friend' or 'Dude'; they use this friendly word that starts with 'Ch'. What is it?",
-        es: "Los salvadorenos no suelen decir 'Amigo'; usan esta palabra amistosa que empieza con 'Ch'. Cual es?",
+        es: "Los salvadorenos no suelen decir 'Amigo'; usan esta palabra amistosa que empieza con 'Ch'. Cuál es?",
         opciones: ["Chero", "Compadre", "Maje"],
         correcta: 0,
         hint: "It is one of the most common Salvadoran words for a close friend."
     },
     {
         en: "I am the most famous traditional food in El Salvador, made with corn or rice dough and filled with cheese, beans, or chicharron. What am I?",
-        es: "Soy la comida tradicional mas famosa de El Salvador, hecha con masa de maiz o arroz y rellena de queso, frijoles o chicharron. Que soy?",
+        es: "Soy la comida tradicional mas famosa de El Salvador, hecha con masa de maiz o arroz y rellena de queso, frijoles o chicharron. Qué soy?",
         opciones: ["Tamal", "Pupusa", "Pastelito"],
         correcta: 1,
         hint: "People usually eat it with curtido and tomato sauce."
     },
     {
         en: "When something is awesome, cool, or excellent, Salvadorans use this word that can also mean goat. What is it?",
-        es: "Cuando algo es genial o excelente, los salvadorenos usan esta palabra que tambien puede significar cabra. Cual es?",
+        es: "Cuando algo es genial o excelente, los salvadoreños usan esta palabra que tambien puede significar cabra. Cuál es?",
         opciones: ["Chivo", "Chucho", "Chispa"],
         correcta: 0,
         hint: "If someone says 'Que chivo', they liked it a lot."
     },
     {
         en: "In El Salvador, kids are often called by this everyday word that starts with 'C'. What is it?",
-        es: "En El Salvador, a los niños muchas veces se les llama con esta palabra comun que empieza con 'C'. Cual es?",
+        es: "En El Salvador, a los niños muchas veces se les llama con esta palabra comun que empieza con 'C'. Cuál es?",
         opciones: ["Chiquito", "Cipotes", "Chispos"],
         correcta: 1,
         hint: "Parents and grandparents use it all the time."

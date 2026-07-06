@@ -403,6 +403,10 @@
         gap:14px;
     }
 
+    .tablero-artesanal-memory > *:nth-child(n+7) {
+        display: none !important;
+    }
+
     .card-memory-back .illustration-container{
         width:90px;
         height:90px;
