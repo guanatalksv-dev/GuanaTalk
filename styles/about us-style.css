@@ -220,3 +220,89 @@
 .color4{ background:#c44f10; } 
 .color5{ background:#1e4308; } 
 .color7{ background:#0283ce; } 
+
+
+@media (max-width: 768px){
+
+    .about-section{
+        width: 95%;
+        margin: 40px auto;
+    }
+
+    .about-section h1{
+        font-size: 2rem;
+    }
+
+    .about-intro{
+        font-size: 1rem;
+        margin-bottom: 40px;
+    }
+
+    .about-text{
+        padding: 25px;
+    }
+
+    .about-text h2{
+        font-size: 2rem;
+    }
+
+    .about-text p{
+        font-size: 1rem;
+    }
+
+    .about-image{
+        height: 300px;
+    }
+
+    .about-text ul li{
+        font-size: 0.95rem;
+        padding: 12px;
+    }
+
+    .colors-section{
+        margin: 60px auto;
+    }
+
+    .colors-section h2{
+        font-size: 2rem;
+    }
+
+    .colors-container{
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .color-card{
+        max-width: 100%;
+    }
+}
+
+
+
+@media (max-width: 480px){
+
+    .about-section h1{
+        font-size: 1.7rem;
+    }
+
+    .about-text h2{
+        font-size: 1.6rem;
+    }
+
+    .about-image{
+        height: 220px;
+    }
+
+    .slide-number{
+        font-size: 0.9rem;
+    }
+
+    .about-text p,
+    .colors-section p{
+        font-size: 0.9rem;
+    }
+
+    .color-box{
+        height: 60px;
+    }
+}
