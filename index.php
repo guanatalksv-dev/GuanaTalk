@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="styles/navbar.css">
      <link rel="stylesheet" href="styles/footer.css">
+    <link rel="shortcut icon" href="img/favicon_io (1) /favicon.ico" type="image/x-icon">
 
 </head>
 
