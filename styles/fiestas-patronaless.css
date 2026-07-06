@@ -6,19 +6,35 @@
 }
 
 body {
-    background-color: #F9F5EB; 
-    color: #333;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+    background-color: #F9F5EB;
+    position: relative;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: "🐦 🌸 🌋 🌙 🐎 🌽 🐚 🎭";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 2.2rem;
+    line-height: 220px;
+    letter-spacing: 140px;
+    opacity: 0.12;
+    pointer-events: none;
+    z-index: -1;
+    padding: 20px;
 }
 
 .fiestas-container {
+    position: relative;
+    z-index: 1;
     max-width: 1100px;
     margin: 0 auto;
     padding: 40px 20px;
-    flex: 1; 
 }
+
 .page-title {
     text-align: center;
     font-size: 2.5rem;
@@ -50,15 +66,21 @@ body {
 }
 
 .green-card-horizontal {
-    background-color: #27B45F; 
+    background-color: #00A71C;
     color: white;
-    border-radius: 25px;
-    padding: 22px;
-    width: 55%; 
+    border-radius: 30px;
+    padding: 25px;
+    width: 80%;
     display: flex;
     align-items: center;
     gap: 20px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.green-card-horizontal:hover {
+    transform: translateY(-5px);
 }
 
 .green-card-horizontal .card-thumb {
@@ -67,7 +89,7 @@ body {
     border-radius: 20px;
     object-fit: cover;
     flex-shrink: 0;
-    background-color: #e5e7eb; 
+    background-color: #e5e7eb;
 }
 
 .card-details h2 {
@@ -75,6 +97,7 @@ body {
     font-weight: 700;
     margin-bottom: 2px;
     color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
 .card-details .card-date {
