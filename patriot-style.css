@@ -246,10 +246,10 @@
 .download-link-btn {
     display: block;
     width: 100%;
-    background-color: #38a169;
+    background-color: #2fbb6e;
     color: #ffffff;
     padding: 11px;
-    border-radius: 8px;
+    border-radius: 20px;
     text-decoration: none;
     font-weight: bold;
     text-align: center;
@@ -259,7 +259,7 @@
 }
 
 .download-link-btn:hover {
-    background-color: #2f855a;
+    background-color: #41e284;
 }
 
 .toggle-lyric-btn {
