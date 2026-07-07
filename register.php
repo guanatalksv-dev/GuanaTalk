@@ -9,6 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles/register.css">
     <link rel="stylesheet" href="styles/navbar.css">
+    <link rel="shortcut icon" href="img/favicon_io (1) /favicon.ico" type="image/x-icon">
 </head>
 <body>
 

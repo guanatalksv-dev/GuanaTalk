@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="styles/navbar.css">
     <link rel="stylesheet" href="styles/footer.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+     <link rel="shortcut icon" href="img/favicon_io (1) /favicon.ico" type="image/x-icon">
 </head>
 <body>
 

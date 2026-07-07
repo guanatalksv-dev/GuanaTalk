@@ -14,6 +14,7 @@ if (!isset($_SESSION['usuario_id'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Profile</title>
     <link rel="stylesheet" href="../styles/profile.css">
+     <link rel="shortcut icon" href="img/favicon_io (1) /favicon.ico" type="image/x-icon">
 </head>
 <body>
     <div class="profile-container">

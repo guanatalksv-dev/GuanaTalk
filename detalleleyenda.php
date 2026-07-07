@@ -26,7 +26,7 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $leyenda['Titulo']; ?></title>
     <link rel="stylesheet" href="styles/detalleslegends.css">
-        
+    <link rel="shortcut icon" href="img/favicon_io (1) /favicon.ico" type="image/x-icon">
     
 </head>
 <body>

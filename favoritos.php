@@ -39,6 +39,7 @@ $resultado = $conexion->query($sql);
     <link rel="stylesheet" href="styles/favoritos-style.css"> 
     <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="styles/footer.css">
+    <link rel="shortcut icon" href="img/favicon_io (1) /favicon.ico" type="image/x-icon">
 </head>
 <body>
 

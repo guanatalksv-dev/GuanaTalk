@@ -13,7 +13,8 @@ $resultado = $conn->query($query);
         <title>Folklore Dances - GuanaTalk</title>
         <link rel="stylesheet" href="styles/folklores.css">
         <link rel="stylesheet" href="styles/navbar.css">
-         <link rel="stylesheet" href="styles/footer.css">
+        <link rel="stylesheet" href="styles/footer.css">
+        <link rel="shortcut icon" href="img/favicon_io (1) /favicon.ico" type="image/x-icon">
 
     </head>
     <body>

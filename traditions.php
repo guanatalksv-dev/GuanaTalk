@@ -21,6 +21,7 @@ $resultado = $conn->query($query);
             flex: 1;
         }
     </style>
+     <link rel="shortcut icon" href="img/favicon_io (1) /favicon.ico" type="image/x-icon">
 </head>
 <body>
 
