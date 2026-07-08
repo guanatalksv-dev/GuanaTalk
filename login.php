@@ -64,19 +64,6 @@
             </form>
         </div>
  
-        <div class="fun-fact-card">
-            <div class="fun-left">
-                <div class="megaphone-icon-box">
-                    <i class="fa-solid fa-bullhorn"></i>
-                </div>
-                <div class="fun-text">
-                    <span class="badge-fact">Fun Fact</span>
-                    <p>Did you know the marble game is known in El Salvador as "chibolas"?</p>
-                </div>
-            </div>
-            <i class="fa-solid fa-chevron-right arrow-detail"></i>
-        </div>
- 
     </div>
  
 </body>

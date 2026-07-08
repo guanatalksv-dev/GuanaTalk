@@ -305,4 +305,116 @@
     .color-box{
         height: 60px;
     }
+    
+}
+
+@media (max-width: 320px) {
+
+    .about-section{
+        width: 95%;
+        margin: 30px auto;
+        padding: 0 10px;
+    }
+
+    .about-section h1{
+        font-size: 2rem;
+    }
+
+    .about-section h1::after{
+        width: 70px;
+        height: 4px;
+    }
+
+    .about-intro{
+        font-size: 0.9rem;
+        line-height: 1.6;
+        margin-bottom: 35px;
+    }
+
+    .about-card{
+        flex-direction: column;
+        min-height: auto;
+        border-radius: 20px;
+    }
+
+    .about-image{
+        width: 100%;
+        height: 220px;
+        order: -1;
+    }
+
+    .about-image img{
+        border-radius: 20px 20px 0 0;
+    }
+
+    .about-text{
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .slide-number{
+        font-size: .85rem;
+        margin-bottom: 10px;
+    }
+
+    .about-text h2{
+        font-size: 1.8rem;
+        line-height: 1.2;
+    }
+
+    .about-text p{
+        font-size: .9rem;
+        line-height: 1.6;
+        margin-top: 15px;
+    }
+
+    .about-text ul li{
+        padding: 12px;
+        font-size: .85rem;
+        margin-bottom: 10px;
+    }
+
+    .carousel{
+        border-radius: 15px;
+    }
+
+    
+
+    .colors-section{
+        width: 95%;
+        margin: 60px auto;
+    }
+
+    .colors-section h2{
+        font-size: 2rem;
+    }
+
+    .colors-section p{
+        font-size: .9rem;
+        margin-bottom: 30px;
+    }
+
+    .colors-container{
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .color-card{
+        max-width: 100%;
+        padding: 18px;
+    }
+
+    .color-box{
+        height: 70px;
+    }
+
+    .color-card h3{
+        font-size: .95rem;
+    }
+
+    .color-card span{
+        font-size: .8rem;
+    }
+
 }

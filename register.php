@@ -89,20 +89,6 @@
                 </div>
             </form>
         </div>
-
-        <div class="fun-fact-card">
-            <div class="fun-left">
-                <div class="megaphone-icon-box">
-                    <i class="fa-solid fa-bullhorn"></i>
-                </div>
-                <div class="fun-text">
-                    <span class="badge-fact">Fun Fact</span>
-                    <p>We’re growing global community! Join and meet others.</p>
-                </div>
-            </div>
-            <i class="fa-solid fa-chevron-right arrow-detail"></i>
-        </div>
-
     </div>
 
 </body>
