@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
         { word: "CIPOTE", hint: "The traditional local word used to refer to a kid, child, or teenager." },
         { word: "PUPUSA", hint: "The most famous, thick, handmade corn tortilla stuffed with cheese or pork." },
         { word: "BAYUNCO", hint: "Used to describe someone who is acting silly, goofy, or making weird jokes." },
-        { word: "MAJE", hint: "Friendly slang equivalent to 'dude', 'guy', or 'bro' among friends." },
+        { word: "BOLADO", hint: "A noun used to name anything" },
         { word: "CORA", hint: "Derived from the English word 'quarter', it means a 25-cent coin." }
     ];
 
@@ -26,6 +26,12 @@ document.addEventListener("DOMContentLoaded", () => {
  
     const canvas = document.getElementById("hangmanCanvas");
     const ctx = canvas.getContext("2d");
+
+    const resultModal = document.getElementById("resultModal");
+    const resultModalTitle = document.getElementById("resultModalTitle");
+    const resultModalMessage = document.getElementById("resultModalMessage");
+    const resultModalWord = document.getElementById("resultModalWord");
+    const resultModalBtn = document.getElementById("resultModalBtn");
 
     function initHangman() {
         selectedGame = wordBank[Math.floor(Math.random() * wordBank.length)];
@@ -92,6 +98,27 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+    function showResultModal(title, message, isWin) {
+        resultModalTitle.textContent = title;
+        resultModalMessage.textContent = message;
+        resultModalWord.textContent = selectedGame.word;
+        
+        if (isWin) {
+            resultModalTitle.style.color = "#00a4e4";
+            resultModalBtn.textContent = "Next Wave 🏄‍♂️";
+        } else {
+            resultModalTitle.style.color = "#ff5500";
+            resultModalBtn.textContent = "Try Again 🔄";
+        }
+
+        resultModal.style.display = "flex";
+    }
+
+    resultModalBtn.addEventListener("click", () => {
+        resultModal.style.display = "none";
+        initHangman();
+    });
+
     function checkWinCondition() {
         const wordArray = selectedGame.word.split("");
         const isWon = wordArray.every(letter => guessedLetters.includes(letter));
@@ -99,8 +126,11 @@ document.addEventListener("DOMContentLoaded", () => {
         if (isWon) {
             currentStreak++;
             setTimeout(() => {
-                alert(`🎉 Awesome! You guessed it!\nCorrect Word: ${selectedGame.word}\nYour winning streak increased!`);
-                initHangman();
+                showResultModal(
+                    "🎉 Awesome!", 
+                    "You guessed it! Your winning streak increased!", 
+                    true
+                );
             }, 300);
         }
     }
@@ -109,8 +139,11 @@ document.addEventListener("DOMContentLoaded", () => {
         if (attemptsLeft === 0) {
             currentStreak = 0; 
             setTimeout(() => {
-                alert(`😢 Game Over!\nThe correct word was: ${selectedGame.word}\nDon't worry, catch the next wave!`);
-                initHangman();
+                showResultModal(
+                    "😢 Game Over!", 
+                    "Don't worry, catch the next wave!", 
+                    false
+                );
             }, 300);
         }
     }

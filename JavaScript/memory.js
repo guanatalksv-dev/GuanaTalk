@@ -59,6 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let cardsChosenId = [];
     let matchesFound = 0;
     let totalMoves = 0;
+    let targetMatches = 4; 
 
     const tablero = document.getElementById("tablero-memory");
     const roundText = document.getElementById("round-text");
@@ -71,18 +72,53 @@ document.addEventListener("DOMContentLoaded", () => {
     const openModalBtn = document.getElementById("openModalBtn");
     const closeModalBtn = document.getElementById("closeModalBtn");
 
+    // NUEVOS ELEMENTOS DEL DOM PARA LOS MENSAJES PERSONALIZADOS
+    const gameMessageModal = document.getElementById("gameMessageModal");
+    const modalMessageTitle = document.getElementById("modalMessageTitle");
+    const modalMessageBody = document.getElementById("modalMessageBody");
+    const modalMessageBtn = document.getElementById("modalMessageBtn");
+    let modalActionCallback = null; // Guardará la acción a ejecutar tras pulsar continuar
+
+    const mediaQueryMovil = window.matchMedia("(max-width: 425px)");
+
+    // Función para invocar el Modal personalizado en vez del alert()
+    function showGameModal(title, text, action) {
+        modalMessageTitle.textContent = title;
+        modalMessageBody.textContent = text;
+        modalActionCallback = action;
+        gameMessageModal.classList.add("active");
+    }
+
+    // Evento para cerrar el modal personalizado y accionar el siguiente paso
+    modalMessageBtn.addEventListener("click", () => {
+        gameMessageModal.classList.remove("active");
+        if (modalActionCallback) {
+            modalActionCallback();
+        }
+    });
+
     function loadRound(roundNumber) {
         tablero.innerHTML = "";
         slangListContainer.innerHTML = "";
         cardsChosen = [];
         cardsChosenId = [];
         matchesFound = 0;
+        
+        let datosBase = [...roundsData[roundNumber]];
+
+        if (mediaQueryMovil.matches) {
+            targetMatches = 3; 
+            const idsPermitidos = Array.from(new Set(datosBase.map(item => item.id))).slice(0, 3);
+            datosBase = datosBase.filter(item => idsPermitidos.includes(item.id));
+        } else {
+            targetMatches = 4; 
+        }
 
         roundText.textContent = `ROUND ${roundNumber} / 5`;
-        matchesDisplay.textContent = "0 / 4";
+        matchesDisplay.textContent = `0 / ${targetMatches}`;
         movesDisplay.textContent = totalMoves;
 
-        currentRoundCards = [...roundsData[roundNumber]];
+        currentRoundCards = datosBase;
         currentRoundCards.sort(() => 0.5 - Math.random());
 
         currentRoundCards.forEach((item, index) => {
@@ -151,9 +187,9 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             matchesFound++;
-            matchesDisplay.textContent = `${matchesFound} / 4`;
+            matchesDisplay.textContent = `${matchesFound} / ${targetMatches}`;
 
-            if (matchesFound === 4) {
+            if (matchesFound === targetMatches) {
                 setTimeout(advanceRound, 1000);
             }
         } else {
@@ -169,11 +205,17 @@ document.addEventListener("DOMContentLoaded", () => {
     function advanceRound() {
         if (currentRound < 5) {
             currentRound++;
-            alert(`🎉 Great job! Advancing to Round ${currentRound}`);
-            loadRound(currentRound);
+            showGameModal(
+                "🎉 ¡Buen trabajo!", 
+                `Has superado la ronda. Prepárate para el Round ${currentRound}`, 
+                () => { loadRound(currentRound); }
+            );
         } else {
-            alert(`🏆 Congratulations! You completed all rounds with ${totalMoves} total moves!`);
-            resetWholeGame();
+            showGameModal(
+                "🏆 ¡Felicidades, Ganaste!", 
+                `Completaste todas las rondas exitosamente usando un total de ${totalMoves} movimientos.`, 
+                () => { resetWholeGame(); }
+            );
         }
     }
 
@@ -182,6 +224,10 @@ document.addEventListener("DOMContentLoaded", () => {
         totalMoves = 0;
         loadRound(currentRound);
     }
+
+    mediaQueryMovil.addEventListener("change", () => {
+        loadRound(currentRound);
+    });
 
     if (openModalBtn && modal && closeModalBtn) {
         openModalBtn.addEventListener("click", () => modal.classList.add("active"));
