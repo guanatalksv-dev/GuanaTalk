@@ -142,6 +142,21 @@ nav a {
   background: #E2F6A2;
 }
 
+body::before {
+    content: "🌸 🌋  🌸 🌋  🌸 🌋  🌸 🌋  🌸 🌋 🌸 🌋  🌸 🌋  🌸 🌋 ";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 3.5rem;
+    line-height: 220px;
+    letter-spacing: 140px;
+    opacity: 0.3;
+    pointer-events: none;
+    z-index: -1;
+    padding: 70px;
+}
 
 .dropdown-content {
   display: none;
