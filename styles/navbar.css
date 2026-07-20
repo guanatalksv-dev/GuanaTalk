@@ -1,3 +1,10 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
 .guanatalk-navbar {
     background: linear-gradient(to right, #fff9f9 3%, #0283ce 40%, #003a74 105%);
     border-bottom: 2px solid #0283ce;
@@ -48,7 +55,7 @@
     text-decoration: none;
     color: white;
     font-weight: 700;
-    font-family: 'Fredoka', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 1.1rem;
     transition: color 0.2s ease;
 }

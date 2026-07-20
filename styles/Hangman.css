@@ -3,7 +3,7 @@
 .hangman-beach-theme {
     margin: 0;
     padding: 0;
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Poppins', sans-serif;
     min-height: 100vh;
     box-sizing: border-box;
     padding-top: 110px;
@@ -113,7 +113,7 @@
 .help-btn {
     background: white; 
     color: #004b6e; 
-    font-family: 'Fredoka One', cursive;
+    font-family: 'Poppins', sans-serif;
     width: 35px; 
     height: 35px; 
     border-radius: 30px; 
@@ -137,7 +137,7 @@
     background: #004b6e; color: white; font-weight: 800; padding: 6px 16px; border-radius: 30px;
 }
 .help-btn {
-    background: white; color: #004b6e; font-family: 'Fredoka One', cursive;
+    background: white; color: #004b6e; font-family: 'Poppins', sans-serif;
     width: 35px; height: 35px; border-radius: 30px; display: flex; align-items: center; justify-content: center;
 }
 

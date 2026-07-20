@@ -9,7 +9,9 @@
     <link rel="stylesheet" href="styles/navbar.css">
     <link rel="stylesheet" href="styles/footer.css">
     <link rel="shortcut icon" href="img/favicon_io (1) /favicon.ico" type="image/x-icon">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
 <?php include("components/navbar.php"); ?>
@@ -19,7 +21,7 @@
 
 <section class="hero">
     <div class="hero-text">
-        <h1 class="pop-title">Mini-games</h1>
+        <h1 class="pop-title">Guana-games</h1>
         <p class="pop-subtitle">Put your “Guanaco Power” to the test! <br> Have fun and learn through play.</p>
     </div>
     <img class="hero-img" src="img/minigames.ES.png" alt="El Salvador">

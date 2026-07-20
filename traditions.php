@@ -13,6 +13,9 @@ $resultado = $conn->query($query);
     <link rel="stylesheet" href="styles/traditions.css">
     <link rel="stylesheet" href="styles/navbar.css">
     <link rel="stylesheet" href="styles/footer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
         .categories-grid a {
             text-decoration: none;
