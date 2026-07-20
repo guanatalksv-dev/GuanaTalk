@@ -42,7 +42,10 @@ $resultado = $conexion->query($sql);
     <link rel="stylesheet" href="styles/funfacts-style(1).css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="styles/footer.css">
-     <link rel="shortcut icon" href="img/favicon_io (1) /favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="img/favicon_io (1) /favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
 

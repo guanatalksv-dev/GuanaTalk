@@ -1,6 +1,6 @@
-<?php 
-include("php/conexion.php"); 
-
+<?php
+include("php/conexion.php");
+ 
 $query = "SELECT * FROM tradiciones";
 $resultado = $conn->query($query);
 ?>
@@ -13,6 +13,9 @@ $resultado = $conn->query($query);
     <link rel="stylesheet" href="styles/traditions.css">
     <link rel="stylesheet" href="styles/navbar.css">
     <link rel="stylesheet" href="styles/footer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
         .categories-grid a {
             text-decoration: none;
@@ -24,9 +27,9 @@ $resultado = $conn->query($query);
      <link rel="shortcut icon" href="img/favicon_io (1) /favicon.ico" type="image/x-icon">
 </head>
 <body>
-
+ 
     <?php include("components/navbar.php"); ?>
-
+ 
     <main class="main-container">
         <section class="hero-section">
             <div class="hero-text">
@@ -37,7 +40,7 @@ $resultado = $conn->query($query);
                 <img src="img/ilustracion.png.png" alt="El Salvador Traditions" class="hero-img">
             </div>
         </section>
-
+ 
         <section class="categories-grid">
             <?php
             if ($resultado && $resultado->num_rows > 0) {
@@ -51,7 +54,7 @@ $resultado = $conn->query($query);
                     } elseif ($fila['titulo'] == 'Unique Celebrations') {
                         $enlace = "unique-celebrations.php";
                     } else {
-                        $enlace = "#"; 
+                        $enlace = "#";
                     }
                     ?>
                     <a href="<?php echo $enlace; ?>">
@@ -68,10 +71,10 @@ $resultado = $conn->query($query);
             ?>
         </section>
     </main>
-
+ 
     <script src="JavaScript/navbar.js"></script>
     <?php include("php/footer.php"); ?>
-    
-
+   
+ 
 </body>
 </html>

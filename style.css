@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Righteous', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 100%;
 }
 
@@ -20,8 +20,6 @@ body {
   color: white;
 }
 
-
-
 .logo img {
   height: 70px;
 }
@@ -32,7 +30,7 @@ nav a {
   padding: 8px 8px;
   text-decoration: none;
   font-weight: 500;
-  font-family: 'Fredoka', sans-serif;
+  font-family: 'Fredoka One', cursive;
   font-weight: 700;
 }
 
@@ -142,6 +140,21 @@ nav a {
   background: #E2F6A2;
 }
 
+body::before {
+    content: "🌸 🌋  🌸 🌋  🌸 🌋  🌸 🌋  🌸 🌋 🌸 🌋  🌸 🌋  🌸 🌋 ";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 3.5rem;
+    line-height: 220px;
+    letter-spacing: 140px;
+    opacity: 0.3;
+    pointer-events: none;
+    z-index: -1;
+    padding: 70px;
+}
 
 .dropdown-content {
   display: none;
@@ -270,13 +283,13 @@ nav a {
 
 
 .card-img {
-  width: 85%;
-  height: 120px;
+  width: 90%;
+  height: 130px;
   object-fit: contain;
 }
 
 .card p {
-  font-size: 18px;
+  font-size: 30px;
   margin-bottom: 5px;
 }
 
@@ -296,7 +309,7 @@ nav a {
 } 
 
 .card-gray {
-  background: linear-gradient(#e2e2e2, #6b6969);
+  background: linear-gradient(#0492e5, #045a93);
 }
 
 .about h2 {
@@ -420,7 +433,7 @@ nav a {
 }
 
 .card p {
-  font-size: 15px;
+  font-size: 20px;
   margin-bottom: 15px;
 }
 

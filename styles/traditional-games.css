@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
@@ -152,25 +152,21 @@ body::before {
 @media screen and (max-width: 425px) {
     
     .games-container {
-        /* Reducimos el padding lateral para ganar espacio en pantalla chica */
         padding: 20px 15px;
     }
 
     .games-title {
-        /* Un título de 2.5rem es enorme para celular, lo bajamos un poco */
         font-size: 1.8rem;
         margin-bottom: 25px;
     }
 
     .games-grid {
-        /* Pasamos las tarjetas de horizontal a vertical */
         flex-direction: column;
         gap: 25px;
         margin-bottom: 30px;
     }
 
     .game-card {
-        /* Ajustamos el padding interno de las tarjetas */
         padding: 25px 20px;
         width: 100%;
     }
@@ -184,11 +180,10 @@ body::before {
         order: 2 !important; 
         padding-right: 0 !important;
         margin-right: 0 !important;
-        font-size: 2.2rem !important; /* <--- Agregalo aquí para cambiar el tamaño */
+        font-size: 2.2rem !important; 
     }
 
     .game-img-box {
-        /* Reducimos un pelín el contenedor de la imagen */
         width: 110px;
         height: 110px;
         margin-bottom: 20px;
@@ -204,7 +199,6 @@ body::before {
     }
 
     .games-fun-fact {
-        /* Pasamos el banner de datos curiosos a vertical si se amontona */
         flex-direction: column;
         text-align: center;
         gap: 10px;
