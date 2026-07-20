@@ -83,8 +83,6 @@
                         <div class="about-text">
 
                             <h2>Our <span> values</span></h2>
-
-                            <p>
                                 <ul>
                                 <li>Cultural identity: Promoting pride in Salvadoran language and traditions. </li>
 
@@ -92,7 +90,6 @@
 
                                 <li>Accessibility: Offering easy and interactive content for understanding and teaching.</li>
                             </ul>
-                            </p>
 
                         </div>
 

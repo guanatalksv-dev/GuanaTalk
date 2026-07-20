@@ -6,14 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GuanaTalk</title>
 
+ <meta property="og:type" content="website">
+<meta property="og:title" content="GuanaTalk">
+<meta property="og:description" content="Explore Salvadoran culture.">
+<meta property="og:image" content="https://guanatalk.freedev.app/img/GuanaTalk%20logo.png.png">
+<meta property="og:url" content="https://guanatalk.freedev.app/">
+
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="styles/navbar.css">
      <link rel="stylesheet" href="styles/footer.css">
     <link rel="shortcut icon" href="img/favicon_io (1)/favicon.ico" type="image/x-icon">
-
 </head>
-
 <body>
 
 <?php include("components/navbar.php"); ?>
