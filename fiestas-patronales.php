@@ -1,7 +1,6 @@
 <?php
 include("php/conexion.php");
-
-// Consultamos los elementos de las Fiestas Patronales (tradicion_id = 1)
+ 
 $query_elementos = "SELECT * FROM sub_tradiciones WHERE tradicion_id = 1";
 $resultado = $conn->query($query_elementos);
 ?>
@@ -15,19 +14,25 @@ $resultado = $conn->query($query_elementos);
         <link rel="stylesheet" href="styles/navbar.css">
         <link rel="stylesheet" href="styles/footer.css">
         <link rel="shortcut icon" href="img/favicon_io (1) /favicon.ico" type="image/x-icon">
+<<<<<<< HEAD
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
+=======
+>>>>>>> 886da50890697dd1152901ba8423842c70bcb977
     </head>
     <body>
-
+ 
      <?php include("components/navbar.php"); ?>
 
+     <a href="traditions.php" class="btn-back-traditions">⬅ Back to Traditions</a>
+ 
         <main class="fiestas-container">
-            
+           
+           
             <h1 class="page-title">Fiestas Patronales: Local Celebrations</h1>
-
+ 
             <section class="zigzag-wrapper">
                 <?php
                 if ($resultado && $resultado->num_rows > 0) {
@@ -53,10 +58,11 @@ $resultado = $conn->query($query_elementos);
                 }
                 ?>
             </section>
-
+ 
         </main>
        <script src="JavaScript/navbar.js"></script>
-        
+       
         <?php include("php/footer.php"); ?>
     </body>
 </html>
+ 
