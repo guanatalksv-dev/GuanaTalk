@@ -72,16 +72,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const openModalBtn = document.getElementById("openModalBtn");
     const closeModalBtn = document.getElementById("closeModalBtn");
 
-    // NUEVOS ELEMENTOS DEL DOM PARA LOS MENSAJES PERSONALIZADOS
     const gameMessageModal = document.getElementById("gameMessageModal");
     const modalMessageTitle = document.getElementById("modalMessageTitle");
     const modalMessageBody = document.getElementById("modalMessageBody");
     const modalMessageBtn = document.getElementById("modalMessageBtn");
-    let modalActionCallback = null; // Guardará la acción a ejecutar tras pulsar continuar
+    let modalActionCallback = null; 
 
     const mediaQueryMovil = window.matchMedia("(max-width: 425px)");
 
-    // Función para invocar el Modal personalizado en vez del alert()
     function showGameModal(title, text, action) {
         modalMessageTitle.textContent = title;
         modalMessageBody.textContent = text;
@@ -89,7 +87,6 @@ document.addEventListener("DOMContentLoaded", () => {
         gameMessageModal.classList.add("active");
     }
 
-    // Evento para cerrar el modal personalizado y accionar el siguiente paso
     modalMessageBtn.addEventListener("click", () => {
         gameMessageModal.classList.remove("active");
         if (modalActionCallback) {
@@ -206,14 +203,14 @@ document.addEventListener("DOMContentLoaded", () => {
         if (currentRound < 5) {
             currentRound++;
             showGameModal(
-                "🎉 ¡Buen trabajo!", 
-                `Has superado la ronda. Prepárate para el Round ${currentRound}`, 
+                "🎉 Good Job!", 
+                `You have passed the round. Get ready for ROUND ${currentRound}`, 
                 () => { loadRound(currentRound); }
             );
         } else {
             showGameModal(
-                "🏆 ¡Felicidades, Ganaste!", 
-                `Completaste todas las rondas exitosamente usando un total de ${totalMoves} movimientos.`, 
+                "🏆 Congratulations, You Won!", 
+                `You completed all rounds successfully using a total of ${totalMoves} moves.`, 
                 () => { resetWholeGame(); }
             );
         }

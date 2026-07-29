@@ -101,6 +101,18 @@
     gap: 12px;                 
 }
 
+.timer-badge{
+    background:#ffcc00;
+    color:#004b6e;
+    font-weight:800;
+    padding:6px 16px;
+    border-radius:30px;
+    font-size:.95rem;
+    display:flex;
+    align-items:center;
+    gap:6px;
+}
+
 .streak-badge {
     background: #004b6e; 
     color: white; 
@@ -390,3 +402,5 @@
         align-items: flex-start;
     }
 }
+
+

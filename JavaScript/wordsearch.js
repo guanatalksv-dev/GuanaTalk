@@ -233,12 +233,12 @@ function dispararModalFinRonda() {
     const divPuntaje = document.getElementById("modal-badge");
 
     if (rondaActual < rondasJuego.length - 1) {
-        titulo.innerText = "¡Buen trabajo!";
+        titulo.innerText = "Good Job!";
         texto.innerText = "You have found all words for this level. Ready for the next ecosystem?";
         divPuntaje.innerText = `Cleared Level ${rondaActual + 1}`;
         boton.innerHTML = `Next Level <i class="fa-solid fa-arrow-right"></i>`;
     } else {
-        titulo.innerText = "¡Sos un máster!";
+        titulo.innerText = "You are a master!";
         texto.innerText = "Amazing! You completed all 5 rounds and discovered all the hidden secrets of our nature and culture.";
         divPuntaje.innerText = "Game Completed! 🏆";
         boton.innerHTML = `Play Again <i class="fa-solid fa-rotate-right"></i>`;

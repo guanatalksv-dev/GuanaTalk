@@ -14,6 +14,8 @@ document.addEventListener("DOMContentLoaded", () => {
     let guessedLetters = [];
     let wrongLetters = [];
     let attemptsLeft = 6;
+    let timer;
+    let timeLeft = 90;
     let currentStreak = 0;
 
     const wordSpacesContainer = document.getElementById("word-spaces");
@@ -22,6 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const attemptsBar = document.getElementById("attempts-bar");
     const hintTextDisplay = document.getElementById("hint-text");
     const streakDisplay = document.getElementById("streak-count");
+    const timerDisplay = document.getElementById("timer");
     const keyboardButtons = document.querySelectorAll(".key-btn");
  
     const canvas = document.getElementById("hangmanCanvas");
@@ -39,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
         wrongLetters = [];
         attemptsLeft = 6;
 
-        hintTextDisplay.textContent = selectedGame.hint;
+        updateHintVisibility();
         attemptsCountDisplay.textContent = attemptsLeft;
         attemptsBar.style.width = "100%";
         streakDisplay.textContent = currentStreak;
@@ -47,10 +50,40 @@ document.addEventListener("DOMContentLoaded", () => {
 
         renderWordSpaces();
         drawHangmanScene(0); 
+        startTimer();
 
         keyboardButtons.forEach(btn => {
             btn.classList.remove("disabled");
         });
+    }
+
+    function startTimer(){
+        clearInterval(timer);
+        timeLeft = 90;
+        updateTimer();
+        timer = setInterval(()=>{
+            timeLeft--;
+            updateTimer();
+            if(timeLeft <= 0){
+                clearInterval(timer);
+                currentStreak = 0;
+                showResultModal(
+                    "⏰ Time's Up!",
+                    "You ran out of time!",
+                    false
+                );
+            }
+        },1000);
+    }
+
+    function updateTimer(){
+
+        const minutes = Math.floor(timeLeft/60);
+        const seconds = timeLeft%60;
+
+        timerDisplay.textContent =
+            `${String(minutes).padStart(2,"0")}:${String(seconds).padStart(2,"0")}`;
+
     }
 
     function renderWordSpaces() {
@@ -92,10 +125,20 @@ document.addEventListener("DOMContentLoaded", () => {
         attemptsCountDisplay.textContent = attemptsLeft;
         const percentage = (attemptsLeft / 6) * 100;
         attemptsBar.style.width = `${percentage}%`;
+        updateHintVisibility();
 
         if (wrongLetters.length > 0) {
             usedLettersContainer.textContent = wrongLetters.join(", ");
         }
+    }
+
+    function updateHintVisibility() {
+        if (attemptsLeft <= 2) {
+            hintTextDisplay.textContent = selectedGame.hint;
+            return;
+        }
+
+        hintTextDisplay.textContent = "Hint locked: it unlocks with 2 lifebuoys left.";
     }
 
     function showResultModal(title, message, isWin) {
